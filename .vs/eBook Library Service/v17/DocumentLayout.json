@@ -1,0 +1,245 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{59671C97-9929-401B-B328-B9CB92FCE5BF}|eBook Library Service\\eBook Library Service.csproj|c:\\users\\ibrah\\source\\repos\\ebook library service\\ebook library service\\viewmodels\\changepassworviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59671C97-9929-401B-B328-B9CB92FCE5BF}|eBook Library Service\\eBook Library Service.csproj|solutionrelative:ebook library service\\viewmodels\\changepassworviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59671C97-9929-401B-B328-B9CB92FCE5BF}|eBook Library Service\\eBook Library Service.csproj|c:\\users\\ibrah\\source\\repos\\ebook library service\\ebook library service\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59671C97-9929-401B-B328-B9CB92FCE5BF}|eBook Library Service\\eBook Library Service.csproj|solutionrelative:ebook library service\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59671C97-9929-401B-B328-B9CB92FCE5BF}|eBook Library Service\\eBook Library Service.csproj|c:\\users\\ibrah\\source\\repos\\ebook library service\\ebook library service\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{59671C97-9929-401B-B328-B9CB92FCE5BF}|eBook Library Service\\eBook Library Service.csproj|solutionrelative:ebook library service\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59671C97-9929-401B-B328-B9CB92FCE5BF}|eBook Library Service\\eBook Library Service.csproj|c:\\users\\ibrah\\source\\repos\\ebook library service\\ebook library service\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{59671C97-9929-401B-B328-B9CB92FCE5BF}|eBook Library Service\\eBook Library Service.csproj|solutionrelative:ebook library service\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59671C97-9929-401B-B328-B9CB92FCE5BF}|eBook Library Service\\eBook Library Service.csproj|c:\\users\\ibrah\\source\\repos\\ebook library service\\ebook library service\\wwwroot\\assets\\css\\main.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{59671C97-9929-401B-B328-B9CB92FCE5BF}|eBook Library Service\\eBook Library Service.csproj|solutionrelative:ebook library service\\wwwroot\\assets\\css\\main.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59671C97-9929-401B-B328-B9CB92FCE5BF}|eBook Library Service\\eBook Library Service.csproj|c:\\users\\ibrah\\source\\repos\\ebook library service\\ebook library service\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59671C97-9929-401B-B328-B9CB92FCE5BF}|eBook Library Service\\eBook Library Service.csproj|solutionrelative:ebook library service\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59671C97-9929-401B-B328-B9CB92FCE5BF}|eBook Library Service\\eBook Library Service.csproj|c:\\users\\ibrah\\source\\repos\\ebook library service\\ebook library service\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59671C97-9929-401B-B328-B9CB92FCE5BF}|eBook Library Service\\eBook Library Service.csproj|solutionrelative:ebook library service\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59671C97-9929-401B-B328-B9CB92FCE5BF}|eBook Library Service\\eBook Library Service.csproj|c:\\users\\ibrah\\source\\repos\\ebook library service\\ebook library service\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59671C97-9929-401B-B328-B9CB92FCE5BF}|eBook Library Service\\eBook Library Service.csproj|solutionrelative:ebook library service\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59671C97-9929-401B-B328-B9CB92FCE5BF}|eBook Library Service\\eBook Library Service.csproj|c:\\users\\ibrah\\source\\repos\\ebook library service\\ebook library service\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59671C97-9929-401B-B328-B9CB92FCE5BF}|eBook Library Service\\eBook Library Service.csproj|solutionrelative:ebook library service\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59671C97-9929-401B-B328-B9CB92FCE5BF}|eBook Library Service\\eBook Library Service.csproj|c:\\users\\ibrah\\source\\repos\\ebook library service\\ebook library service\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{59671C97-9929-401B-B328-B9CB92FCE5BF}|eBook Library Service\\eBook Library Service.csproj|solutionrelative:ebook library service\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59671C97-9929-401B-B328-B9CB92FCE5BF}|eBook Library Service\\eBook Library Service.csproj|c:\\users\\ibrah\\source\\repos\\ebook library service\\ebook library service\\views\\home\\contact.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{59671C97-9929-401B-B328-B9CB92FCE5BF}|eBook Library Service\\eBook Library Service.csproj|solutionrelative:ebook library service\\views\\home\\contact.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59671C97-9929-401B-B328-B9CB92FCE5BF}|eBook Library Service\\eBook Library Service.csproj|c:\\users\\ibrah\\source\\repos\\ebook library service\\ebook library service\\views\\home\\about.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{59671C97-9929-401B-B328-B9CB92FCE5BF}|eBook Library Service\\eBook Library Service.csproj|solutionrelative:ebook library service\\views\\home\\about.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59671C97-9929-401B-B328-B9CB92FCE5BF}|eBook Library Service\\eBook Library Service.csproj|c:\\users\\ibrah\\source\\repos\\ebook library service\\ebook library service\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{59671C97-9929-401B-B328-B9CB92FCE5BF}|eBook Library Service\\eBook Library Service.csproj|solutionrelative:ebook library service\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59671C97-9929-401B-B328-B9CB92FCE5BF}|eBook Library Service\\eBook Library Service.csproj|c:\\users\\ibrah\\source\\repos\\ebook library service\\ebook library service\\wwwroot\\assets\\js\\main.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{59671C97-9929-401B-B328-B9CB92FCE5BF}|eBook Library Service\\eBook Library Service.csproj|solutionrelative:ebook library service\\wwwroot\\assets\\js\\main.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ChangePassworViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\eBook Library Service\\ViewModels\\ChangePassworViewModel.cs",
+              "RelativeDocumentMoniker": "eBook Library Service\\ViewModels\\ChangePassworViewModel.cs",
+              "ToolTip": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\eBook Library Service\\ViewModels\\ChangePassworViewModel.cs",
+              "RelativeToolTip": "eBook Library Service\\ViewModels\\ChangePassworViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-25T16:38:59.486Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LoginViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\eBook Library Service\\ViewModels\\LoginViewModel.cs",
+              "RelativeDocumentMoniker": "eBook Library Service\\ViewModels\\LoginViewModel.cs",
+              "ToolTip": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\eBook Library Service\\ViewModels\\LoginViewModel.cs",
+              "RelativeToolTip": "eBook Library Service\\ViewModels\\LoginViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-25T16:38:56.348Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_LoginPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\eBook Library Service\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeDocumentMoniker": "eBook Library Service\\Views\\Shared\\_LoginPartial.cshtml",
+              "ToolTip": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\eBook Library Service\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeToolTip": "eBook Library Service\\Views\\Shared\\_LoginPartial.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-25T12:28:30.456Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\eBook Library Service\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "eBook Library Service\\Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\eBook Library Service\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "eBook Library Service\\Data\\AppDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAYAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-25T06:22:36.986Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\eBook Library Service\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "eBook Library Service\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\eBook Library Service\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "eBook Library Service\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-22T19:02:16.02Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\eBook Library Service\\Program.cs",
+              "RelativeDocumentMoniker": "eBook Library Service\\Program.cs",
+              "ToolTip": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\eBook Library Service\\Program.cs",
+              "RelativeToolTip": "eBook Library Service\\Program.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABYAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-21T18:58:38.539Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\eBook Library Service\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "eBook Library Service\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\eBook Library Service\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "eBook Library Service\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAIcAAAAAAAAAAADwv6MAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-21T18:58:34.195Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\eBook Library Service\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "eBook Library Service\\Models\\ErrorViewModel.cs",
+              "ToolTip": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\eBook Library Service\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "eBook Library Service\\Models\\ErrorViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-22T19:01:05.583Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "About.cshtml",
+              "DocumentMoniker": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\eBook Library Service\\Views\\Home\\About.cshtml",
+              "RelativeDocumentMoniker": "eBook Library Service\\Views\\Home\\About.cshtml",
+              "ToolTip": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\eBook Library Service\\Views\\Home\\About.cshtml",
+              "RelativeToolTip": "eBook Library Service\\Views\\Home\\About.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-23T14:45:10.688Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "main.css",
+              "DocumentMoniker": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\eBook Library Service\\wwwroot\\assets\\css\\main.css",
+              "RelativeDocumentMoniker": "eBook Library Service\\wwwroot\\assets\\css\\main.css",
+              "ToolTip": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\eBook Library Service\\wwwroot\\assets\\css\\main.css",
+              "RelativeToolTip": "eBook Library Service\\wwwroot\\assets\\css\\main.css",
+              "ViewState": "AQIAAFkBAAAAAAAAAAAAAIABAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-23T15:41:13.343Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "main.js",
+              "DocumentMoniker": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\eBook Library Service\\wwwroot\\assets\\js\\main.js",
+              "RelativeDocumentMoniker": "eBook Library Service\\wwwroot\\assets\\js\\main.js",
+              "ToolTip": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\eBook Library Service\\wwwroot\\assets\\js\\main.js",
+              "RelativeToolTip": "eBook Library Service\\wwwroot\\assets\\js\\main.js",
+              "ViewState": "AQIAAN8AAAAAAAAAAAAqwOUAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-12-23T15:48:24.262Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Contact.cshtml",
+              "DocumentMoniker": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\eBook Library Service\\Views\\Home\\Contact.cshtml",
+              "RelativeDocumentMoniker": "eBook Library Service\\Views\\Home\\Contact.cshtml",
+              "ToolTip": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\eBook Library Service\\Views\\Home\\Contact.cshtml",
+              "RelativeToolTip": "eBook Library Service\\Views\\Home\\Contact.cshtml",
+              "ViewState": "AQIAADgAAAAAAAAAAAAqwE4AAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-24T14:18:05.968Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\eBook Library Service\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "eBook Library Service\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\eBook Library Service\\Properties\\launchSettings.json",
+              "RelativeToolTip": "eBook Library Service\\Properties\\launchSettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-24T19:58:39.4Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\eBook Library Service\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "eBook Library Service\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\eBook Library Service\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "eBook Library Service\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-21T19:45:47.246Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
