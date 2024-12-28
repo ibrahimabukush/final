@@ -36,7 +36,7 @@
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
-      <a href="index.html" class="logo d-flex align-items-center me-auto">
+      <a href="/Home" class="logo d-flex align-items-center me-auto">
        
         <h1 class="sitename">eBook Library</h1>
       </a>
@@ -64,16 +64,21 @@
             </ul>
           </li>
           <li><a href="/Home/contact">Contact</a></li>
+                  
          
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+                
       </nav>
-            <li><a><partial name="_LoginPartial" /></a></li>
-  
                 
       
 
     </div>
+        
+
+        <div class="auth-buttons">
+            <partial name="_LoginPartial" />
+        </div>
   </header>
 
   @RenderBody()
@@ -159,6 +164,4 @@
 </body>
 
 </html>
-<link href="c:\users\ibrah\source\repos\ebook library service\ebook library service\views\shared\_layout.cshtml.css" rel="stylesheet" />
-<a href="c:\users\ibrah\source\repos\ebook library service\ebook library service\views\shared\_layout.cshtml">c:\users\ibrah\source\repos\ebook library service\ebook library service\views\shared\_layout.cshtml</a>
 @await RenderSectionAsync("Scripts", required: false)

@@ -167,3 +167,4 @@ C:\Users\ibrah\source\repos\eBook Library Service\eBook Library Service\obj\Debu
 C:\Users\ibrah\source\repos\eBook Library Service\eBook Library Service\obj\Debug\net8.0\eBook Library Service.genruntimeconfig.cache
 C:\Users\ibrah\source\repos\eBook Library Service\eBook Library Service\obj\Debug\net8.0\ref\eBook Library Service.dll
 C:\Users\ibrah\source\repos\eBook Library Service\eBook Library Service\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\ibrah\source\repos\eBook Library Service\eBook Library Service\obj\Debug\net8.0\eBook Library Service.sourcelink.json

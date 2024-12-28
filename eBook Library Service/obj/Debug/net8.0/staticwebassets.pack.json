@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\eBook Library Service.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\eBook Library Service\\wwwroot\\assets\\css\\account.css",
+      "PackagePath": "staticwebassets\\assets\\css\\account.css"
+    },
+    {
       "Id": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\eBook Library Service\\wwwroot\\assets\\css\\main.css",
       "PackagePath": "staticwebassets\\assets\\css\\main.css"
     },
@@ -59,6 +63,10 @@
     {
       "Id": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\eBook Library Service\\wwwroot\\assets\\img\\hero-img.png",
       "PackagePath": "staticwebassets\\assets\\img\\hero-img.png"
+    },
+    {
+      "Id": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\eBook Library Service\\wwwroot\\assets\\img\\io.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\io.jpg"
     },
     {
       "Id": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\eBook Library Service\\wwwroot\\assets\\img\\logo.png",

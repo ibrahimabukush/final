@@ -1,4 +1,5 @@
 using eBook_Library_Service.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -17,7 +18,7 @@ namespace eBook_Library_Service.Controllers
         {
             return View();
         }
-
+        [Authorize]
         public IActionResult About()
         {
             return View();

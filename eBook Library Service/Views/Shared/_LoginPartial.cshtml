@@ -1,20 +1,39 @@
 ﻿@using Microsoft.AspNetCore.Identity;
 @inject SignInManager<Users> SignInManager;
-<ul class="navbar-nav ms-auto">
+
+<div class="auth-buttons">
     @if (SignInManager.IsSignedIn(User))
     {
-        <li class="nav-item">
-            <a class="nav-link text-dark" asp-controller="Account" asp-action="Logout">Logout</a>
-        </li>
+        <a class="nav-link button" asp-controller="Account" asp-action="Logout">Logout</a>
     }
     else
     {
-        <li class="nav-item">
-            <a class="nav-link text-dark" asp-controller="Account" asp-action="Login">Login</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link text-dark" asp-controller="Account" asp-action="Register">Register</a>
-        </li>
+        <a class="nav-link button" asp-controller="Account" asp-action="Login">Login</a>
+        <a class="nav-link button" asp-controller="Account" asp-action="Register">Register</a>
+    }
+</div>
+
+<style>
+    .auth-buttons {
+        position: absolute; /* מאפשר מיקום אבסולוטי */
+        top: 10px; /* מרחק מהחלק העליון */
+        right: 10px; /* מרחק מהחלק הימני */
+        display: flex; /* יישור אופקי */
+        gap: 10px; /* ריווח בין הכפתורים */
     }
 
-</ul>
+        .auth-buttons .button {
+            background-color: #47b2e4; /* צבע רקע */
+            color: #fff; /* צבע טקסט */
+            padding: 8px 20px; /* ריווח פנימי */
+            border-radius: 50px; /* עיגול פינות */
+            font-weight: 600;
+            text-decoration: none; /* ללא קו תחתי */
+            transition: background-color 0.3s, color 0.3s; /* אנימציה */
+        }
+
+            .auth-buttons .button:hover {
+                background-color: #0056b3; /* צבע כהה יותר במעבר */
+                color: #ffffff; /* טקסט לבן */
+            }
+</style>

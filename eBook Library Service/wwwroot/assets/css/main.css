@@ -1,10 +1,11 @@
-/**
+﻿/**
 * Template Name: Arsha
 * Template URL: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/
 * Updated: Aug 07 2024 with Bootstrap v5.3.3
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
+
 
 /*--------------------------------------------------------------
 # Font & Color Variables
@@ -230,14 +231,16 @@ h6 {
 
     .navmenu {
         padding: 0;
+        
     }
 
         .navmenu ul {
-            margin: 0;
+            margin: 140px;
             padding: 0;
             display: flex;
             list-style: none;
             align-items: center;
+            
         }
 
         .navmenu li {
@@ -265,7 +268,7 @@ h6 {
                 margin-left: 5px;
                 transition: 0.3s;
             }
-
+            
         .navmenu li:last-child a {
             padding-right: 0;
         }
@@ -514,7 +517,7 @@ h6 {
 --------------------------------------------------------------*/
 .footer {
     color: var(--default-color);
-    background-color: var(--background-color);
+    background-color: var(--background-color);zzz
     font-size: 14px;
     padding-bottom: 50px;
     position: relative;
@@ -735,6 +738,7 @@ h6 {
         opacity: 1;
         bottom: 15px;
     }
+    
 
 /*--------------------------------------------------------------
 # Disable aos animation delay on mobile devices

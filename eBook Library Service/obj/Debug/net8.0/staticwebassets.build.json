@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "8bBS+V9W3UkTz0Kp2fmdu7OT4RgiDjclSq8PuEBgMCo=",
+  "Hash": "bmsEv20As9SNBgtUiiw1Tro1uxZWWngJevYihq3NGwU=",
   "Source": "eBook Library Service",
   "BasePath": "_content/eBook Library Service",
   "Mode": "Default",
@@ -53,6 +53,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\eBook Library Service\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\eBook Library Service.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\eBook Library Service\\wwwroot\\assets\\css\\account.css",
+      "SourceId": "eBook Library Service",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\eBook Library Service\\wwwroot\\",
+      "BasePath": "_content/eBook Library Service",
+      "RelativePath": "assets/css/account.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\css\\account.css"
     },
     {
       "Identity": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\eBook Library Service\\wwwroot\\assets\\css\\main.css",
@@ -319,6 +338,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\img\\hero-img.png"
+    },
+    {
+      "Identity": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\eBook Library Service\\wwwroot\\assets\\img\\io.jpg",
+      "SourceId": "eBook Library Service",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\eBook Library Service\\wwwroot\\",
+      "BasePath": "_content/eBook Library Service",
+      "RelativePath": "assets/img/io.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\io.jpg"
     },
     {
       "Identity": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\eBook Library Service\\wwwroot\\assets\\img\\logo.png",
