@@ -3,14 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{59671C97-9929-401B-B328-B9CB92FCE5BF}|eBook Library Service\\eBook Library Service.csproj|c:\\users\\ibrah\\source\\repos\\ebook library service\\ebook library service\\ty\\ccad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{59671C97-9929-401B-B328-B9CB92FCE5BF}|eBook Library Service\\eBook Library Service.csproj|solutionrelative:ebook library service\\ty\\ccad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{59671C97-9929-401B-B328-B9CB92FCE5BF}|eBook Library Service\\eBook Library Service.csproj|c:\\users\\ibrah\\source\\repos\\ebook library service\\ebook library service\\ebook library service.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{59671C97-9929-401B-B328-B9CB92FCE5BF}|eBook Library Service\\eBook Library Service.csproj|solutionrelative:ebook library service\\ebook library service.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{59671C97-9929-401B-B328-B9CB92FCE5BF}|eBook Library Service\\eBook Library Service.csproj|c:\\users\\ibrah\\source\\repos\\ebook library service\\ebook library service\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{59671C97-9929-401B-B328-B9CB92FCE5BF}|eBook Library Service\\eBook Library Service.csproj|solutionrelative:ebook library service\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -110,53 +102,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ccad.cs",
-              "DocumentMoniker": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\eBook Library Service\\ty\\ccad.cs",
-              "RelativeDocumentMoniker": "eBook Library Service\\ty\\ccad.cs",
-              "ToolTip": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\eBook Library Service\\ty\\ccad.cs",
-              "RelativeToolTip": "eBook Library Service\\ty\\ccad.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-29T13:26:22.953Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "eBook Library Service.csproj",
-              "DocumentMoniker": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\eBook Library Service\\eBook Library Service.csproj",
-              "RelativeDocumentMoniker": "eBook Library Service\\eBook Library Service.csproj",
-              "ToolTip": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\eBook Library Service\\eBook Library Service.csproj",
-              "RelativeToolTip": "eBook Library Service\\eBook Library Service.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-12-29T13:15:18.713Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\eBook Library Service\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "eBook Library Service\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\eBook Library Service\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "eBook Library Service\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAACIAAAAAAAAAAIBJwCkAAAAKAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-21T18:58:34.195Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "main.css",
               "DocumentMoniker": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\eBook Library Service\\wwwroot\\assets\\css\\main.css",
               "RelativeDocumentMoniker": "eBook Library Service\\wwwroot\\assets\\css\\main.css",
@@ -168,7 +126,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "account.css",
               "DocumentMoniker": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\eBook Library Service\\wwwroot\\assets\\css\\account.css",
               "RelativeDocumentMoniker": "eBook Library Service\\wwwroot\\assets\\css\\account.css",
@@ -180,7 +138,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\eBook Library Service\\Program.cs",
+              "RelativeDocumentMoniker": "eBook Library Service\\Program.cs",
+              "ToolTip": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\eBook Library Service\\Program.cs",
+              "RelativeToolTip": "eBook Library Service\\Program.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABYAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-21T18:58:38.539Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\eBook Library Service\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "eBook Library Service\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\eBook Library Service\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "eBook Library Service\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAACUAAAAAAAAAAAAAACkAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-21T18:58:34.195Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\eBook Library Service\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "eBook Library Service\\Views\\Home\\Index.cshtml",
@@ -192,7 +175,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 9,
               "Title": "LoginViewModel.cs",
               "DocumentMoniker": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\eBook Library Service\\ViewModels\\LoginViewModel.cs",
               "RelativeDocumentMoniker": "eBook Library Service\\ViewModels\\LoginViewModel.cs",
@@ -204,7 +187,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 6,
               "Title": "_LoginPartial.cshtml",
               "DocumentMoniker": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\eBook Library Service\\Views\\Shared\\_LoginPartial.cshtml",
               "RelativeDocumentMoniker": "eBook Library Service\\Views\\Shared\\_LoginPartial.cshtml",
@@ -216,7 +199,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 5,
               "Title": "_AccountLayout.cshtml",
               "DocumentMoniker": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\eBook Library Service\\Views\\Shared\\_AccountLayout.cshtml",
               "RelativeDocumentMoniker": "eBook Library Service\\Views\\Shared\\_AccountLayout.cshtml",
@@ -228,19 +211,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\eBook Library Service\\Program.cs",
-              "RelativeDocumentMoniker": "eBook Library Service\\Program.cs",
-              "ToolTip": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\eBook Library Service\\Program.cs",
-              "RelativeToolTip": "eBook Library Service\\Program.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABYAAAAuAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-21T18:58:38.539Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 8,
               "Title": "Login.cshtml",
               "DocumentMoniker": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\eBook Library Service\\Views\\Account\\Login.cshtml",
               "RelativeDocumentMoniker": "eBook Library Service\\Views\\Account\\Login.cshtml",
@@ -252,7 +223,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 7,
               "Title": "AccountController.cs",
               "DocumentMoniker": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\eBook Library Service\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "eBook Library Service\\Controllers\\AccountController.cs",
@@ -264,7 +235,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 10,
               "Title": "RegisterViewModel.cs",
               "DocumentMoniker": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\eBook Library Service\\ViewModels\\RegisterViewModel.cs",
               "RelativeDocumentMoniker": "eBook Library Service\\ViewModels\\RegisterViewModel.cs",
@@ -276,7 +247,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 11,
               "Title": "_ValidationScriptsPartial.cshtml",
               "DocumentMoniker": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\eBook Library Service\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
               "RelativeDocumentMoniker": "eBook Library Service\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
@@ -288,7 +259,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 12,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\eBook Library Service\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "eBook Library Service\\Controllers\\HomeController.cs",
@@ -300,7 +271,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 13,
               "Title": "ChangePasswordViewModel.cs",
               "DocumentMoniker": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\eBook Library Service\\ViewModels\\ChangePasswordViewModel.cs",
               "RelativeDocumentMoniker": "eBook Library Service\\ViewModels\\ChangePasswordViewModel.cs",
@@ -312,7 +283,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 14,
               "Title": "ChangePassword.cshtml",
               "DocumentMoniker": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\eBook Library Service\\Views\\Account\\ChangePassword.cshtml",
               "RelativeDocumentMoniker": "eBook Library Service\\Views\\Account\\ChangePassword.cshtml",
@@ -324,7 +295,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 15,
               "Title": "VerifyEmail.cshtml",
               "DocumentMoniker": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\eBook Library Service\\Views\\Account\\VerifyEmail.cshtml",
               "RelativeDocumentMoniker": "eBook Library Service\\Views\\Account\\VerifyEmail.cshtml",
@@ -336,7 +307,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 16,
               "Title": "Register.cshtml",
               "DocumentMoniker": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\eBook Library Service\\Views\\Account\\Register.cshtml",
               "RelativeDocumentMoniker": "eBook Library Service\\Views\\Account\\Register.cshtml",
@@ -348,7 +319,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 17,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\eBook Library Service\\Data\\AppDbContext.cs",
               "RelativeDocumentMoniker": "eBook Library Service\\Data\\AppDbContext.cs",
@@ -360,7 +331,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 18,
               "Title": "ErrorViewModel.cs",
               "DocumentMoniker": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\eBook Library Service\\Models\\ErrorViewModel.cs",
               "RelativeDocumentMoniker": "eBook Library Service\\Models\\ErrorViewModel.cs",
@@ -372,7 +343,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 21,
               "Title": "About.cshtml",
               "DocumentMoniker": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\eBook Library Service\\Views\\Home\\About.cshtml",
               "RelativeDocumentMoniker": "eBook Library Service\\Views\\Home\\About.cshtml",
@@ -384,7 +355,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 22,
               "Title": "main.js",
               "DocumentMoniker": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\eBook Library Service\\wwwroot\\assets\\js\\main.js",
               "RelativeDocumentMoniker": "eBook Library Service\\wwwroot\\assets\\js\\main.js",
@@ -396,7 +367,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 20,
               "Title": "Contact.cshtml",
               "DocumentMoniker": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\eBook Library Service\\Views\\Home\\Contact.cshtml",
               "RelativeDocumentMoniker": "eBook Library Service\\Views\\Home\\Contact.cshtml",
@@ -408,7 +379,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 19,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\eBook Library Service\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "eBook Library Service\\Properties\\launchSettings.json",
