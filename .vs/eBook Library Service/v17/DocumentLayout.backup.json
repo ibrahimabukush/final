@@ -3,7 +3,23 @@
   "WorkspaceRootPath": "C:\\Users\\eldad\\eBook-Library-Service\\",
   "Documents": [
     {
+<<<<<<< HEAD
       "AbsoluteMoniker": "D:0:0:{59671C97-9929-401B-B328-B9CB92FCE5BF}|eBook Library Service\\eBook Library Service.csproj|c:\\users\\eldad\\ebook-library-service\\ebook library service\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+=======
+      "AbsoluteMoniker": "D:0:0:{59671C97-9929-401B-B328-B9CB92FCE5BF}|eBook Library Service\\eBook Library Service.csproj|c:\\users\\ibrah\\source\\repos\\ebook library service\\ebook library service\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59671C97-9929-401B-B328-B9CB92FCE5BF}|eBook Library Service\\eBook Library Service.csproj|solutionrelative:ebook library service\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59671C97-9929-401B-B328-B9CB92FCE5BF}|eBook Library Service\\eBook Library Service.csproj|c:\\users\\ibrah\\source\\repos\\ebook library service\\ebook library service\\wwwroot\\assets\\css\\account.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{59671C97-9929-401B-B328-B9CB92FCE5BF}|eBook Library Service\\eBook Library Service.csproj|solutionrelative:ebook library service\\wwwroot\\assets\\css\\account.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59671C97-9929-401B-B328-B9CB92FCE5BF}|eBook Library Service\\eBook Library Service.csproj|c:\\users\\ibrah\\source\\repos\\ebook library service\\ebook library service\\wwwroot\\assets\\css\\main.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{59671C97-9929-401B-B328-B9CB92FCE5BF}|eBook Library Service\\eBook Library Service.csproj|solutionrelative:ebook library service\\wwwroot\\assets\\css\\main.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59671C97-9929-401B-B328-B9CB92FCE5BF}|eBook Library Service\\eBook Library Service.csproj|c:\\users\\ibrah\\source\\repos\\ebook library service\\ebook library service\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+>>>>>>> ddd752ea383ff7436b8b1073b63a10fadb73751f
       "RelativeMoniker": "D:0:0:{59671C97-9929-401B-B328-B9CB92FCE5BF}|eBook Library Service\\eBook Library Service.csproj|solutionrelative:ebook library service\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
@@ -106,7 +122,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
+<<<<<<< HEAD
           "SelectedChildIndex": 7,
+=======
+          "SelectedChildIndex": 4,
+>>>>>>> ddd752ea383ff7436b8b1073b63a10fadb73751f
           "Children": [
             {
               "$type": "Bookmark",
@@ -118,6 +138,7 @@
             },
             {
               "$type": "Bookmark",
+<<<<<<< HEAD
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
@@ -131,10 +152,50 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2024-12-29T13:15:18.713Z",
+=======
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "main.css",
+              "DocumentMoniker": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\eBook Library Service\\wwwroot\\assets\\css\\main.css",
+              "RelativeDocumentMoniker": "eBook Library Service\\wwwroot\\assets\\css\\main.css",
+              "ToolTip": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\eBook Library Service\\wwwroot\\assets\\css\\main.css",
+              "RelativeToolTip": "eBook Library Service\\wwwroot\\assets\\css\\main.css",
+              "ViewState": "AQIAAGADAAAAAAAAAIBJwHUDAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-23T15:41:13.343Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "account.css",
+              "DocumentMoniker": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\eBook Library Service\\wwwroot\\assets\\css\\account.css",
+              "RelativeDocumentMoniker": "eBook Library Service\\wwwroot\\assets\\css\\account.css",
+              "ToolTip": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\eBook Library Service\\wwwroot\\assets\\css\\account.css",
+              "RelativeToolTip": "eBook Library Service\\wwwroot\\assets\\css\\account.css",
+              "ViewState": "AQIAAOsCAAAAAAAAAAAmwPcCAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-26T08:48:17.572Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\eBook Library Service\\Program.cs",
+              "RelativeDocumentMoniker": "eBook Library Service\\Program.cs",
+              "ToolTip": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\eBook Library Service\\Program.cs",
+              "RelativeToolTip": "eBook Library Service\\Program.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABYAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-21T18:58:38.539Z",
+>>>>>>> ddd752ea383ff7436b8b1073b63a10fadb73751f
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 3,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\eldad\\eBook-Library-Service\\eBook Library Service\\Views\\Shared\\_Layout.cshtml",
@@ -142,12 +203,34 @@
               "ToolTip": "C:\\Users\\eldad\\eBook-Library-Service\\eBook Library Service\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "eBook Library Service\\Views\\Shared\\_Layout.cshtml",
               "ViewState": "AgIAACUAAAAAAAAAAAAAACkAAAAKAAAAAAAAAA==",
+=======
+              "DocumentIndex": 4,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\eBook Library Service\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "eBook Library Service\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\eBook Library Service\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "eBook Library Service\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAACUAAAAAAAAAAAAAACkAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-21T18:58:34.195Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\eBook Library Service\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "eBook Library Service\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ibrah\\source\\repos\\eBook Library Service\\eBook Library Service\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "eBook Library Service\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAyAAAA",
+>>>>>>> ddd752ea383ff7436b8b1073b63a10fadb73751f
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-12-21T18:58:34.195Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 2,
               "Title": "main.css",
               "DocumentMoniker": "C:\\Users\\eldad\\eBook-Library-Service\\eBook Library Service\\wwwroot\\assets\\css\\main.css",
@@ -188,6 +271,9 @@
             {
               "$type": "Document",
               "DocumentIndex": 10,
+=======
+              "DocumentIndex": 9,
+>>>>>>> ddd752ea383ff7436b8b1073b63a10fadb73751f
               "Title": "LoginViewModel.cs",
               "DocumentMoniker": "C:\\Users\\eldad\\eBook-Library-Service\\eBook Library Service\\ViewModels\\LoginViewModel.cs",
               "RelativeDocumentMoniker": "eBook Library Service\\ViewModels\\LoginViewModel.cs",
@@ -199,7 +285,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 7,
+=======
+              "DocumentIndex": 6,
+>>>>>>> ddd752ea383ff7436b8b1073b63a10fadb73751f
               "Title": "_LoginPartial.cshtml",
               "DocumentMoniker": "C:\\Users\\eldad\\eBook-Library-Service\\eBook Library Service\\Views\\Shared\\_LoginPartial.cshtml",
               "RelativeDocumentMoniker": "eBook Library Service\\Views\\Shared\\_LoginPartial.cshtml",
@@ -211,7 +301,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 6,
+=======
+              "DocumentIndex": 5,
+>>>>>>> ddd752ea383ff7436b8b1073b63a10fadb73751f
               "Title": "_AccountLayout.cshtml",
               "DocumentMoniker": "C:\\Users\\eldad\\eBook-Library-Service\\eBook Library Service\\Views\\Shared\\_AccountLayout.cshtml",
               "RelativeDocumentMoniker": "eBook Library Service\\Views\\Shared\\_AccountLayout.cshtml",
@@ -223,6 +317,7 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\eldad\\eBook-Library-Service\\eBook Library Service\\Program.cs",
@@ -236,6 +331,9 @@
             {
               "$type": "Document",
               "DocumentIndex": 9,
+=======
+              "DocumentIndex": 8,
+>>>>>>> ddd752ea383ff7436b8b1073b63a10fadb73751f
               "Title": "Login.cshtml",
               "DocumentMoniker": "C:\\Users\\eldad\\eBook-Library-Service\\eBook Library Service\\Views\\Account\\Login.cshtml",
               "RelativeDocumentMoniker": "eBook Library Service\\Views\\Account\\Login.cshtml",
@@ -247,7 +345,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 8,
+=======
+              "DocumentIndex": 7,
+>>>>>>> ddd752ea383ff7436b8b1073b63a10fadb73751f
               "Title": "AccountController.cs",
               "DocumentMoniker": "C:\\Users\\eldad\\eBook-Library-Service\\eBook Library Service\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "eBook Library Service\\Controllers\\AccountController.cs",
@@ -259,7 +361,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 11,
+=======
+              "DocumentIndex": 10,
+>>>>>>> ddd752ea383ff7436b8b1073b63a10fadb73751f
               "Title": "RegisterViewModel.cs",
               "DocumentMoniker": "C:\\Users\\eldad\\eBook-Library-Service\\eBook Library Service\\ViewModels\\RegisterViewModel.cs",
               "RelativeDocumentMoniker": "eBook Library Service\\ViewModels\\RegisterViewModel.cs",
@@ -271,7 +377,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 12,
+=======
+              "DocumentIndex": 11,
+>>>>>>> ddd752ea383ff7436b8b1073b63a10fadb73751f
               "Title": "_ValidationScriptsPartial.cshtml",
               "DocumentMoniker": "C:\\Users\\eldad\\eBook-Library-Service\\eBook Library Service\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
               "RelativeDocumentMoniker": "eBook Library Service\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
@@ -283,7 +393,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 13,
+=======
+              "DocumentIndex": 12,
+>>>>>>> ddd752ea383ff7436b8b1073b63a10fadb73751f
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\eldad\\eBook-Library-Service\\eBook Library Service\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "eBook Library Service\\Controllers\\HomeController.cs",
@@ -295,7 +409,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 14,
+=======
+              "DocumentIndex": 13,
+>>>>>>> ddd752ea383ff7436b8b1073b63a10fadb73751f
               "Title": "ChangePasswordViewModel.cs",
               "DocumentMoniker": "C:\\Users\\eldad\\eBook-Library-Service\\eBook Library Service\\ViewModels\\ChangePasswordViewModel.cs",
               "RelativeDocumentMoniker": "eBook Library Service\\ViewModels\\ChangePasswordViewModel.cs",
@@ -307,7 +425,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 15,
+=======
+              "DocumentIndex": 14,
+>>>>>>> ddd752ea383ff7436b8b1073b63a10fadb73751f
               "Title": "ChangePassword.cshtml",
               "DocumentMoniker": "C:\\Users\\eldad\\eBook-Library-Service\\eBook Library Service\\Views\\Account\\ChangePassword.cshtml",
               "RelativeDocumentMoniker": "eBook Library Service\\Views\\Account\\ChangePassword.cshtml",
@@ -319,7 +441,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 16,
+=======
+              "DocumentIndex": 15,
+>>>>>>> ddd752ea383ff7436b8b1073b63a10fadb73751f
               "Title": "VerifyEmail.cshtml",
               "DocumentMoniker": "C:\\Users\\eldad\\eBook-Library-Service\\eBook Library Service\\Views\\Account\\VerifyEmail.cshtml",
               "RelativeDocumentMoniker": "eBook Library Service\\Views\\Account\\VerifyEmail.cshtml",
@@ -331,7 +457,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 17,
+=======
+              "DocumentIndex": 16,
+>>>>>>> ddd752ea383ff7436b8b1073b63a10fadb73751f
               "Title": "Register.cshtml",
               "DocumentMoniker": "C:\\Users\\eldad\\eBook-Library-Service\\eBook Library Service\\Views\\Account\\Register.cshtml",
               "RelativeDocumentMoniker": "eBook Library Service\\Views\\Account\\Register.cshtml",
@@ -343,7 +473,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 18,
+=======
+              "DocumentIndex": 17,
+>>>>>>> ddd752ea383ff7436b8b1073b63a10fadb73751f
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "C:\\Users\\eldad\\eBook-Library-Service\\eBook Library Service\\Data\\AppDbContext.cs",
               "RelativeDocumentMoniker": "eBook Library Service\\Data\\AppDbContext.cs",
@@ -355,7 +489,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 19,
+=======
+              "DocumentIndex": 18,
+>>>>>>> ddd752ea383ff7436b8b1073b63a10fadb73751f
               "Title": "ErrorViewModel.cs",
               "DocumentMoniker": "C:\\Users\\eldad\\eBook-Library-Service\\eBook Library Service\\Models\\ErrorViewModel.cs",
               "RelativeDocumentMoniker": "eBook Library Service\\Models\\ErrorViewModel.cs",
@@ -367,7 +505,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 22,
+=======
+              "DocumentIndex": 21,
+>>>>>>> ddd752ea383ff7436b8b1073b63a10fadb73751f
               "Title": "About.cshtml",
               "DocumentMoniker": "C:\\Users\\eldad\\eBook-Library-Service\\eBook Library Service\\Views\\Home\\About.cshtml",
               "RelativeDocumentMoniker": "eBook Library Service\\Views\\Home\\About.cshtml",
@@ -379,7 +521,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 23,
+=======
+              "DocumentIndex": 22,
+>>>>>>> ddd752ea383ff7436b8b1073b63a10fadb73751f
               "Title": "main.js",
               "DocumentMoniker": "C:\\Users\\eldad\\eBook-Library-Service\\eBook Library Service\\wwwroot\\assets\\js\\main.js",
               "RelativeDocumentMoniker": "eBook Library Service\\wwwroot\\assets\\js\\main.js",
@@ -391,7 +537,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 21,
+=======
+              "DocumentIndex": 20,
+>>>>>>> ddd752ea383ff7436b8b1073b63a10fadb73751f
               "Title": "Contact.cshtml",
               "DocumentMoniker": "C:\\Users\\eldad\\eBook-Library-Service\\eBook Library Service\\Views\\Home\\Contact.cshtml",
               "RelativeDocumentMoniker": "eBook Library Service\\Views\\Home\\Contact.cshtml",
@@ -403,7 +553,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 20,
+=======
+              "DocumentIndex": 19,
+>>>>>>> ddd752ea383ff7436b8b1073b63a10fadb73751f
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\eldad\\eBook-Library-Service\\eBook Library Service\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "eBook Library Service\\Properties\\launchSettings.json",
