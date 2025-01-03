@@ -114,3 +114,15 @@ wwwroot\assets\vendor\waypoints\noframework.waypoints.js
 wwwroot\forms\contact.php
 wwwroot\forms\newsletter.php
 wwwroot\forms\Readme.txt
+wwwroot\images\2637da17-01a7-498d-9f82-22fba6c8b956_HideAndSeek.jpg
+wwwroot\images\5df6a456-52dd-450e-aca4-d439a378449b_images.jpg
+wwwroot\images\6cc5ea98-b606-4f41-9cf3-a925fbf621c0_HideAndSeek.jpg
+wwwroot\images\75fb1c6d-4dc7-43ca-87d0-5cfaab2a7152_images.jpg
+wwwroot\images\7f3b0518-a356-4286-af16-cfb6cd510c4f_Million.jpg
+wwwroot\images\b2da977e-d78c-43cf-934b-a77994e9a37e_images.jpg
+wwwroot\images\BookDefult.png
+wwwroot\images\f71b74d4-37cc-41c4-9727-dd1a35dacf42_Million.jpg
+wwwroot\images\f939262e-f008-4b7c-b987-d64a3c5abc77_Soul.jpg
+wwwroot\images\HideAndSeek.jpg
+wwwroot\images\Million.jpg
+wwwroot\images\Soul.jpg

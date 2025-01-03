@@ -1,0 +1,19 @@
+﻿@model Book
+@{
+	ViewBag.Title = "Details";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h1>@Model.Title Details</h1>
+@if (Model.BookAuthors != null && Model.BookAuthors.Any())
+{
+	<h3>Authors</h3>
+	<ul>
+		@foreach (var author in Model.BookAuthors)
+		{
+			<li>@author.Author.Name</li>
+		}
+	</ul>
+	<div>
+		<a asp-action="Index">Back TO LIst</a>
+	</div>
+}

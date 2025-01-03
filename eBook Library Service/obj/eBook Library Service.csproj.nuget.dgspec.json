@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\eldad\\eBook-Library-Service\\eBook Library Service\\eBook Library Service.csproj": {}
+    "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\eBook Library Service.csproj": {}
   },
   "projects": {
-    "C:\\Users\\eldad\\eBook-Library-Service\\eBook Library Service\\eBook Library Service.csproj": {
+    "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\eBook Library Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\eldad\\eBook-Library-Service\\eBook Library Service\\eBook Library Service.csproj",
+        "projectUniqueName": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\eBook Library Service.csproj",
         "projectName": "eBook Library Service",
-        "projectPath": "C:\\Users\\eldad\\eBook-Library-Service\\eBook Library Service\\eBook Library Service.csproj",
+        "projectPath": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\eBook Library Service.csproj",
         "packagesPath": "C:\\Users\\eldad\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\eldad\\eBook-Library-Service\\eBook Library Service\\obj\\",
+        "outputPath": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -73,6 +73,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[9.0.0, )"
+            },
+            "System.Linq.Expressions": {
+              "target": "Package",
+              "version": "[4.3.0, )"
             }
           },
           "imports": [

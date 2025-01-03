@@ -155,6 +155,181 @@ namespace eBook_Library_Service.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("eBook_Library_Service.Models.Author", b =>
+                {
+                    b.Property<int>("AuthorId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AuthorId"));
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("AuthorId");
+
+                    b.ToTable("Authors");
+
+                    b.HasData(
+                        new
+                        {
+                            AuthorId = 1,
+                            Name = "Author1"
+                        },
+                        new
+                        {
+                            AuthorId = 2,
+                            Name = "Author2"
+                        });
+                });
+
+            modelBuilder.Entity("eBook_Library_Service.Models.Book", b =>
+                {
+                    b.Property<int>("BookId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("BookId"));
+
+                    b.Property<string>("AgeLimit")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<decimal>("BorrowPrice")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("BuyPrice")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("Category")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("DiscountEndDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<decimal?>("DiscountPrice")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("ImageUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Publisher")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<int>("Stock")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<int>("YearPublished")
+                        .HasColumnType("int");
+
+                    b.HasKey("BookId");
+
+                    b.ToTable("Books");
+
+                    b.HasData(
+                        new
+                        {
+                            BookId = 1,
+                            AgeLimit = "18+",
+                            BorrowPrice = 5.99m,
+                            BuyPrice = 15.99m,
+                            Category = "Fiction",
+                            Description = "A novel written by American author F. Scott Fitzgerald. It is a critique of the American Dream in the 1920s.",
+                            DiscountEndDate = new DateTime(2025, 12, 31, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DiscountPrice = 12.99m,
+                            ImageUrl = "https://via.placeholder.com/150",
+                            Publisher = "Scribner",
+                            Stock = 3,
+                            Title = "The Great Gatsby",
+                            YearPublished = 1925
+                        },
+                        new
+                        {
+                            BookId = 2,
+                            AgeLimit = "16+",
+                            BorrowPrice = 4.99m,
+                            BuyPrice = 12.99m,
+                            Category = "Science Fiction",
+                            Description = "A dystopian social science fiction novel and cautionary tale, written by the English writer George Orwell.",
+                            DiscountEndDate = new DateTime(2025, 11, 30, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DiscountPrice = 10.99m,
+                            ImageUrl = "https://via.placeholder.com/150",
+                            Publisher = "Secker & Warburg",
+                            Stock = 3,
+                            Title = "1984",
+                            YearPublished = 1949
+                        },
+                        new
+                        {
+                            BookId = 3,
+                            AgeLimit = "12+",
+                            BorrowPrice = 6.99m,
+                            BuyPrice = 14.99m,
+                            Category = "Classic",
+                            Description = "A novel by Harper Lee published in 1960. It was immediately successful, winning the Pulitzer Prize for Fiction in 1961.",
+                            DiscountEndDate = new DateTime(2025, 10, 31, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DiscountPrice = 11.99m,
+                            ImageUrl = "https://via.placeholder.com/150",
+                            Publisher = "J.B. Lippincott & Co.",
+                            Stock = 3,
+                            Title = "To Kill a Mockingbird",
+                            YearPublished = 1960
+                        });
+                });
+
+            modelBuilder.Entity("eBook_Library_Service.Models.BookAuthor", b =>
+                {
+                    b.Property<int>("BookId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("AuthorId")
+                        .HasColumnType("int");
+
+                    b.HasKey("BookId", "AuthorId");
+
+                    b.HasIndex("AuthorId");
+
+                    b.ToTable("BookAuthors");
+
+                    b.HasData(
+                        new
+                        {
+                            BookId = 1,
+                            AuthorId = 1
+                        },
+                        new
+                        {
+                            BookId = 1,
+                            AuthorId = 2
+                        },
+                        new
+                        {
+                            BookId = 2,
+                            AuthorId = 2
+                        },
+                        new
+                        {
+                            BookId = 3,
+                            AuthorId = 1
+                        });
+                });
+
             modelBuilder.Entity("eBook_Library_Service.Models.Users", b =>
                 {
                     b.Property<string>("Id")
@@ -273,6 +448,35 @@ namespace eBook_Library_Service.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("eBook_Library_Service.Models.BookAuthor", b =>
+                {
+                    b.HasOne("eBook_Library_Service.Models.Author", "Author")
+                        .WithMany("BookAuthors")
+                        .HasForeignKey("AuthorId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("eBook_Library_Service.Models.Book", "Book")
+                        .WithMany("BookAuthors")
+                        .HasForeignKey("BookId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Author");
+
+                    b.Navigation("Book");
+                });
+
+            modelBuilder.Entity("eBook_Library_Service.Models.Author", b =>
+                {
+                    b.Navigation("BookAuthors");
+                });
+
+            modelBuilder.Entity("eBook_Library_Service.Models.Book", b =>
+                {
+                    b.Navigation("BookAuthors");
                 });
 #pragma warning restore 612, 618
         }

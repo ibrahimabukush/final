@@ -1,0 +1,34 @@
+﻿@model IEnumerable<Author>;
+@{
+	ViewData["Title"] = "List Of Books";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h1>List Of Books</h1>
+<a asp-action="Create"> Create Author</a>
+<table class="table">
+	<thead>
+		<tr>
+			<th>
+				@Html.DisplayNameFor(model => model.Name)
+			</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (Author i in Model)
+		{
+			<tr>
+				<td>
+					@Html.DisplayFor(modelItem => i.Name)
+				</td>
+				<td>
+					<a asp-action="Details" asp-route-id="@i.AuthorId">Details</a>
+					<a asp-action="Edit" asp-route-id="@i.AuthorId">Edit</a>
+					<a asp-action="Delete" asp-route-id="@i.AuthorId">Delete</a>
+
+				</td>
+
+			</tr>
+		})
+	</tbody>
+</table>
