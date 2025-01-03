@@ -2,4 +2,11 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
+# Ignore solution files
 /eBook Library Service.sln
+
+# Ignore Visual Studio temporary files
+.vs/
+
+# Ignore database and other cache files
+*.db-wal
