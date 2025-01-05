@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ChQkW7m8BTHNGIddcnN5ImV/xd1ExVC76bVUqVUk3us=",
+  "Hash": "Ba2B0kJB6P+CNf8QmKvzdU84UxM83pDJ6BzFJG5jFEw=",
   "Source": "eBook Library Service",
   "BasePath": "_content/eBook Library Service",
   "Mode": "Default",
@@ -983,27 +983,6 @@
       "OriginalItemSpec": "wwwroot\\assets\\img\\why-us.png"
     },
     {
-      "Identity": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\assets\\js\\books.js",
-      "SourceId": "eBook Library Service",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\",
-      "BasePath": "_content/eBook Library Service",
-      "RelativePath": "assets/js/books#[.{fingerprint}]?.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "gmlcp2c3v6",
-      "Integrity": "iIZawScsh/TOKVj4yK/+B904PcZi4EKm3n0nPJOg/ik=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\js\\books.js"
-    },
-    {
       "Identity": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\assets\\js\\main.js",
       "SourceId": "eBook Library Service",
       "SourceType": "Discovered",
@@ -1023,6 +1002,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\js\\main.js"
+    },
+    {
+      "Identity": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\assets\\js\\site.js",
+      "SourceId": "eBook Library Service",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\",
+      "BasePath": "_content/eBook Library Service",
+      "RelativePath": "assets/js/site#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "4ghitrubyc",
+      "Integrity": "1FGWlxfk8vtzo9tCjJuBjUt9X338vvPP2Ox54L3FMrc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\js\\site.js"
     },
     {
       "Identity": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\assets\\scss\\Readme.txt",
@@ -6651,88 +6651,6 @@
       ]
     },
     {
-      "Route": "assets/js/books.gmlcp2c3v6.js",
-      "AssetFile": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\assets\\js\\books.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "837"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"iIZawScsh/TOKVj4yK/+B904PcZi4EKm3n0nPJOg/ik=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 05 Jan 2025 20:10:24 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "gmlcp2c3v6"
-        },
-        {
-          "Name": "label",
-          "Value": "assets/js/books.js"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-iIZawScsh/TOKVj4yK/+B904PcZi4EKm3n0nPJOg/ik="
-        }
-      ]
-    },
-    {
-      "Route": "assets/js/books.js",
-      "AssetFile": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\assets\\js\\books.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "837"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"iIZawScsh/TOKVj4yK/+B904PcZi4EKm3n0nPJOg/ik=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 05 Jan 2025 20:10:24 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-iIZawScsh/TOKVj4yK/+B904PcZi4EKm3n0nPJOg/ik="
-        }
-      ]
-    },
-    {
       "Route": "assets/js/main.js",
       "AssetFile": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\assets\\js\\main.js",
       "Selectors": [],
@@ -6811,6 +6729,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-bY6tZVoi9UlBxBpLA2Bmte0fwsAezNr3/USmi8A3Fa4="
+        }
+      ]
+    },
+    {
+      "Route": "assets/js/site.4ghitrubyc.js",
+      "AssetFile": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\assets\\js\\site.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3210"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1FGWlxfk8vtzo9tCjJuBjUt9X338vvPP2Ox54L3FMrc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 05 Jan 2025 23:05:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "4ghitrubyc"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/js/site.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-1FGWlxfk8vtzo9tCjJuBjUt9X338vvPP2Ox54L3FMrc="
+        }
+      ]
+    },
+    {
+      "Route": "assets/js/site.js",
+      "AssetFile": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\assets\\js\\site.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3210"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1FGWlxfk8vtzo9tCjJuBjUt9X338vvPP2Ox54L3FMrc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 05 Jan 2025 23:05:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-1FGWlxfk8vtzo9tCjJuBjUt9X338vvPP2Ox54L3FMrc="
         }
       ]
     },

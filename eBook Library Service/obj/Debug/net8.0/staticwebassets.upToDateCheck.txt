@@ -42,8 +42,8 @@ wwwroot\assets\img\testimonials\testimonials-3.jpg
 wwwroot\assets\img\testimonials\testimonials-4.jpg
 wwwroot\assets\img\testimonials\testimonials-5.jpg
 wwwroot\assets\img\why-us.png
-wwwroot\assets\js\books.js
 wwwroot\assets\js\main.js
+wwwroot\assets\js\site.js
 wwwroot\assets\scss\Readme.txt
 wwwroot\assets\vendor\aos\aos.cjs.js
 wwwroot\assets\vendor\aos\aos.css

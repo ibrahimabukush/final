@@ -181,12 +181,12 @@
       "PackagePath": "staticwebassets\\assets\\img\\why-us.png"
     },
     {
-      "Id": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\assets\\js\\books.js",
-      "PackagePath": "staticwebassets\\assets\\js\\books.js"
-    },
-    {
       "Id": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\assets\\js\\main.js",
       "PackagePath": "staticwebassets\\assets\\js\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\assets\\js\\site.js",
+      "PackagePath": "staticwebassets\\assets\\js\\site.js"
     },
     {
       "Id": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\assets\\scss\\Readme.txt",

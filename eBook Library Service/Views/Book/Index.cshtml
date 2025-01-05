@@ -12,12 +12,11 @@
 
 <form method="get" asp-action="Index">
     <div class="form-group">
-        <label for="category">Filter by Category:</label>
         <select id="category" name="category" class="form-control">
             <option value="">All</option>
             @foreach (var category in ViewBag.Categories)
             {
-                <option value="@category" selected="@(category == ViewBag.SelectedCategory ? "selected" : "")">@category</option>
+                <option value="@category" selected="@(category == ViewBag.SelectedCategory ? "selected" : null)">@category</option>
             }
         </select>
     </div>
@@ -38,7 +37,7 @@
     <tbody>
         @foreach (var book in Model)
         {
-            <tr>    
+            <tr>
                 <td>
                     <img src="~/images/@book.ImageUrl" alt="@book.Title" style="width: 100px; height: auto;" />
                 </td>
@@ -48,11 +47,11 @@
                 <td>@book.Category</td>
                 <td>
                     <a asp-action="AddEdit" asp-route-id="@book.BookId" class="btn btn-sm btn-warning">
-                        <i class="bi bi-pencil-square"></i> 
+                        <i class="bi bi-pencil-square"></i>
                     </a>
                     <form asp-action="Delete" asp-route-id="@book.BookId" method="post" style="display:inline;">
                         <button type="submit" class="btn btn-sm btn-danger">
-                            <i class="bi bi-trash3-fill"></i> 
+                            <i class="bi bi-trash3-fill"></i>
                         </button>
                     </form>
                 </td>

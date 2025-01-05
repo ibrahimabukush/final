@@ -87,10 +87,8 @@
             <option value="">All</option>
             @foreach (var category in ViewBag.Categories)
             {
-                <option value="@category" selected="@(category == ViewBag.SelectedCategory ? "selected" : "")">@category</option>
-
-
-
+                var isSelected = category == ViewBag.SelectedCategory ? "selected" : null;
+                <option value="@category" selected="@isSelected">@category</option>
             }
         </select>
     </div>
@@ -105,55 +103,43 @@
 <div id="bookList" class="book-list mt-4">
     @foreach (var book in Model)
     {
-        <div class="book-card">
-            <img src="@Url.Content("~/images/" + book.ImageUrl)" alt="@book.Description" />
-            <div class="book-card-body">
-                <h5>@book.Title</h5>
-                <p>@book.Description</p>
-                <p><strong>Published:</strong> @book.YearPublished</p>
-                <p><strong>Category:</strong> @book.Category</p>
-          
-                <div>
-                    @if (book.DiscountEndDate.HasValue && book.DiscountEndDate.Value > DateTime.Now)
-                    {
-                        <p class="card-text" style="color: #dc3545; font-weight: bold; font-size: 1rem;">
-                            Discount ends in: <span id="countdown-@book.BookId"></span>
-                        </p>
+        <a asp-action="Details" asp-route-id="@book.BookId">
+            <div class="book-card">
+                <img src="@Url.Content("~/images/" + book.ImageUrl)" alt="@book.Description" />
+                <div class="book-card-body">
+                    <h5>@book.Title</h5>
+                    <p>@book.Description</p>
+                    <p><strong>Published:</strong> @book.YearPublished</p>
+                    <p><strong>Category:</strong> @book.Category</p>
+                    <div>
+                        @if (book.DiscountEndDate.HasValue && book.DiscountEndDate.Value > DateTime.Now)
+                        {
+                            <p class="card-text" style="color: #dc3545; font-weight: bold; font-size: 1rem;">
+                                Discount ends in: <span id="countdown-@book.BookId"></span>
+                            </p>
 
-                        var originalPrice = book.BuyPrice / (1 - (book.DiscountPrice.Value / 100));
+                            var originalPrice = book.BuyPrice / (1 - (book.DiscountPrice.Value / 100));
 
-                        <p class="card-text" style="color: #dc3545; font-weight: bold; font-size: 1.2rem;">
-                            <span>@book.DiscountPrice.Value% off</span>
-                        </p>
+                            <p class="card-text" style="color: #dc3545; font-weight: bold; font-size: 1.2rem;">
+                                <span>@book.DiscountPrice.Value% off</span>
+                            </p>
 
-                        <p class="card-text" style="color: #dc3545; font-weight: bold; font-size: 1.2rem;">
-                            <span style="text-decoration: line-through; color: #6c757d;">@originalPrice.ToString("c")</span>
+                            <p class="card-text" style="color: #dc3545; font-weight: bold; font-size: 1.2rem;">
+                                <span style="text-decoration: line-through; color: #6c757d;">@originalPrice.ToString("c")</span>
+                            </p>
 
-                        </p>
-
-                        <!-- Pass BookId and DiscountEndDate to JavaScript -->
-                        <script>
-                            var bookId = @book.BookId;
-                            var discountEndDate = '@book.DiscountEndDate.Value.ToString("yyyy-MM-ddTHH:mm:ss")';
-                            // Call the external JavaScript function to initialize the countdown
-                            initCountdown(bookId, discountEndDate);
-                        </script>
-                    }
-                    <span style="color: #28a745;">@book.BuyPrice.ToString("c")</span>
+                            <!-- Pass BookId and DiscountEndDate to JavaScript -->
+                            <script>
+                                var bookId = @book.BookId;
+                                var discountEndDate = '@book.DiscountEndDate.Value.ToString("yyyy-MM-ddTHH:mm:ss")';
+                                initCountdown(bookId, discountEndDate); // Initialize the countdown
+                            </script>
+                        }
+                        <span style="color: #28a745;">@book.BuyPrice.ToString("c")</span>
+                    </div>
                 </div>
-
-               @*  <!-- Price and Add to Cart Section -->
-                <div class="book-price">
-                    <p class="price">Price: <span class="green-price">@book.BuyPrice.ToString("C")</span></p>
-                    <button type="button" class="btn btn-add-to-cart" data-toggle="modal" data-target="#addToCartModal">Add to Cart</button>
-                </div> *@
             </div>
-               
-           
-            <div class="book-card-footer">
-                <a asp-action="Details" asp-route-id="@book.BookId" class="btn btn-info btn-sm">Details</a>
-            </div>
-        </div>
+        </a>
     }
    </div>
 
@@ -170,5 +156,40 @@
                 $('#bookList').html(result);
             }
         });
+    }
+</script>
+<script>
+    // Function to initialize the countdown
+    function initCountdown(bookId, discountEndDate) {
+        // Convert the discount end date to a JavaScript Date object
+        var endDate = new Date(discountEndDate);
+
+        // Get the countdown element for this book
+        var countdownElement = document.getElementById("countdown-" + bookId);
+
+        // Update the countdown every second
+        var countdownInterval = setInterval(function () {
+            // Get the current date and time
+            var now = new Date().getTime();
+
+            // Calculate the remaining time
+            var timeRemaining = endDate - now;
+
+            // If the discount has ended, clear the interval and display a message
+            if (timeRemaining <= 0) {
+                clearInterval(countdownInterval);
+                countdownElement.innerHTML = "Discount ended!";
+                return;
+            }
+
+            // Calculate days, hours, minutes, and seconds
+            var days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+            // Display the countdown
+            countdownElement.innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s";
+        }, 1000); // Update every second
     }
 </script>

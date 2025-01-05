@@ -3611,88 +3611,6 @@
       ]
     },
     {
-      "Route": "assets/js/books.gmlcp2c3v6.js",
-      "AssetFile": "assets/js/books.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "837"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"iIZawScsh/TOKVj4yK/+B904PcZi4EKm3n0nPJOg/ik=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 05 Jan 2025 20:10:24 GMT"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "gmlcp2c3v6"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-iIZawScsh/TOKVj4yK/+B904PcZi4EKm3n0nPJOg/ik="
-        },
-        {
-          "Name": "label",
-          "Value": "assets/js/books.js"
-        }
-      ]
-    },
-    {
-      "Route": "assets/js/books.js",
-      "AssetFile": "assets/js/books.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "837"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"iIZawScsh/TOKVj4yK/+B904PcZi4EKm3n0nPJOg/ik=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 05 Jan 2025 20:10:24 GMT"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-iIZawScsh/TOKVj4yK/+B904PcZi4EKm3n0nPJOg/ik="
-        }
-      ]
-    },
-    {
       "Route": "assets/js/main.js",
       "AssetFile": "assets/js/main.js",
       "Selectors": [],
@@ -3771,6 +3689,88 @@
         {
           "Name": "label",
           "Value": "assets/js/main.js"
+        }
+      ]
+    },
+    {
+      "Route": "assets/js/site.4ghitrubyc.js",
+      "AssetFile": "assets/js/site.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3210"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1FGWlxfk8vtzo9tCjJuBjUt9X338vvPP2Ox54L3FMrc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 05 Jan 2025 23:05:16 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "4ghitrubyc"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-1FGWlxfk8vtzo9tCjJuBjUt9X338vvPP2Ox54L3FMrc="
+        },
+        {
+          "Name": "label",
+          "Value": "assets/js/site.js"
+        }
+      ]
+    },
+    {
+      "Route": "assets/js/site.js",
+      "AssetFile": "assets/js/site.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3210"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1FGWlxfk8vtzo9tCjJuBjUt9X338vvPP2Ox54L3FMrc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 05 Jan 2025 23:05:16 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-1FGWlxfk8vtzo9tCjJuBjUt9X338vvPP2Ox54L3FMrc="
         }
       ]
     },
