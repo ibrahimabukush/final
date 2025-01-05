@@ -1,6 +1,7 @@
 ﻿using eBook_Library_Service.Data;
 using eBook_Library_Service.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace eBook_Library_Service.Controllers
 {
@@ -17,9 +18,31 @@ namespace eBook_Library_Service.Controllers
             _webHostingEnvironment = webHostingEnvironment;
         }
 
-        public async Task<IActionResult> Index()
+
+        public async Task<IActionResult> Index(string category = null)
         {
-            return View(await books.GetAllsync());
+            IEnumerable<Book> bookList;
+
+            if (string.IsNullOrEmpty(category))
+            {
+                bookList = await books.GetAllsync();
+            }
+            else
+            {
+                bookList = await books.GetAllsync();
+                bookList = bookList.Where(b => b.Category == category);
+            }
+
+            ViewBag.Categories = await GetCategories();
+            ViewBag.SelectedCategory = category;
+
+            return View(bookList);
+        }
+
+        private async Task<IEnumerable<string>> GetCategories()
+        {
+            var categories = await books.GetAllsync();
+            return categories.Select(b => b.Category).Distinct().ToList();
         }
 
         [HttpGet]
@@ -171,8 +194,103 @@ namespace eBook_Library_Service.Controllers
             }
         }
 
+        public async Task<IActionResult> UserIndex(string category = null, string searchQuery = null)
+        {
+            var bookList = await books.GetAllsync();
+
+            foreach (var book in bookList)
+            {
+                if (book.DiscountPrice.HasValue && book.DiscountPrice.Value > 0 && book.BuyPrice > 0)
+                {
+                    // Calculate the discounted price
+                    var discountAmount = book.BuyPrice * (book.DiscountPrice.Value / 100);
+                    book.BuyPrice = book.BuyPrice - discountAmount; // Update the BuyPrice with the discounted price
+                }
+                var bookWithAuthors = await books.GetByIdAsync(book.BookId, new QueryOptions<Book>
+                {
+                    Includes = "BookAuthors.Author"
+                });
+                book.BookAuthors = bookWithAuthors.BookAuthors;
+            }
+
+            // Apply category filter if specified
+            if (!string.IsNullOrEmpty(category))
+            {
+                bookList = bookList.Where(b => b.Category != null && b.Category.Equals(category, StringComparison.OrdinalIgnoreCase));
+            }
+
+            // Apply search query filter if specified
+            if (!string.IsNullOrEmpty(searchQuery))
+            {
+                bookList = bookList.Where(b =>
+                    (!string.IsNullOrEmpty(b.Title) && b.Title.Contains(searchQuery, StringComparison.OrdinalIgnoreCase)) ||
+                    (!string.IsNullOrEmpty(b.Description) && b.Description.Contains(searchQuery, StringComparison.OrdinalIgnoreCase)) ||
+                    (!string.IsNullOrEmpty(b.Category) && b.Category.Contains(searchQuery, StringComparison.OrdinalIgnoreCase)));
+            }
+
+            ViewBag.Categories = await GetCategories();
+            ViewBag.SelectedCategory = category;
+            ViewBag.SearchQuery = searchQuery;
+
+            if (IsAjaxRequest(Request))
+            {
+                return PartialView("_BookList", bookList);
+            }
+
+            return View(bookList);
+        }
+
+        public async Task<IActionResult> SearchBook(string category = null, string searchIndex = null)
+        {
+            var bookList = await books.GetAllsync();
+
+            foreach (var book in bookList)
+
+            {
+                if (book.DiscountPrice.HasValue && book.DiscountPrice.Value > 0 && book.BuyPrice > 0)
+                {
+                    // Calculate the discounted price
+                    var discountAmount = book.BuyPrice * (book.DiscountPrice.Value / 100);
+                    book.BuyPrice = book.BuyPrice - discountAmount; // Update the BuyPrice with the discounted price
+                }
+                var bookWithAuthors = await books.GetByIdAsync(book.BookId, new QueryOptions<Book>
+                {
+                    Includes = "BookAuthors.Author"
+                });
+                book.BookAuthors = bookWithAuthors.BookAuthors;
+            }
+
+            // Apply category filter if specified
+            if (!string.IsNullOrEmpty(category))
+            {
+                bookList = bookList.Where(b => b.Category != null && b.Category.Equals(category, StringComparison.OrdinalIgnoreCase));
+            }
+
+            // Apply search query filter if specified
+            if (!string.IsNullOrEmpty(searchIndex))
+            {
+                bookList = bookList.Where(b =>
+                    (!string.IsNullOrEmpty(b.Title) && b.Title.Contains(searchIndex, StringComparison.OrdinalIgnoreCase)) ||
+                    (!string.IsNullOrEmpty(b.Description) && b.Description.Contains(searchIndex, StringComparison.OrdinalIgnoreCase)) ||
+                    (!string.IsNullOrEmpty(b.Category) && b.Category.Contains(searchIndex, StringComparison.OrdinalIgnoreCase)));
+            }
+
+            ViewBag.Categories = await GetCategories();
+            ViewBag.SelectedCategory = category;
+            ViewBag.SearchQuery = searchIndex;
+
+            return PartialView("_BookList", bookList);
+        }
+
+
+        public bool IsAjaxRequest(HttpRequest request)
+        {
+            return request.Headers["X-Requested-With"] == "XMLHttpRequest";
+        }
+
+
         [HttpGet]
-        public async Task<IActionResult> Edit(int id)
+        public async Task<IActionResult> Details(int id)
         {
             var book = await books.GetByIdAsync(id, new QueryOptions<Book>
             {
@@ -185,12 +303,9 @@ namespace eBook_Library_Service.Controllers
                 return NotFound();
             }
 
-            ViewBag.Authors = await authors.GetAllsync();
-            ViewBag.operation = "Edit";
-
             return View(book);
         }
 
-        
+
     }
 }

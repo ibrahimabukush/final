@@ -2048,6 +2048,7 @@ section,
     font-weight: 700;
 }
 
+
 .service-details p {
     font-size: 15px;
 }
@@ -2075,6 +2076,135 @@ section,
     margin-right: 8px;
     color: var(--accent-color);
 }
+@{
+    Layout = "_Layout";
+}
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+}
+
+.book-details-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.book-details {
+    display: flex;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 80%;
+    max-width: 1200px;
+}
+
+.book-image img {
+    width: 100%;
+    max-width: 300px;
+    object-fit: cover;
+    border-right: 2px solid #eee;
+}
+
+.book-info {
+    padding: 20px;
+    width: 100%;
+}
+
+.book-info h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.book-info p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.book-category,
+.book-publisher,
+.book-year {
+    color: #555;
+}
+
+.book-description {
+    margin-top: 20px;
+    font-size: 1.1em;
+}
+
+.book-authors ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.book-authors li {
+    font-size: 1em;
+    color: #555;
+}
+
+.book-age-limit, .book-discount-price, .book-borrow-price, .book-date {
+    margin-top: 15px;
+    font-size: 1.1em;
+}
+
+.book-price {
+    margin-top: 30px;
+}
+
+.green-price {
+    color: #28a745;
+    font-weight: bold;
+}
+
+.blue-price {
+    color: #007bff;
+    font-weight: bold;
+}
+
+.btn {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #218838;
+}
+
+.modal-content {
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.modal-body form {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-body .form-control {
+    margin-bottom: 15px;
+}
+
+.btn-block {
+    width: 100%;
+    padding: 15px;
+    background-color: #ff6347;
+}
+
+.btn-block:hover {
+    background-color: #e5533d;
+}
+
 
 /*--------------------------------------------------------------
 # Starter Section Section

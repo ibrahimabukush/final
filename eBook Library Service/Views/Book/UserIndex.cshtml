@@ -1,0 +1,174 @@
+﻿@model IEnumerable<Book>
+@{
+    ViewBag.Title = "Books";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .book-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+    }
+
+    .book-card {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .book-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .book-card-body {
+        padding: 1rem;
+        flex-grow: 1;
+    }
+
+    .book-card-body h5 {
+        font-size: 1.2rem;
+        color: #007bff;
+        margin-bottom: 0.5rem;
+    }
+
+    .book-card-body p {
+        color: #6c757d;
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .book-card-footer {
+        padding: 1rem;
+        background-color: #f8f9fa;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .book-card-footer .btn {
+        font-size: 0.9rem;
+    }
+
+    .back-to-list-btn {
+        position: absolute;
+        bottom: 1rem;
+        left: 1rem;
+        background-color: transparent;
+        border: 1px solid #007bff;
+        color: #007bff;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1rem;
+    }
+
+    .back-to-list-btn:hover {
+        background-color: #007bff;
+        color: #fff;
+    }
+</style>
+
+<h1>Books</h1>
+
+<!-- Filter Form -->
+<form method="get" asp-action="UserIndex">
+    <div class="form-group">
+        <label for="category">Filter by Category:</label>
+        <select id="category" name="category" class="form-control">
+            <option value="">All</option>
+            @foreach (var category in ViewBag.Categories)
+            {
+                <option value="@category" selected="@(category == ViewBag.SelectedCategory ? "selected" : "")">@category</option>
+
+
+
+            }
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="searchQuery">Search:</label>
+        <input type="text" id="searchQuery" name="searchQuery" class="form-control" value="@ViewBag.SearchQuery" onkeyup="searchBooks()" placeholder="Search for books...">
+    </div>
+    <button type="submit" class="btn btn-primary">Filter</button>
+</form>
+
+<!-- Books List -->
+<div id="bookList" class="book-list mt-4">
+    @foreach (var book in Model)
+    {
+        <div class="book-card">
+            <img src="@Url.Content("~/images/" + book.ImageUrl)" alt="@book.Description" />
+            <div class="book-card-body">
+                <h5>@book.Title</h5>
+                <p>@book.Description</p>
+                <p><strong>Published:</strong> @book.YearPublished</p>
+                <p><strong>Category:</strong> @book.Category</p>
+          
+                <div>
+                    @if (book.DiscountEndDate.HasValue && book.DiscountEndDate.Value > DateTime.Now)
+                    {
+                        <p class="card-text" style="color: #dc3545; font-weight: bold; font-size: 1rem;">
+                            Discount ends in: <span id="countdown-@book.BookId"></span>
+                        </p>
+
+                        var originalPrice = book.BuyPrice / (1 - (book.DiscountPrice.Value / 100));
+
+                        <p class="card-text" style="color: #dc3545; font-weight: bold; font-size: 1.2rem;">
+                            <span>@book.DiscountPrice.Value% off</span>
+                        </p>
+
+                        <p class="card-text" style="color: #dc3545; font-weight: bold; font-size: 1.2rem;">
+                            <span style="text-decoration: line-through; color: #6c757d;">@originalPrice.ToString("c")</span>
+
+                        </p>
+
+                        <!-- Pass BookId and DiscountEndDate to JavaScript -->
+                        <script>
+                            var bookId = @book.BookId;
+                            var discountEndDate = '@book.DiscountEndDate.Value.ToString("yyyy-MM-ddTHH:mm:ss")';
+                            // Call the external JavaScript function to initialize the countdown
+                            initCountdown(bookId, discountEndDate);
+                        </script>
+                    }
+                    <span style="color: #28a745;">@book.BuyPrice.ToString("c")</span>
+                </div>
+
+               @*  <!-- Price and Add to Cart Section -->
+                <div class="book-price">
+                    <p class="price">Price: <span class="green-price">@book.BuyPrice.ToString("C")</span></p>
+                    <button type="button" class="btn btn-add-to-cart" data-toggle="modal" data-target="#addToCartModal">Add to Cart</button>
+                </div> *@
+            </div>
+               
+           
+            <div class="book-card-footer">
+                <a asp-action="Details" asp-route-id="@book.BookId" class="btn btn-info btn-sm">Details</a>
+            </div>
+        </div>
+    }
+   </div>
+
+<script>
+    function searchBooks() {
+        var searchQuery = document.getElementById('searchQuery').value;
+        var category = document.getElementById('category').value;
+
+        $.ajax({
+            url: '@Url.Action("UserIndex", "Book")',
+            type: 'GET',
+            data: { category: category, searchQuery: searchQuery },
+            success: function (result) {
+                $('#bookList').html(result);
+            }
+        });
+    }
+</script>

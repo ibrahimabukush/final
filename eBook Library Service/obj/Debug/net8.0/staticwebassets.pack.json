@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\assets\\css\\main.css"
     },
     {
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\assets\\css\\style.css",
+      "PackagePath": "staticwebassets\\assets\\css\\style.css"
+    },
+    {
       "Id": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\assets\\img\\6920933.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\6920933.jpg"
     },
@@ -175,6 +179,10 @@
     {
       "Id": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\assets\\img\\why-us.png",
       "PackagePath": "staticwebassets\\assets\\img\\why-us.png"
+    },
+    {
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\assets\\js\\books.js",
+      "PackagePath": "staticwebassets\\assets\\js\\books.js"
     },
     {
       "Id": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\assets\\js\\main.js",
@@ -469,8 +477,24 @@
       "PackagePath": "staticwebassets\\forms\\newsletter.php"
     },
     {
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\images\\16242627-f4ec-4e03-a14d-b5475ee470c4_images.jpg",
+      "PackagePath": "staticwebassets\\images\\16242627-f4ec-4e03-a14d-b5475ee470c4_images.jpg"
+    },
+    {
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\images\\1a40ec79-743a-4662-a15f-821bc8b62781_Million.jpg",
+      "PackagePath": "staticwebassets\\images\\1a40ec79-743a-4662-a15f-821bc8b62781_Million.jpg"
+    },
+    {
       "Id": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\images\\2637da17-01a7-498d-9f82-22fba6c8b956_HideAndSeek.jpg",
       "PackagePath": "staticwebassets\\images\\2637da17-01a7-498d-9f82-22fba6c8b956_HideAndSeek.jpg"
+    },
+    {
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\images\\38a02b9b-4c9b-4e29-aeeb-a8f0f30fbdf2_Million.jpg",
+      "PackagePath": "staticwebassets\\images\\38a02b9b-4c9b-4e29-aeeb-a8f0f30fbdf2_Million.jpg"
+    },
+    {
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\images\\4639710c-7b12-4b3b-a7aa-9333ec50ce1f_Million.jpg",
+      "PackagePath": "staticwebassets\\images\\4639710c-7b12-4b3b-a7aa-9333ec50ce1f_Million.jpg"
     },
     {
       "Id": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\images\\5df6a456-52dd-450e-aca4-d439a378449b_images.jpg",
@@ -481,12 +505,20 @@
       "PackagePath": "staticwebassets\\images\\6cc5ea98-b606-4f41-9cf3-a925fbf621c0_HideAndSeek.jpg"
     },
     {
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\images\\71bf1be1-37c4-4927-8d7e-c14596244dc4_OIP.jpg",
+      "PackagePath": "staticwebassets\\images\\71bf1be1-37c4-4927-8d7e-c14596244dc4_OIP.jpg"
+    },
+    {
       "Id": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\images\\75fb1c6d-4dc7-43ca-87d0-5cfaab2a7152_images.jpg",
       "PackagePath": "staticwebassets\\images\\75fb1c6d-4dc7-43ca-87d0-5cfaab2a7152_images.jpg"
     },
     {
       "Id": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\images\\7f3b0518-a356-4286-af16-cfb6cd510c4f_Million.jpg",
       "PackagePath": "staticwebassets\\images\\7f3b0518-a356-4286-af16-cfb6cd510c4f_Million.jpg"
+    },
+    {
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\images\\8eda3e23-7619-485a-839b-45cee9b577bb_HideAndSeek.jpg",
+      "PackagePath": "staticwebassets\\images\\8eda3e23-7619-485a-839b-45cee9b577bb_HideAndSeek.jpg"
     },
     {
       "Id": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\images\\BookDefult.png",
@@ -505,8 +537,32 @@
       "PackagePath": "staticwebassets\\images\\Soul.jpg"
     },
     {
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\images\\a836840d-6170-40fd-83b8-3d5abef9c97c_images.jpg",
+      "PackagePath": "staticwebassets\\images\\a836840d-6170-40fd-83b8-3d5abef9c97c_images.jpg"
+    },
+    {
       "Id": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\images\\b2da977e-d78c-43cf-934b-a77994e9a37e_images.jpg",
       "PackagePath": "staticwebassets\\images\\b2da977e-d78c-43cf-934b-a77994e9a37e_images.jpg"
+    },
+    {
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\images\\cfa963b5-ab80-44d7-83c4-28f1b0eaab69_images.jpg",
+      "PackagePath": "staticwebassets\\images\\cfa963b5-ab80-44d7-83c4-28f1b0eaab69_images.jpg"
+    },
+    {
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\images\\d243c0ba-9f7a-4564-bdec-046a80029219_Million.jpg",
+      "PackagePath": "staticwebassets\\images\\d243c0ba-9f7a-4564-bdec-046a80029219_Million.jpg"
+    },
+    {
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\images\\df4c1c5d-1678-4897-b82b-260c14ecc727_images.jpg",
+      "PackagePath": "staticwebassets\\images\\df4c1c5d-1678-4897-b82b-260c14ecc727_images.jpg"
+    },
+    {
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\images\\df63af07-696d-4cb9-9ec6-fc9a6e97fb49_Soul.jpg",
+      "PackagePath": "staticwebassets\\images\\df63af07-696d-4cb9-9ec6-fc9a6e97fb49_Soul.jpg"
+    },
+    {
+      "Id": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\images\\e500b7d4-3330-4ede-8602-daba0d1b96f1_images.jpg",
+      "PackagePath": "staticwebassets\\images\\e500b7d4-3330-4ede-8602-daba0d1b96f1_images.jpg"
     },
     {
       "Id": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\images\\f71b74d4-37cc-41c4-9727-dd1a35dacf42_Million.jpg",

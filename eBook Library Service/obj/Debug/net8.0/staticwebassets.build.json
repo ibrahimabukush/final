@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "uF94HZDUVuLdj8FK85SLqxVJv2TZnh+wQbHznP4DNRM=",
+  "Hash": "ChQkW7m8BTHNGIddcnN5ImV/xd1ExVC76bVUqVUk3us=",
   "Source": "eBook Library Service",
   "BasePath": "_content/eBook Library Service",
   "Mode": "Default",
@@ -94,11 +94,32 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "o6nthuc7x6",
-      "Integrity": "YHyWHhDjeRXyGGcILEQa9h3XEbgYwBO6UV5AEqTJpKQ=",
+      "Fingerprint": "b2k8849zrq",
+      "Integrity": "k/8KuK8Xnipz3T1JI4/v3fq1A+K7UGCniWbGw6OV94M=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\css\\main.css"
+    },
+    {
+      "Identity": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\assets\\css\\style.css",
+      "SourceId": "eBook Library Service",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\",
+      "BasePath": "_content/eBook Library Service",
+      "RelativePath": "assets/css/style#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "01hzp24inh",
+      "Integrity": "9AEXP/4tTrw0GeOmSJQ0hPX31cd68uigqg2S6aYFV0E=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\css\\style.css"
     },
     {
       "Identity": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\assets\\img\\6920933.jpg",
@@ -960,6 +981,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\img\\why-us.png"
+    },
+    {
+      "Identity": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\assets\\js\\books.js",
+      "SourceId": "eBook Library Service",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\",
+      "BasePath": "_content/eBook Library Service",
+      "RelativePath": "assets/js/books#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "gmlcp2c3v6",
+      "Integrity": "iIZawScsh/TOKVj4yK/+B904PcZi4EKm3n0nPJOg/ik=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\js\\books.js"
     },
     {
       "Identity": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\assets\\js\\main.js",
@@ -2495,6 +2537,48 @@
       "OriginalItemSpec": "wwwroot\\forms\\Readme.txt"
     },
     {
+      "Identity": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\images\\16242627-f4ec-4e03-a14d-b5475ee470c4_images.jpg",
+      "SourceId": "eBook Library Service",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\",
+      "BasePath": "_content/eBook Library Service",
+      "RelativePath": "images/16242627-f4ec-4e03-a14d-b5475ee470c4_images#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "g25arny68o",
+      "Integrity": "KI9NHeIeyCoJH/4v2NvqJ9XE3vimDPnyIBSwNvKd4QQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\16242627-f4ec-4e03-a14d-b5475ee470c4_images.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\images\\1a40ec79-743a-4662-a15f-821bc8b62781_Million.jpg",
+      "SourceId": "eBook Library Service",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\",
+      "BasePath": "_content/eBook Library Service",
+      "RelativePath": "images/1a40ec79-743a-4662-a15f-821bc8b62781_Million#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "3h0bxwd2a6",
+      "Integrity": "J2gsvdgQjNhTPbTQlBwz/osVRIgE8P9osBzUzaFJ/84=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\1a40ec79-743a-4662-a15f-821bc8b62781_Million.jpg"
+    },
+    {
       "Identity": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\images\\2637da17-01a7-498d-9f82-22fba6c8b956_HideAndSeek.jpg",
       "SourceId": "eBook Library Service",
       "SourceType": "Discovered",
@@ -2514,6 +2598,48 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\2637da17-01a7-498d-9f82-22fba6c8b956_HideAndSeek.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\images\\38a02b9b-4c9b-4e29-aeeb-a8f0f30fbdf2_Million.jpg",
+      "SourceId": "eBook Library Service",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\",
+      "BasePath": "_content/eBook Library Service",
+      "RelativePath": "images/38a02b9b-4c9b-4e29-aeeb-a8f0f30fbdf2_Million#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "3h0bxwd2a6",
+      "Integrity": "J2gsvdgQjNhTPbTQlBwz/osVRIgE8P9osBzUzaFJ/84=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\38a02b9b-4c9b-4e29-aeeb-a8f0f30fbdf2_Million.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\images\\4639710c-7b12-4b3b-a7aa-9333ec50ce1f_Million.jpg",
+      "SourceId": "eBook Library Service",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\",
+      "BasePath": "_content/eBook Library Service",
+      "RelativePath": "images/4639710c-7b12-4b3b-a7aa-9333ec50ce1f_Million#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "3h0bxwd2a6",
+      "Integrity": "J2gsvdgQjNhTPbTQlBwz/osVRIgE8P9osBzUzaFJ/84=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\4639710c-7b12-4b3b-a7aa-9333ec50ce1f_Million.jpg"
     },
     {
       "Identity": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\images\\5df6a456-52dd-450e-aca4-d439a378449b_images.jpg",
@@ -2558,6 +2684,27 @@
       "OriginalItemSpec": "wwwroot\\images\\6cc5ea98-b606-4f41-9cf3-a925fbf621c0_HideAndSeek.jpg"
     },
     {
+      "Identity": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\images\\71bf1be1-37c4-4927-8d7e-c14596244dc4_OIP.jpg",
+      "SourceId": "eBook Library Service",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\",
+      "BasePath": "_content/eBook Library Service",
+      "RelativePath": "images/71bf1be1-37c4-4927-8d7e-c14596244dc4_OIP#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "vc1d3k8m5w",
+      "Integrity": "4QSO7dp5qmyGDBp4h3EgDLoXXz7uH9HinoB5UDP1hk8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\71bf1be1-37c4-4927-8d7e-c14596244dc4_OIP.jpg"
+    },
+    {
       "Identity": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\images\\75fb1c6d-4dc7-43ca-87d0-5cfaab2a7152_images.jpg",
       "SourceId": "eBook Library Service",
       "SourceType": "Discovered",
@@ -2600,6 +2747,48 @@
       "OriginalItemSpec": "wwwroot\\images\\7f3b0518-a356-4286-af16-cfb6cd510c4f_Million.jpg"
     },
     {
+      "Identity": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\images\\8eda3e23-7619-485a-839b-45cee9b577bb_HideAndSeek.jpg",
+      "SourceId": "eBook Library Service",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\",
+      "BasePath": "_content/eBook Library Service",
+      "RelativePath": "images/8eda3e23-7619-485a-839b-45cee9b577bb_HideAndSeek#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "imd1ud3bn8",
+      "Integrity": "xuJSM/9UgJ6moxwhKOXQ8hpnq7ZWfHq/lR01v2hMuHM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\8eda3e23-7619-485a-839b-45cee9b577bb_HideAndSeek.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\images\\a836840d-6170-40fd-83b8-3d5abef9c97c_images.jpg",
+      "SourceId": "eBook Library Service",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\",
+      "BasePath": "_content/eBook Library Service",
+      "RelativePath": "images/a836840d-6170-40fd-83b8-3d5abef9c97c_images#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "g25arny68o",
+      "Integrity": "KI9NHeIeyCoJH/4v2NvqJ9XE3vimDPnyIBSwNvKd4QQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\a836840d-6170-40fd-83b8-3d5abef9c97c_images.jpg"
+    },
+    {
       "Identity": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\images\\b2da977e-d78c-43cf-934b-a77994e9a37e_images.jpg",
       "SourceId": "eBook Library Service",
       "SourceType": "Discovered",
@@ -2640,6 +2829,111 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\BookDefult.png"
+    },
+    {
+      "Identity": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\images\\cfa963b5-ab80-44d7-83c4-28f1b0eaab69_images.jpg",
+      "SourceId": "eBook Library Service",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\",
+      "BasePath": "_content/eBook Library Service",
+      "RelativePath": "images/cfa963b5-ab80-44d7-83c4-28f1b0eaab69_images#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "g25arny68o",
+      "Integrity": "KI9NHeIeyCoJH/4v2NvqJ9XE3vimDPnyIBSwNvKd4QQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\cfa963b5-ab80-44d7-83c4-28f1b0eaab69_images.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\images\\d243c0ba-9f7a-4564-bdec-046a80029219_Million.jpg",
+      "SourceId": "eBook Library Service",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\",
+      "BasePath": "_content/eBook Library Service",
+      "RelativePath": "images/d243c0ba-9f7a-4564-bdec-046a80029219_Million#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "3h0bxwd2a6",
+      "Integrity": "J2gsvdgQjNhTPbTQlBwz/osVRIgE8P9osBzUzaFJ/84=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\d243c0ba-9f7a-4564-bdec-046a80029219_Million.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\images\\df4c1c5d-1678-4897-b82b-260c14ecc727_images.jpg",
+      "SourceId": "eBook Library Service",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\",
+      "BasePath": "_content/eBook Library Service",
+      "RelativePath": "images/df4c1c5d-1678-4897-b82b-260c14ecc727_images#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "g25arny68o",
+      "Integrity": "KI9NHeIeyCoJH/4v2NvqJ9XE3vimDPnyIBSwNvKd4QQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\df4c1c5d-1678-4897-b82b-260c14ecc727_images.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\images\\df63af07-696d-4cb9-9ec6-fc9a6e97fb49_Soul.jpg",
+      "SourceId": "eBook Library Service",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\",
+      "BasePath": "_content/eBook Library Service",
+      "RelativePath": "images/df63af07-696d-4cb9-9ec6-fc9a6e97fb49_Soul#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "dxj7ha4pjh",
+      "Integrity": "Xwbl/aWtER+NG3Jc5L2mp6FVKZyFiw9lr4qoFJCJpBQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\df63af07-696d-4cb9-9ec6-fc9a6e97fb49_Soul.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\images\\e500b7d4-3330-4ede-8602-daba0d1b96f1_images.jpg",
+      "SourceId": "eBook Library Service",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\",
+      "BasePath": "_content/eBook Library Service",
+      "RelativePath": "images/e500b7d4-3330-4ede-8602-daba0d1b96f1_images#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "g25arny68o",
+      "Integrity": "KI9NHeIeyCoJH/4v2NvqJ9XE3vimDPnyIBSwNvKd4QQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\e500b7d4-3330-4ede-8602-daba0d1b96f1_images.jpg"
     },
     {
       "Identity": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\images\\f71b74d4-37cc-41c4-9727-dd1a35dacf42_Million.jpg",
@@ -2831,6 +3125,51 @@
       ]
     },
     {
+      "Route": "assets/css/main.b2k8849zrq.css",
+      "AssetFile": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\assets\\css\\main.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "57620"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"k/8KuK8Xnipz3T1JI4/v3fq1A+K7UGCniWbGw6OV94M=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 04 Jan 2025 23:21:48 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "b2k8849zrq"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/css/main.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-k/8KuK8Xnipz3T1JI4/v3fq1A+K7UGCniWbGw6OV94M="
+        }
+      ]
+    },
+    {
       "Route": "assets/css/main.css",
       "AssetFile": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\assets\\css\\main.css",
       "Selectors": [],
@@ -2841,7 +3180,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "55600"
+          "Value": "57620"
         },
         {
           "Name": "Content-Type",
@@ -2849,11 +3188,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"YHyWHhDjeRXyGGcILEQa9h3XEbgYwBO6UV5AEqTJpKQ=\""
+          "Value": "\"k/8KuK8Xnipz3T1JI4/v3fq1A+K7UGCniWbGw6OV94M=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 02 Jan 2025 23:00:39 GMT"
+          "Value": "Sat, 04 Jan 2025 23:21:48 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2863,13 +3202,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-YHyWHhDjeRXyGGcILEQa9h3XEbgYwBO6UV5AEqTJpKQ="
+          "Value": "sha256-k/8KuK8Xnipz3T1JI4/v3fq1A+K7UGCniWbGw6OV94M="
         }
       ]
     },
     {
-      "Route": "assets/css/main.o6nthuc7x6.css",
-      "AssetFile": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\assets\\css\\main.css",
+      "Route": "assets/css/style.01hzp24inh.css",
+      "AssetFile": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\assets\\css\\style.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2878,7 +3217,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "55600"
+          "Value": "2047"
         },
         {
           "Name": "Content-Type",
@@ -2886,11 +3225,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"YHyWHhDjeRXyGGcILEQa9h3XEbgYwBO6UV5AEqTJpKQ=\""
+          "Value": "\"9AEXP/4tTrw0GeOmSJQ0hPX31cd68uigqg2S6aYFV0E=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 02 Jan 2025 23:00:39 GMT"
+          "Value": "Sat, 04 Jan 2025 19:55:53 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2900,15 +3239,52 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "o6nthuc7x6"
+          "Value": "01hzp24inh"
         },
         {
           "Name": "label",
-          "Value": "assets/css/main.css"
+          "Value": "assets/css/style.css"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-YHyWHhDjeRXyGGcILEQa9h3XEbgYwBO6UV5AEqTJpKQ="
+          "Value": "sha256-9AEXP/4tTrw0GeOmSJQ0hPX31cd68uigqg2S6aYFV0E="
+        }
+      ]
+    },
+    {
+      "Route": "assets/css/style.css",
+      "AssetFile": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\assets\\css\\style.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2047"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9AEXP/4tTrw0GeOmSJQ0hPX31cd68uigqg2S6aYFV0E=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 04 Jan 2025 19:55:53 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-9AEXP/4tTrw0GeOmSJQ0hPX31cd68uigqg2S6aYFV0E="
         }
       ]
     },
@@ -6271,6 +6647,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-5BO7nMR9TzW4ZU5KvAT9Oz1mpTqO3SeXE8iQHgDvJR4="
+        }
+      ]
+    },
+    {
+      "Route": "assets/js/books.gmlcp2c3v6.js",
+      "AssetFile": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\assets\\js\\books.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "837"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"iIZawScsh/TOKVj4yK/+B904PcZi4EKm3n0nPJOg/ik=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 05 Jan 2025 20:10:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "gmlcp2c3v6"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/js/books.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-iIZawScsh/TOKVj4yK/+B904PcZi4EKm3n0nPJOg/ik="
+        }
+      ]
+    },
+    {
+      "Route": "assets/js/books.js",
+      "AssetFile": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\assets\\js\\books.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "837"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"iIZawScsh/TOKVj4yK/+B904PcZi4EKm3n0nPJOg/ik=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 05 Jan 2025 20:10:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-iIZawScsh/TOKVj4yK/+B904PcZi4EKm3n0nPJOg/ik="
         }
       ]
     },
@@ -12425,6 +12883,170 @@
       ]
     },
     {
+      "Route": "images/16242627-f4ec-4e03-a14d-b5475ee470c4_images.g25arny68o.jpg",
+      "AssetFile": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\images\\16242627-f4ec-4e03-a14d-b5475ee470c4_images.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5737"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KI9NHeIeyCoJH/4v2NvqJ9XE3vimDPnyIBSwNvKd4QQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 04 Jan 2025 22:34:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "g25arny68o"
+        },
+        {
+          "Name": "label",
+          "Value": "images/16242627-f4ec-4e03-a14d-b5475ee470c4_images.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-KI9NHeIeyCoJH/4v2NvqJ9XE3vimDPnyIBSwNvKd4QQ="
+        }
+      ]
+    },
+    {
+      "Route": "images/16242627-f4ec-4e03-a14d-b5475ee470c4_images.jpg",
+      "AssetFile": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\images\\16242627-f4ec-4e03-a14d-b5475ee470c4_images.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5737"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KI9NHeIeyCoJH/4v2NvqJ9XE3vimDPnyIBSwNvKd4QQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 04 Jan 2025 22:34:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-KI9NHeIeyCoJH/4v2NvqJ9XE3vimDPnyIBSwNvKd4QQ="
+        }
+      ]
+    },
+    {
+      "Route": "images/1a40ec79-743a-4662-a15f-821bc8b62781_Million.3h0bxwd2a6.jpg",
+      "AssetFile": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\images\\1a40ec79-743a-4662-a15f-821bc8b62781_Million.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10319"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"J2gsvdgQjNhTPbTQlBwz/osVRIgE8P9osBzUzaFJ/84=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 03 Jan 2025 18:39:43 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "3h0bxwd2a6"
+        },
+        {
+          "Name": "label",
+          "Value": "images/1a40ec79-743a-4662-a15f-821bc8b62781_Million.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-J2gsvdgQjNhTPbTQlBwz/osVRIgE8P9osBzUzaFJ/84="
+        }
+      ]
+    },
+    {
+      "Route": "images/1a40ec79-743a-4662-a15f-821bc8b62781_Million.jpg",
+      "AssetFile": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\images\\1a40ec79-743a-4662-a15f-821bc8b62781_Million.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10319"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"J2gsvdgQjNhTPbTQlBwz/osVRIgE8P9osBzUzaFJ/84=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 03 Jan 2025 18:39:43 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-J2gsvdgQjNhTPbTQlBwz/osVRIgE8P9osBzUzaFJ/84="
+        }
+      ]
+    },
+    {
       "Route": "images/2637da17-01a7-498d-9f82-22fba6c8b956_HideAndSeek.imd1ud3bn8.jpg",
       "AssetFile": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\images\\2637da17-01a7-498d-9f82-22fba6c8b956_HideAndSeek.jpg",
       "Selectors": [],
@@ -12503,6 +13125,170 @@
         {
           "Name": "integrity",
           "Value": "sha256-xuJSM/9UgJ6moxwhKOXQ8hpnq7ZWfHq/lR01v2hMuHM="
+        }
+      ]
+    },
+    {
+      "Route": "images/38a02b9b-4c9b-4e29-aeeb-a8f0f30fbdf2_Million.3h0bxwd2a6.jpg",
+      "AssetFile": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\images\\38a02b9b-4c9b-4e29-aeeb-a8f0f30fbdf2_Million.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10319"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"J2gsvdgQjNhTPbTQlBwz/osVRIgE8P9osBzUzaFJ/84=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 04 Jan 2025 18:57:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "3h0bxwd2a6"
+        },
+        {
+          "Name": "label",
+          "Value": "images/38a02b9b-4c9b-4e29-aeeb-a8f0f30fbdf2_Million.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-J2gsvdgQjNhTPbTQlBwz/osVRIgE8P9osBzUzaFJ/84="
+        }
+      ]
+    },
+    {
+      "Route": "images/38a02b9b-4c9b-4e29-aeeb-a8f0f30fbdf2_Million.jpg",
+      "AssetFile": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\images\\38a02b9b-4c9b-4e29-aeeb-a8f0f30fbdf2_Million.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10319"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"J2gsvdgQjNhTPbTQlBwz/osVRIgE8P9osBzUzaFJ/84=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 04 Jan 2025 18:57:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-J2gsvdgQjNhTPbTQlBwz/osVRIgE8P9osBzUzaFJ/84="
+        }
+      ]
+    },
+    {
+      "Route": "images/4639710c-7b12-4b3b-a7aa-9333ec50ce1f_Million.3h0bxwd2a6.jpg",
+      "AssetFile": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\images\\4639710c-7b12-4b3b-a7aa-9333ec50ce1f_Million.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10319"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"J2gsvdgQjNhTPbTQlBwz/osVRIgE8P9osBzUzaFJ/84=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 03 Jan 2025 18:12:53 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "3h0bxwd2a6"
+        },
+        {
+          "Name": "label",
+          "Value": "images/4639710c-7b12-4b3b-a7aa-9333ec50ce1f_Million.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-J2gsvdgQjNhTPbTQlBwz/osVRIgE8P9osBzUzaFJ/84="
+        }
+      ]
+    },
+    {
+      "Route": "images/4639710c-7b12-4b3b-a7aa-9333ec50ce1f_Million.jpg",
+      "AssetFile": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\images\\4639710c-7b12-4b3b-a7aa-9333ec50ce1f_Million.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10319"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"J2gsvdgQjNhTPbTQlBwz/osVRIgE8P9osBzUzaFJ/84=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 03 Jan 2025 18:12:53 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-J2gsvdgQjNhTPbTQlBwz/osVRIgE8P9osBzUzaFJ/84="
         }
       ]
     },
@@ -12671,6 +13457,88 @@
       ]
     },
     {
+      "Route": "images/71bf1be1-37c4-4927-8d7e-c14596244dc4_OIP.jpg",
+      "AssetFile": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\images\\71bf1be1-37c4-4927-8d7e-c14596244dc4_OIP.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "16163"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4QSO7dp5qmyGDBp4h3EgDLoXXz7uH9HinoB5UDP1hk8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 04 Jan 2025 20:59:07 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-4QSO7dp5qmyGDBp4h3EgDLoXXz7uH9HinoB5UDP1hk8="
+        }
+      ]
+    },
+    {
+      "Route": "images/71bf1be1-37c4-4927-8d7e-c14596244dc4_OIP.vc1d3k8m5w.jpg",
+      "AssetFile": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\images\\71bf1be1-37c4-4927-8d7e-c14596244dc4_OIP.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "16163"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4QSO7dp5qmyGDBp4h3EgDLoXXz7uH9HinoB5UDP1hk8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 04 Jan 2025 20:59:07 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "vc1d3k8m5w"
+        },
+        {
+          "Name": "label",
+          "Value": "images/71bf1be1-37c4-4927-8d7e-c14596244dc4_OIP.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-4QSO7dp5qmyGDBp4h3EgDLoXXz7uH9HinoB5UDP1hk8="
+        }
+      ]
+    },
+    {
       "Route": "images/75fb1c6d-4dc7-43ca-87d0-5cfaab2a7152_images.g25arny68o.jpg",
       "AssetFile": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\images\\75fb1c6d-4dc7-43ca-87d0-5cfaab2a7152_images.jpg",
       "Selectors": [],
@@ -12835,6 +13703,170 @@
       ]
     },
     {
+      "Route": "images/8eda3e23-7619-485a-839b-45cee9b577bb_HideAndSeek.imd1ud3bn8.jpg",
+      "AssetFile": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\images\\8eda3e23-7619-485a-839b-45cee9b577bb_HideAndSeek.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9512"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xuJSM/9UgJ6moxwhKOXQ8hpnq7ZWfHq/lR01v2hMuHM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 03 Jan 2025 22:03:05 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "imd1ud3bn8"
+        },
+        {
+          "Name": "label",
+          "Value": "images/8eda3e23-7619-485a-839b-45cee9b577bb_HideAndSeek.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-xuJSM/9UgJ6moxwhKOXQ8hpnq7ZWfHq/lR01v2hMuHM="
+        }
+      ]
+    },
+    {
+      "Route": "images/8eda3e23-7619-485a-839b-45cee9b577bb_HideAndSeek.jpg",
+      "AssetFile": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\images\\8eda3e23-7619-485a-839b-45cee9b577bb_HideAndSeek.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9512"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xuJSM/9UgJ6moxwhKOXQ8hpnq7ZWfHq/lR01v2hMuHM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 03 Jan 2025 22:03:05 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-xuJSM/9UgJ6moxwhKOXQ8hpnq7ZWfHq/lR01v2hMuHM="
+        }
+      ]
+    },
+    {
+      "Route": "images/a836840d-6170-40fd-83b8-3d5abef9c97c_images.g25arny68o.jpg",
+      "AssetFile": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\images\\a836840d-6170-40fd-83b8-3d5abef9c97c_images.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5737"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KI9NHeIeyCoJH/4v2NvqJ9XE3vimDPnyIBSwNvKd4QQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 04 Jan 2025 23:00:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "g25arny68o"
+        },
+        {
+          "Name": "label",
+          "Value": "images/a836840d-6170-40fd-83b8-3d5abef9c97c_images.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-KI9NHeIeyCoJH/4v2NvqJ9XE3vimDPnyIBSwNvKd4QQ="
+        }
+      ]
+    },
+    {
+      "Route": "images/a836840d-6170-40fd-83b8-3d5abef9c97c_images.jpg",
+      "AssetFile": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\images\\a836840d-6170-40fd-83b8-3d5abef9c97c_images.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5737"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KI9NHeIeyCoJH/4v2NvqJ9XE3vimDPnyIBSwNvKd4QQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 04 Jan 2025 23:00:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-KI9NHeIeyCoJH/4v2NvqJ9XE3vimDPnyIBSwNvKd4QQ="
+        }
+      ]
+    },
+    {
       "Route": "images/b2da977e-d78c-43cf-934b-a77994e9a37e_images.g25arny68o.jpg",
       "AssetFile": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\images\\b2da977e-d78c-43cf-934b-a77994e9a37e_images.jpg",
       "Selectors": [],
@@ -12995,6 +14027,416 @@
         {
           "Name": "integrity",
           "Value": "sha256-+cIIrdT44z7wgruOc6X/v+PMpXMqHrQ62R/H6pNs+Qg="
+        }
+      ]
+    },
+    {
+      "Route": "images/cfa963b5-ab80-44d7-83c4-28f1b0eaab69_images.g25arny68o.jpg",
+      "AssetFile": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\images\\cfa963b5-ab80-44d7-83c4-28f1b0eaab69_images.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5737"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KI9NHeIeyCoJH/4v2NvqJ9XE3vimDPnyIBSwNvKd4QQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 04 Jan 2025 23:00:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "g25arny68o"
+        },
+        {
+          "Name": "label",
+          "Value": "images/cfa963b5-ab80-44d7-83c4-28f1b0eaab69_images.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-KI9NHeIeyCoJH/4v2NvqJ9XE3vimDPnyIBSwNvKd4QQ="
+        }
+      ]
+    },
+    {
+      "Route": "images/cfa963b5-ab80-44d7-83c4-28f1b0eaab69_images.jpg",
+      "AssetFile": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\images\\cfa963b5-ab80-44d7-83c4-28f1b0eaab69_images.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5737"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KI9NHeIeyCoJH/4v2NvqJ9XE3vimDPnyIBSwNvKd4QQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 04 Jan 2025 23:00:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-KI9NHeIeyCoJH/4v2NvqJ9XE3vimDPnyIBSwNvKd4QQ="
+        }
+      ]
+    },
+    {
+      "Route": "images/d243c0ba-9f7a-4564-bdec-046a80029219_Million.3h0bxwd2a6.jpg",
+      "AssetFile": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\images\\d243c0ba-9f7a-4564-bdec-046a80029219_Million.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10319"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"J2gsvdgQjNhTPbTQlBwz/osVRIgE8P9osBzUzaFJ/84=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 03 Jan 2025 17:45:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "3h0bxwd2a6"
+        },
+        {
+          "Name": "label",
+          "Value": "images/d243c0ba-9f7a-4564-bdec-046a80029219_Million.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-J2gsvdgQjNhTPbTQlBwz/osVRIgE8P9osBzUzaFJ/84="
+        }
+      ]
+    },
+    {
+      "Route": "images/d243c0ba-9f7a-4564-bdec-046a80029219_Million.jpg",
+      "AssetFile": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\images\\d243c0ba-9f7a-4564-bdec-046a80029219_Million.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10319"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"J2gsvdgQjNhTPbTQlBwz/osVRIgE8P9osBzUzaFJ/84=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 03 Jan 2025 17:45:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-J2gsvdgQjNhTPbTQlBwz/osVRIgE8P9osBzUzaFJ/84="
+        }
+      ]
+    },
+    {
+      "Route": "images/df4c1c5d-1678-4897-b82b-260c14ecc727_images.g25arny68o.jpg",
+      "AssetFile": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\images\\df4c1c5d-1678-4897-b82b-260c14ecc727_images.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5737"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KI9NHeIeyCoJH/4v2NvqJ9XE3vimDPnyIBSwNvKd4QQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 04 Jan 2025 23:01:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "g25arny68o"
+        },
+        {
+          "Name": "label",
+          "Value": "images/df4c1c5d-1678-4897-b82b-260c14ecc727_images.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-KI9NHeIeyCoJH/4v2NvqJ9XE3vimDPnyIBSwNvKd4QQ="
+        }
+      ]
+    },
+    {
+      "Route": "images/df4c1c5d-1678-4897-b82b-260c14ecc727_images.jpg",
+      "AssetFile": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\images\\df4c1c5d-1678-4897-b82b-260c14ecc727_images.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5737"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KI9NHeIeyCoJH/4v2NvqJ9XE3vimDPnyIBSwNvKd4QQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 04 Jan 2025 23:01:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-KI9NHeIeyCoJH/4v2NvqJ9XE3vimDPnyIBSwNvKd4QQ="
+        }
+      ]
+    },
+    {
+      "Route": "images/df63af07-696d-4cb9-9ec6-fc9a6e97fb49_Soul.dxj7ha4pjh.jpg",
+      "AssetFile": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\images\\df63af07-696d-4cb9-9ec6-fc9a6e97fb49_Soul.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7098"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Xwbl/aWtER+NG3Jc5L2mp6FVKZyFiw9lr4qoFJCJpBQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 03 Jan 2025 18:12:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "dxj7ha4pjh"
+        },
+        {
+          "Name": "label",
+          "Value": "images/df63af07-696d-4cb9-9ec6-fc9a6e97fb49_Soul.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Xwbl/aWtER+NG3Jc5L2mp6FVKZyFiw9lr4qoFJCJpBQ="
+        }
+      ]
+    },
+    {
+      "Route": "images/df63af07-696d-4cb9-9ec6-fc9a6e97fb49_Soul.jpg",
+      "AssetFile": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\images\\df63af07-696d-4cb9-9ec6-fc9a6e97fb49_Soul.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7098"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Xwbl/aWtER+NG3Jc5L2mp6FVKZyFiw9lr4qoFJCJpBQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 03 Jan 2025 18:12:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Xwbl/aWtER+NG3Jc5L2mp6FVKZyFiw9lr4qoFJCJpBQ="
+        }
+      ]
+    },
+    {
+      "Route": "images/e500b7d4-3330-4ede-8602-daba0d1b96f1_images.g25arny68o.jpg",
+      "AssetFile": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\images\\e500b7d4-3330-4ede-8602-daba0d1b96f1_images.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5737"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KI9NHeIeyCoJH/4v2NvqJ9XE3vimDPnyIBSwNvKd4QQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 04 Jan 2025 23:02:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "g25arny68o"
+        },
+        {
+          "Name": "label",
+          "Value": "images/e500b7d4-3330-4ede-8602-daba0d1b96f1_images.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-KI9NHeIeyCoJH/4v2NvqJ9XE3vimDPnyIBSwNvKd4QQ="
+        }
+      ]
+    },
+    {
+      "Route": "images/e500b7d4-3330-4ede-8602-daba0d1b96f1_images.jpg",
+      "AssetFile": "C:\\Users\\eldad\\Source\\Repos\\eBook-Library-Service\\eBook Library Service\\wwwroot\\images\\e500b7d4-3330-4ede-8602-daba0d1b96f1_images.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5737"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KI9NHeIeyCoJH/4v2NvqJ9XE3vimDPnyIBSwNvKd4QQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 04 Jan 2025 23:02:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-KI9NHeIeyCoJH/4v2NvqJ9XE3vimDPnyIBSwNvKd4QQ="
         }
       ]
     },

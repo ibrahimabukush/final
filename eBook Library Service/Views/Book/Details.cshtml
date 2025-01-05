@@ -1,19 +1,253 @@
-﻿@model Book
+﻿@model eBook_Library_Service.Models.Book
 @{
-	ViewBag.Title = "Details";
-	Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Book Details";
 }
-<h1>@Model.Title Details</h1>
-@if (Model.BookAuthors != null && Model.BookAuthors.Any())
-{
-	<h3>Authors</h3>
-	<ul>
-		@foreach (var author in Model.BookAuthors)
-		{
-			<li>@author.Author.Name</li>
-		}
-	</ul>
-	<div>
-		<a asp-action="Index">Back TO LIst</a>
-	</div>
-}
+
+<style>
+    .book-details-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+        background-color: #f8f9fa;
+    }
+
+    .book-details {
+        display: flex;
+        flex-direction: row;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        max-width: 900px;
+        width: 100%;
+        position: relative;
+    }
+
+    .book-image img {
+        width: 350px;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .book-info {
+        padding: 2rem;
+        flex-grow: 1;
+    }
+
+        .book-info h1 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .book-info p {
+            margin-bottom: 0.5rem;
+            color: #555;
+        }
+
+        .book-info .book-category,
+        .book-info .book-publisher,
+        .book-info .book-year,
+        .book-info .book-description,
+        .book-info .book-age-limit {
+            font-size: 1.1rem;
+        }
+
+        .book-info .book-authors ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .book-info .book-authors li {
+            margin-bottom: 0.5rem;
+        }
+
+        .book-info .green-price {
+            color: #28a745;
+            font-weight: bold;
+        }
+
+    .book-price {
+        margin-top: 1rem;
+    }
+
+    .btn-add-to-cart {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 0.75rem 1.5rem;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1rem;
+    }
+
+        .btn-add-to-cart:hover {
+            background-color: #0056b3;
+        }
+
+    .modal-content {
+        border-radius: 10px;
+    }
+
+    .modal-header {
+        border-bottom: none;
+    }
+
+    .modal-title {
+        font-size: 1.5rem;
+        color: #333;
+    }
+
+    .modal-body {
+        padding: 2rem;
+    }
+
+        .modal-body .form-control {
+            font-size: 1rem;
+            padding: 0.75rem;
+        }
+
+        .modal-body .btn {
+            font-size: 1rem;
+            padding: 0.75rem;
+        }
+
+    .back-to-list-btn {
+        position: absolute;
+        bottom: 1rem;
+        left: 1rem;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 0.75rem 1.5rem;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1rem;
+        display: flex;
+        align-items: center;
+    }
+
+        .back-to-list-btn i {
+            margin-right: 0.5rem;
+        }
+
+        .back-to-list-btn:hover {
+            background-color: #0056b3;
+        }
+</style>
+
+<body>
+    <main class="book-details-container">
+        <div class="book-details">
+            <!-- Left Column / Book Image -->
+            <div class="book-image">
+                <img src="~/images/@Model.ImageUrl" alt="@Model.Title" />
+            </div>
+
+            <!-- Right Column / Book Details -->
+            <div class="book-info">
+                <h1>@Model.Title</h1>
+                <p class="book-category"><strong>Category:</strong> @Model.Category</p>
+                <p class="book-publisher"><strong>Publisher:</strong> @Model.Publisher</p>
+                <p class="book-year"><strong>Year Published:</strong> @Model.YearPublished</p>
+                <p class="book-description"><strong>Description:</strong> @Model.Description</p>
+
+                <div class="book-authors">
+                    <strong>Authors:</strong>
+                    @if (Model.BookAuthors != null && Model.BookAuthors.Any())
+                    {
+                        <ul>
+                            @foreach (var author in Model.BookAuthors)
+                            {
+                                <li>@author.Author.Name</li>
+                            }
+                        </ul>
+                    }
+                    else
+                    {
+                        <p>No authors available</p>
+                    }
+                </div>
+
+                <!-- New Book Details -->
+                <div class="book-age-limit">
+                    <strong>Age Limit:</strong> @Model.AgeLimit
+                </div>
+                <div class="book-discount-price">
+                    @if (Model.DiscountPrice.HasValue)
+                    {
+                        <span class="green-price">@Model.DiscountPrice.Value.ToString("C")</span>
+                    }
+                    else
+                    {
+                        <span class="green-price">No Discount</span>
+                    }
+                </div>
+                <div>
+                    @if (Model.DiscountPrice.HasValue && Model.DiscountPrice.Value > 0 && Model.BuyPrice > 0)
+                    {
+                        @if (Model.DiscountEndDate.HasValue && Model.DiscountEndDate.Value > DateTime.Now)
+                        {
+                            <p class="card-text" style="color: #dc3545; font-weight: bold; font-size: 1rem;">Discount ends in: <span id="countdown-@Model.BookId"></span></p>
+                            var discountAmount = @Model.BuyPrice * (@Model.DiscountPrice.Value / 100);
+                            var discountedPrice1 = @Model.BuyPrice - discountAmount;
+                            <p class="card-text" style="color: #dc3545; font-weight: bold; font-size: 1.2rem;">
+                                <span>@Model.DiscountPrice.Value% off</span>
+                            </p>
+                            <p class="card-text" style="color: #dc3545; font-weight: bold; font-size: 1.2rem;">
+                                <span style="text-decoration: line-through; color: #6c757d;">@Model.BuyPrice.ToString("c")</span>
+                                <span style="color: #28a745;">@discountedPrice1.ToString("c")</span>
+                            </p>
+                            <script>
+                                // Countdown timer for each book
+                                var countdownDate = new Date('@Model.DiscountEndDate.Value.ToString("yyyy-MM-ddTHH:mm:ss")').getTime();
+
+                                var x = setInterval(function() {
+                                    var now = new Date().getTime();
+                                    var distance = countdownDate - now;
+
+                                    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                                    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                                    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                                    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                                    // Display the countdown
+                                    document.getElementById("countdown-@Model.BookId").innerHTML = days + "d " + hours + "h "
+                                        + minutes + "m " + seconds + "s ";
+
+                                    // If the countdown is finished
+                                    if (distance < 0) {
+                                        clearInterval(x);
+                                        document.getElementById("countdown-@Model.BookId").innerHTML = "EXPIRED";
+                                    }
+                                }, 1000);
+                            </script>
+                        }
+                    }
+                    else
+                    {
+                        <p class="card-text" style="color: #28a745; font-weight: bold; font-size: 1.2rem;">
+                            @Model.BuyPrice.ToString("c")
+                        </p>
+                    }
+                </div>
+
+                <!-- Price and Add to Cart Section -->
+                <div class="book-price">
+                    <p class="price">Price: <span class="green-price">@Model.BuyPrice.ToString("C")</span></p>
+                    <button type="button" class="btn btn-add-to-cart" data-toggle="modal" data-target="#addToCartModal">Add to Cart</button>
+                </div>
+            </div>
+            <a asp-action="UserIndex" asp-controller="Book" class="back-to-list-btn">
+                <i class="bi bi-arrow-left-circle-fill"></i> Back to list
+            </a>
+        </div>
+    </main>
+
+
+ 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="~/assets/js/scripts.js"></script>
+</body>
+</html>

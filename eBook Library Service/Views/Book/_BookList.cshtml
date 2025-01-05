@@ -1,0 +1,62 @@
+﻿@model IEnumerable<eBook_Library_Service.Models.Book>
+
+<div class="book-list">
+    @foreach (var book in Model)
+    {
+        <div class="book-card">
+            <img src="@Url.Content("~/images/" + book.ImageUrl)" alt="@book.Description" />
+            <div class="book-card-body">
+                <h5>@book.Title</h5>
+                <p>@book.Description</p>
+                <p><strong>Published:</strong> @book.YearPublished</p>
+                <p><strong>Category:</strong> @book.Category</p>
+
+                <div>
+
+
+                    <p class="card-text" style="color: #28a745; font-weight: bold; font-size: 1.2rem;">
+                        @book.BuyPrice.ToString("c")
+                    </p>
+                        @if (book.DiscountEndDate.HasValue && book.DiscountEndDate.Value > DateTime.Now)
+                        {
+                            <p class="card-text" style="color: #dc3545; font-weight: bold; font-size: 1rem;">
+                                Discount ends in: <span id="countdown-@book.BookId"></span>
+                            </p>
+
+                             var originalPrice = book.BuyPrice / (1 - (book.DiscountPrice.Value / 100));
+
+                            <p class="card-text" style="color: #dc3545; font-weight: bold; font-size: 1.2rem;">
+                                <span>@book.DiscountPrice.Value% off</span>
+                            </p>
+
+                            <p class="card-text" style="color: #dc3545; font-weight: bold; font-size: 1.2rem;">
+                            <span style="text-decoration: line-through; color: #6c757d;">@originalPrice.ToString("c")</span>
+                                
+                            </p>
+
+                            <!-- Pass BookId and DiscountEndDate to JavaScript -->
+                            <script>
+                                var bookId = @book.BookId;
+                            console.log("Discount end date for Book ID " + bookId + ": " + discountEndDate);
+                                var discountEndDate = '@book.DiscountEndDate.Value.ToString("yyyy-MM-ddTHH:mm:ss")';
+                                // Call the external JavaScript function to initialize the countdown
+                                initCountdown(bookId, discountEndDate);
+                            </script>
+                        }
+                    <span style="color: #28a745;">@book.BuyPrice.ToString("c")</span>
+                    
+                    
+               </div>
+
+              
+            </div>
+
+
+            <div class="book-card-footer">
+                <a asp-action="Details" asp-route-id="@book.BookId" class="btn btn-info btn-sm">Details</a>
+            </div>
+        </div>
+    }
+</div>
+    }
+

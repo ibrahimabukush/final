@@ -1,34 +1,62 @@
-﻿@model IEnumerable<Book>;
+﻿@model IEnumerable<Book>
 @{
-	ViewBag.Title= "List Of Books";
-	Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Books";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<h1>List Of Books</h1>
-<a asp-action="AddEdit" asp-controller="Book" class="btn btn-primary"> Create New Book</a>
+
+<h1>Books</h1>
+<a asp-action="AddEdit" class="btn btn-sm btn-warning">
+    <i class="bi bi-person-fill-add"></i> Add new book
+</a>
 
 
-<div class="row">
-	@foreach (Book i in Model)
-	{
-		<div class="col-md-4 mb-4">
-			<form asp-action="Delete" asp-controller="Book" method="post">
-				<input type="hidden" name="id" value="@i.BookId" />
-				<div class="card" style="width: 18rem; border: 1px solid #ddd; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-					<img src="@Url.Content("~/images/"+i.ImageUrl)"
-						 class="card-img-top" style="height: 200px; object-fit: cover;" alt="@i.Description" />
-					<div class="card-body" style="background-color: #f8f9fa; padding: 15px;">
-						<h5 class="card-title" style="color: #007bff; font-weight: 600; font-size: 1.2rem;">@i.Title</h5>
-						<p class="card-text" style="color: #6c757d; font-size: 0.9rem; margin-bottom: 10px;">@i.Description</p>
-						<p class="card-text" style="color: #28a745; font-weight: bold;">@i.BuyPrice.ToString("c")</p>
-						<p class="card-text" style="color: #6c757d; font-size: 0.85rem;">Published: @i.YearPublished</p>
-						<p class="card-text" style="color: #6c757d; font-size: 0.85rem;">Quantity in Stock: @i.Stock</p>
-						<a class="btn btn-info" asp-controller="Book" asp-action="AddEdit" asp-route-id="@i.BookId"><i class=" bi bi-pencil-fill">Edit</i></a>
-						<a class="btn btn-info" asp-controller="Book" asp-action="Delete" asp-route-id="@i.BookId"><i class="bi bi-trash"> Delete</i></a>
+<form method="get" asp-action="Index">
+    <div class="form-group">
+        <label for="category">Filter by Category:</label>
+        <select id="category" name="category" class="form-control">
+            <option value="">All</option>
+            @foreach (var category in ViewBag.Categories)
+            {
+                <option value="@category" selected="@(category == ViewBag.SelectedCategory ? "selected" : "")">@category</option>
+            }
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Filter</button>
+</form>
 
-
-					</div>
-				</div>
-			</form>
-		</div>
-	}
-</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Image</th>
+            <th>Title</th>
+            <th>Publisher</th>
+            <th>Year Published</th>
+            <th>Category</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var book in Model)
+        {
+            <tr>    
+                <td>
+                    <img src="~/images/@book.ImageUrl" alt="@book.Title" style="width: 100px; height: auto;" />
+                </td>
+                <td>@book.Title</td>
+                <td>@book.Publisher</td>
+                <td>@book.YearPublished</td>
+                <td>@book.Category</td>
+                <td>
+                    <a asp-action="AddEdit" asp-route-id="@book.BookId" class="btn btn-sm btn-warning">
+                        <i class="bi bi-pencil-square"></i> 
+                    </a>
+                    <form asp-action="Delete" asp-route-id="@book.BookId" method="post" style="display:inline;">
+                        <button type="submit" class="btn btn-sm btn-danger">
+                            <i class="bi bi-trash3-fill"></i> 
+                        </button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
