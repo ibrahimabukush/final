@@ -189,6 +189,7 @@
                     {
                         <p class="card-text" style="color: #dc3545; font-weight: bold; font-size: 1rem;">Discount ends in: <span id="countdown-@Model.BookId"></span></p>
                         var originalPrice = Model.BuyPrice / (1 - (Model.DiscountPrice.Value / 100));
+<<<<<<< HEAD
 
                         <p class="card-text" style="color: #dc3545; font-weight: bold; font-size: 1.2rem;">
                             <span>@Model.DiscountPrice.Value% off</span>
@@ -235,11 +236,63 @@
 
 
 
+=======
+
+                        <p class="card-text" style="color: #dc3545; font-weight: bold; font-size: 1.2rem;">
+                            <span>@Model.DiscountPrice.Value% off</span>
+                        </p>
+
+                        <p class="card-text" style="color: #dc3545; font-weight: bold; font-size: 1.2rem;">
+                            <span style="text-decoration: line-through; color: #6c757d;">@originalPrice.ToString("c")</span>
+                        </p>
+
+                        <!-- Pass BookId and DiscountEndDate to JavaScript -->
+                    }
+                    <div>
+                        <span style="color: #28a745;">Borrow price: @Model.BorrowPrice.ToString("c")</span>
+                        <span style="color: #28a745;">Buy price: @Model.BuyPrice.ToString("c")</span>
+                    </div>
+                   
+                            <script>
+                                // Countdown timer for each book
+                                var countdownDate = new Date('@Model.DiscountEndDate.Value.ToString("yyyy-MM-ddTHH:mm:ss")').getTime();
+
+                                var x = setInterval(function() {
+                                    var now = new Date().getTime();
+                                    var distance = countdownDate - now;
+
+                                    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                                    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                                    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                                    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                                    // Display the countdown
+                                    document.getElementById("countdown-@Model.BookId").innerHTML = days + "d " + hours + "h "
+                                        + minutes + "m " + seconds + "s ";
+
+                                    // If the countdown is finished
+                                    if (distance < 0) {
+                                        clearInterval(x);
+                                        document.getElementById("countdown-@Model.BookId").innerHTML = "EXPIRED";
+                                    }
+                                }, 1000);
+                            </script>
+                        
+                    
+                   
+                    
+                        
+                    
+>>>>>>> 38e31174d50d8acd7bc64d6bcbcea5afdde2d9a0
                 </div>
 
                 <!-- Price and Add to Cart Section -->
                 <div class="book-price">
+<<<<<<< HEAD
 
+=======
+                   
+>>>>>>> 38e31174d50d8acd7bc64d6bcbcea5afdde2d9a0
                     <button type="button" class="btn btn-add-to-cart" data-toggle="modal" data-target="#addToCartModal">Add to Cart</button>
                 </div>
             </div>

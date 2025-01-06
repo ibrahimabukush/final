@@ -10,7 +10,11 @@ namespace eBook_Library_Service.Models
         {
             Stock = 3;
             BookAuthors = new List<BookAuthor>();
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> 38e31174d50d8acd7bc64d6bcbcea5afdde2d9a0
             EpubFilePath = null; // Initialize as null
             F2bFilePath = null;  // Initialize as null
             MobiFilePath = null; // Initialize as null
@@ -67,6 +71,7 @@ namespace eBook_Library_Service.Models
         // Image file (not mapped to the database)
         [NotMapped]
         public IFormFile ImageFile { get; set; }
+<<<<<<< HEAD
 
         // Image URL (stored in the database)
         public string? ImageUrl { get; set; } = "images/BookDefault.png";
@@ -91,6 +96,27 @@ namespace eBook_Library_Service.Models
         public IFormFile PdfFile { get; set; }
 
         // Formats supported by the book
+=======
+        public string? ImageUrl { get; set; }= "images/BookDefult.png";
+
+        public string? EpubFilePath { get; set; } // Nullable
+        public string? F2bFilePath { get; set; }  // Nullable
+        public string? MobiFilePath { get; set; } // Nullable
+        public string? PdfFilePath { get; set; }  // Nullable
+
+        // File upload properties (not mapped to the database)
+        [NotMapped]
+            public IFormFile EpubFile { get; set; }
+
+            [NotMapped]
+            public IFormFile F2bFile { get; set; }
+
+            [NotMapped]
+            public IFormFile MobiFile { get; set; }
+
+            [NotMapped]
+            public IFormFile PdfFile { get; set; }
+>>>>>>> 38e31174d50d8acd7bc64d6bcbcea5afdde2d9a0
         public string Formats { get; set; } = "epub,f2b,mobi,PDF";
 
         // Navigation property for authors of the book (Many-to-many relation with Author)

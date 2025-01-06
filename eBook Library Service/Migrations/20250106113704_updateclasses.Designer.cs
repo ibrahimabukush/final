@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using eBook_Library_Service.Data;
 
@@ -11,9 +12,11 @@ using eBook_Library_Service.Data;
 namespace eBook_Library_Service.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250106113704_updateclasses")]
+    partial class updateclasses
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -207,20 +210,14 @@ namespace eBook_Library_Service.Migrations
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("EpubFilePath")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("F2bFilePath")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Formats")
-<<<<<<< HEAD
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ImageUrl")
-                        .HasColumnType("nvarchar(max)");
-
-=======
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -228,11 +225,12 @@ namespace eBook_Library_Service.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
->>>>>>> 38e31174d50d8acd7bc64d6bcbcea5afdde2d9a0
                     b.Property<string>("MobiFilePath")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PdfFilePath")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Publisher")
@@ -254,62 +252,6 @@ namespace eBook_Library_Service.Migrations
                     b.HasKey("BookId");
 
                     b.ToTable("Books");
-<<<<<<< HEAD
-
-                    b.HasData(
-                        new
-                        {
-                            BookId = 1,
-                            AgeLimit = "18+",
-                            BorrowPrice = 5.99m,
-                            BuyPrice = 15.99m,
-                            Category = "Fiction",
-                            Description = "A novel written by American author F. Scott Fitzgerald. It is a critique of the American Dream in the 1920s.",
-                            DiscountEndDate = new DateTime(2025, 12, 31, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DiscountPrice = 12.99m,
-                            Formats = "epub,f2b,mobi,PDF",
-                            ImageUrl = "images/BookDefult.png",
-                            Publisher = "Scribner",
-                            Stock = 3,
-                            Title = "The Great Gatsby",
-                            YearPublished = 1925
-                        },
-                        new
-                        {
-                            BookId = 2,
-                            AgeLimit = "16+",
-                            BorrowPrice = 4.99m,
-                            BuyPrice = 12.99m,
-                            Category = "Science Fiction",
-                            Description = "A dystopian social science fiction novel and cautionary tale, written by the English writer George Orwell.",
-                            DiscountEndDate = new DateTime(2025, 11, 30, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DiscountPrice = 10.99m,
-                            Formats = "epub,f2b,mobi,PDF",
-                            ImageUrl = "images/BookDefult.png",
-                            Publisher = "Secker & Warburg",
-                            Stock = 3,
-                            Title = "1984",
-                            YearPublished = 1949
-                        },
-                        new
-                        {
-                            BookId = 3,
-                            AgeLimit = "12+",
-                            BorrowPrice = 6.99m,
-                            BuyPrice = 14.99m,
-                            Category = "Classic",
-                            Description = "A novel by Harper Lee published in 1960. It was immediately successful, winning the Pulitzer Prize for Fiction in 1961.",
-                            DiscountEndDate = new DateTime(2025, 10, 31, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DiscountPrice = 11.99m,
-                            Formats = "epub,f2b,mobi,PDF",
-                            ImageUrl = "images/BookDefult.png",
-                            Publisher = "J.B. Lippincott & Co.",
-                            Stock = 3,
-                            Title = "To Kill a Mockingbird",
-                            YearPublished = 1960
-                        });
-=======
->>>>>>> 38e31174d50d8acd7bc64d6bcbcea5afdde2d9a0
                 });
 
             modelBuilder.Entity("eBook_Library_Service.Models.BookAuthor", b =>
@@ -325,65 +267,6 @@ namespace eBook_Library_Service.Migrations
                     b.HasIndex("AuthorId");
 
                     b.ToTable("BookAuthors");
-                });
-
-            modelBuilder.Entity("eBook_Library_Service.Models.BorrowRequest", b =>
-                {
-                    b.Property<int>("BorrowRequestId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("BorrowRequestId"));
-
-                    b.Property<int>("BookId")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("RequestDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Status")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("UserId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("BorrowRequestId");
-
-                    b.ToTable("BorrowRequests");
-                });
-
-            modelBuilder.Entity("eBook_Library_Service.Models.Contact", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("FullName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Message")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Subject")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("SubmissionDate")
-                        .HasColumnType("datetime2");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Contacts");
                 });
 
             modelBuilder.Entity("eBook_Library_Service.Models.Users", b =>

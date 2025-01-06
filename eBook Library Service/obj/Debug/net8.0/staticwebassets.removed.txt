@@ -1,1 +1,0 @@
-C:\Users\eldad\Source\Repos\eBook-Library-Service\eBook Library Service\wwwroot\assets\js\books.js

@@ -207,7 +207,10 @@ namespace eBook_Library_Service.Controllers
 
             return RedirectToAction("Index");
         }
+<<<<<<< HEAD
         [Authorize(Policy = "AdminOnly")]
+=======
+>>>>>>> 38e31174d50d8acd7bc64d6bcbcea5afdde2d9a0
         private async Task<string> SaveImage(IFormFile imageFile)
         {
             try
@@ -243,7 +246,11 @@ namespace eBook_Library_Service.Controllers
                 throw; // Re-throw the exception to see it in the debugger
             }
         }
+<<<<<<< HEAD
         [Authorize(Policy = "AdminOnly")]
+=======
+        // Delete Book (Admin)
+>>>>>>> 38e31174d50d8acd7bc64d6bcbcea5afdde2d9a0
         [HttpPost]
         public async Task<IActionResult> Delete(int id)
         {
