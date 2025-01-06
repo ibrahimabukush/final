@@ -4,13 +4,14 @@ using Microsoft.EntityFrameworkCore;
 
 namespace eBook_Library_Service.Data
 {
-    public class AppDbContext:IdentityDbContext<Users>
+    public class AppDbContext : IdentityDbContext<Users>
     {
         public AppDbContext(DbContextOptions options) : base(options) { }
-        public DbSet<Users> User { get; set; } = default!;
         public DbSet<Book> Books { get; set; }
         public DbSet<Author> Authors { get; set; }
         public DbSet<BookAuthor> BookAuthors { get; set; }
+        public DbSet<BorrowRequest> BorrowRequests { get; set; }
+        public DbSet<Contact> Contacts { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -25,20 +26,20 @@ namespace eBook_Library_Service.Data
             modelBuilder.Entity<Author>().HasData(new Author { AuthorId = 1, Name = "Author1" });
             modelBuilder.Entity<Author>().HasData(new Author { AuthorId = 2, Name = "Author2" });
             modelBuilder.Entity<Book>().HasData(new Book
-             {
-                 BookId = 1,
-                 Title = "The Great Gatsby",
-                 Publisher = "Scribner",
-                 Description = "A novel written by American author F. Scott Fitzgerald. It is a critique of the American Dream in the 1920s.",
-                 YearPublished = 1925,
-                 BorrowPrice = 5.99m,
-                 BuyPrice = 15.99m,
-                 DiscountPrice = 12.99m,
-                 DiscountEndDate = new DateTime(2025, 12, 31),
-                 Stock = 3,
-                 AgeLimit = "18+",
-                 Category = "Fiction"
-             },
+            {
+                BookId = 1,
+                Title = "The Great Gatsby",
+                Publisher = "Scribner",
+                Description = "A novel written by American author F. Scott Fitzgerald. It is a critique of the American Dream in the 1920s.",
+                YearPublished = 1925,
+                BorrowPrice = 5.99m,
+                BuyPrice = 15.99m,
+                DiscountPrice = 12.99m,
+                DiscountEndDate = new DateTime(2025, 12, 31),
+                Stock = 3,
+                AgeLimit = "18+",
+                Category = "Fiction"
+            },
              new Book
              {
                  BookId = 2,

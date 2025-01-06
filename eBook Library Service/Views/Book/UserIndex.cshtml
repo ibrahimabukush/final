@@ -1,80 +1,45 @@
-﻿@model IEnumerable<Book>
+﻿@model IEnumerable<eBook_Library_Service.Models.Book>
 @{
     ViewBag.Title = "Books";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <style>
-    .book-list {
+    .book-price {
         display: flex;
-        flex-wrap: wrap;
-        gap: 1rem;
-        justify-content: center;
+        gap: 0.5rem; /* Space between buttons */
+        margin-top: 1rem; /* Add some space above the buttons */
     }
 
-    .book-card {
-        background-color: #fff;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        overflow: hidden;
-        width: 300px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+    .btn-add-to-cart, .btn-borrow, .btn-buy {
+        padding: 0.25rem 0.5rem; /* Smaller padding */
+        font-size: 0.8rem; /* Smaller font size */
+        border-radius: 5px; /* Rounded corners */
+        text-align: center;
+        white-space: nowrap; /* Prevent text from wrapping */
     }
 
-    .book-card img {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
-    }
-
-    .book-card-body {
-        padding: 1rem;
-        flex-grow: 1;
-    }
-
-    .book-card-body h5 {
-        font-size: 1.2rem;
-        color: #007bff;
-        margin-bottom: 0.5rem;
-    }
-
-    .book-card-body p {
-        color: #6c757d;
-        font-size: 0.9rem;
-        margin-bottom: 0.5rem;
-    }
-
-    .book-card-footer {
-        padding: 1rem;
-        background-color: #f8f9fa;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .book-card-footer .btn {
-        font-size: 0.9rem;
-    }
-
-    .back-to-list-btn {
-        position: absolute;
-        bottom: 1rem;
-        left: 1rem;
-        background-color: transparent;
+    .btn-add-to-cart {
+        background-color: #007bff; /* Blue color */
+        color: white;
         border: 1px solid #007bff;
-        color: #007bff;
-        padding: 0.5rem 1rem;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 1rem;
     }
 
-    .back-to-list-btn:hover {
-        background-color: #007bff;
-        color: #fff;
+    .btn-borrow {
+        background-color: #28a745; /* Green color */
+        color: white;
+        border: 1px solid #28a745;
     }
+
+    .btn-buy {
+        background-color: #dc3545; /* Red color */
+        color: white;
+        border: 1px solid #dc3545;
+    }
+
+        .btn-add-to-cart:hover, .btn-borrow:hover, .btn-buy:hover {
+            opacity: 0.8; /* Slightly transparent on hover */
+        }
 </style>
 
 <h1>Books</h1>
@@ -114,10 +79,7 @@
                     <div>
                         @if (book.DiscountEndDate.HasValue && book.DiscountEndDate.Value > DateTime.Now)
                         {
-                            <p class="card-text" style="color: #dc3545; font-weight: bold; font-size: 1rem;">
-                                Discount ends in: <span id="countdown-@book.BookId"></span>
-                            </p>
-
+                            <p class="card-text" style="color: #dc3545; font-weight: bold; font-size: 1rem;">Discount ends in: <span id="countdown-@book.BookId"></span></p>
                             var originalPrice = book.BuyPrice / (1 - (book.DiscountPrice.Value / 100));
 
                             <p class="card-text" style="color: #dc3545; font-weight: bold; font-size: 1.2rem;">
@@ -129,19 +91,50 @@
                             </p>
 
                             <!-- Pass BookId and DiscountEndDate to JavaScript -->
-                            <script>
-                                var bookId = @book.BookId;
-                                var discountEndDate = '@book.DiscountEndDate.Value.ToString("yyyy-MM-ddTHH:mm:ss")';
-                                initCountdown(bookId, discountEndDate); // Initialize the countdown
-                            </script>
                         }
-                        <span style="color: #28a745;">@book.BuyPrice.ToString("c")</span>
+                        <div>
+                            <p style="color: #28a745;">Borrow price: @book.BorrowPrice.ToString("c")</p>
+                            <p style="color: #28a745;">Buy price: @book.BuyPrice.ToString("c")</p>
+                        </div>
+
+                        <div class="book-price">
+                            
+                            <div class="book-price">
+                                <button type="button" class="btn btn-add-to-cart" data-toggle="modal" data-target="#addToCartModal">Add to Cart</button>
+                                <a class="btn btn-borrow">Borrow</a>
+                                <a class="btn btn-buy">Buy</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </a>
+        <script>
+            // Countdown timer for each book
+            var countdownDate = new Date('@book.DiscountEndDate.Value.ToString("yyyy-MM-ddTHH:mm:ss")').getTime();
+
+            var x = setInterval(function () {
+                var now = new Date().getTime();
+                var distance = countdownDate - now;
+
+                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                // Display the countdown
+                document.getElementById("countdown-@book.BookId").innerHTML = days + "d " + hours + "h "
+                    + minutes + "m " + seconds + "s ";
+
+                // If the countdown is finished
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("countdown-@book.BookId").innerHTML = "EXPIRED";
+                }
+            }, 1000);
+        </script>
     }
-   </div>
+</div>
 
 <script>
     function searchBooks() {
@@ -156,40 +149,5 @@
                 $('#bookList').html(result);
             }
         });
-    }
-</script>
-<script>
-    // Function to initialize the countdown
-    function initCountdown(bookId, discountEndDate) {
-        // Convert the discount end date to a JavaScript Date object
-        var endDate = new Date(discountEndDate);
-
-        // Get the countdown element for this book
-        var countdownElement = document.getElementById("countdown-" + bookId);
-
-        // Update the countdown every second
-        var countdownInterval = setInterval(function () {
-            // Get the current date and time
-            var now = new Date().getTime();
-
-            // Calculate the remaining time
-            var timeRemaining = endDate - now;
-
-            // If the discount has ended, clear the interval and display a message
-            if (timeRemaining <= 0) {
-                clearInterval(countdownInterval);
-                countdownElement.innerHTML = "Discount ended!";
-                return;
-            }
-
-            // Calculate days, hours, minutes, and seconds
-            var days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
-            var hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            var minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
-            var seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
-
-            // Display the countdown
-            countdownElement.innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s";
-        }, 1000); // Update every second
     }
 </script>

@@ -43,34 +43,30 @@
 
             <nav id="navmenu" class="navmenu">
                 <ul>
-
                     <li><a href="/Home" class="active">Home</a></li>
-                    <li><a href="/Home/About" class="active">About</a></li>
-                    <li class="dropdown">
-                        <a href="#"><span>Services</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                        <ul>
-                            <li><a href="#">Dropdown 1</a></li>
-                            <li class="dropdown">
-                                <a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                                <ul>
-                                    <li><a href="#">Deep Dropdown 1</a></li>
-                                    <li><a href="#">Deep Dropdown 2</a></li>
-                                    <li><a href="#">Deep Dropdown 3</a></li>
-                                    <li><a href="#">Deep Dropdown 4</a></li>
-                                    <li><a href="#">Deep Dropdown 5</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Dropdown 2</a></li>
-                            <li><a href="#">Dropdown 3</a></li>
-                            <li><a href="#">Dropdown 4</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="/Home/contact">Contact</a></li>
+                    <li><a href="/Home/Profile">Profile</a></li>
 
+                    <!-- Admin-Specific Links -->
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <li><a href="/Book/Index">Manage Books</a></li>
+                        <li><a href="/Author/Index">Manage Authors</a></li>
+                        <li><a href="/Admin/Dashboard">Admin Dashboard</a></li>
+                    }
+                    else
+                    {
+                        <!-- Regular User Links -->
+                        <li><a href="/Home/About">About</a></li>
+                        <li><a href="/Home/Contact">Contact</a></li>
+                        <li><a href="#">Services</a></li>
+
+
+                    }
                 </ul>
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+
             </nav>
-         
+
         </div>
         <div class="auth-buttons">
             <partial name="_LoginPartial" />

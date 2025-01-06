@@ -10,22 +10,31 @@ namespace eBook_Library_Service.Models
         {
             Stock = 3;
             BookAuthors = new List<BookAuthor>();
+
+            EpubFilePath = null; // Initialize as null
+            F2bFilePath = null;  // Initialize as null
+            MobiFilePath = null; // Initialize as null
+            PdfFilePath = null;
         }
-      
+
         public int BookId { get; set; }
 
         // Book title
-        [Required]
-        [StringLength(200)]
+        [Required(ErrorMessage = "Title is required.")]
+        [StringLength(200, ErrorMessage = "Title cannot exceed 200 characters.")]
         public string Title { get; set; }
 
         // Publisher of the book
-        [Required]
-        [StringLength(200)]
+        [Required(ErrorMessage = "Publisher is required.")]
+        [StringLength(200, ErrorMessage = "Publisher cannot exceed 200 characters.")]
         public string Publisher { get; set; }
+
+        // Description of the book
         public string Description { get; set; }
 
         // Year the book was published
+        [Required(ErrorMessage = "Year published is required.")]
+        [Range(1000, 9999, ErrorMessage = "Year published must be a valid year.")]
         public int YearPublished { get; set; }
 
         // Price to borrow the book (must be lower than BuyPrice)
@@ -37,6 +46,7 @@ namespace eBook_Library_Service.Models
         public decimal BuyPrice { get; set; }
 
         // Discount price for limited time
+        [Range(0, double.MaxValue, ErrorMessage = "Discount price must be a positive value.")]
         public decimal? DiscountPrice { get; set; }
 
         // The date when the discount ends
@@ -47,22 +57,43 @@ namespace eBook_Library_Service.Models
         public int Stock { get; set; }
 
         // Age limit for the book (e.g., 18+, 8+, etc.)
-        [StringLength(50)]
+        [StringLength(50, ErrorMessage = "Age limit cannot exceed 50 characters.")]
         public string AgeLimit { get; set; }
 
-        [StringLength(100)]
+        // Category of the book
+        [StringLength(100, ErrorMessage = "Category cannot exceed 100 characters.")]
         public string Category { get; set; }
+
+        // Image file (not mapped to the database)
         [NotMapped]
         public IFormFile ImageFile { get; set; }
-        public string ImageUrl { get; set; }= "images/BookDefult.png";
 
+        // Image URL (stored in the database)
+        public string? ImageUrl { get; set; } = "images/BookDefault.png";
+
+        // File paths for different formats (nullable)
+        public string? EpubFilePath { get; set; }
+        public string? F2bFilePath { get; set; }
+        public string? MobiFilePath { get; set; }
+        public string? PdfFilePath { get; set; }
+
+        // File upload properties (not mapped to the database)
+        [NotMapped]
+        public IFormFile EpubFile { get; set; }
+
+        [NotMapped]
+        public IFormFile F2bFile { get; set; }
+
+        [NotMapped]
+        public IFormFile MobiFile { get; set; }
+
+        [NotMapped]
+        public IFormFile PdfFile { get; set; }
+
+        // Formats supported by the book
+        public string Formats { get; set; } = "epub,f2b,mobi,PDF";
 
         // Navigation property for authors of the book (Many-to-many relation with Author)
-        public virtual ICollection<BookAuthor> BookAuthors { get; set; }=new List<BookAuthor>();
-
-        
-       
-       
+        public virtual ICollection<BookAuthor> BookAuthors { get; set; } = new List<BookAuthor>();
     }
 }
-

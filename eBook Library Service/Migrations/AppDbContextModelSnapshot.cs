@@ -218,8 +218,23 @@ namespace eBook_Library_Service.Migrations
                     b.Property<decimal?>("DiscountPrice")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<string>("ImageUrl")
+                    b.Property<string>("EpubFilePath")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("F2bFilePath")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Formats")
                         .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ImageUrl")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MobiFilePath")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PdfFilePath")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Publisher")
@@ -253,7 +268,8 @@ namespace eBook_Library_Service.Migrations
                             Description = "A novel written by American author F. Scott Fitzgerald. It is a critique of the American Dream in the 1920s.",
                             DiscountEndDate = new DateTime(2025, 12, 31, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DiscountPrice = 12.99m,
-                            ImageUrl = "https://via.placeholder.com/150",
+                            Formats = "epub,f2b,mobi,PDF",
+                            ImageUrl = "images/BookDefult.png",
                             Publisher = "Scribner",
                             Stock = 3,
                             Title = "The Great Gatsby",
@@ -269,7 +285,8 @@ namespace eBook_Library_Service.Migrations
                             Description = "A dystopian social science fiction novel and cautionary tale, written by the English writer George Orwell.",
                             DiscountEndDate = new DateTime(2025, 11, 30, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DiscountPrice = 10.99m,
-                            ImageUrl = "https://via.placeholder.com/150",
+                            Formats = "epub,f2b,mobi,PDF",
+                            ImageUrl = "images/BookDefult.png",
                             Publisher = "Secker & Warburg",
                             Stock = 3,
                             Title = "1984",
@@ -285,7 +302,8 @@ namespace eBook_Library_Service.Migrations
                             Description = "A novel by Harper Lee published in 1960. It was immediately successful, winning the Pulitzer Prize for Fiction in 1961.",
                             DiscountEndDate = new DateTime(2025, 10, 31, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DiscountPrice = 11.99m,
-                            ImageUrl = "https://via.placeholder.com/150",
+                            Formats = "epub,f2b,mobi,PDF",
+                            ImageUrl = "images/BookDefult.png",
                             Publisher = "J.B. Lippincott & Co.",
                             Stock = 3,
                             Title = "To Kill a Mockingbird",
@@ -328,6 +346,65 @@ namespace eBook_Library_Service.Migrations
                             BookId = 3,
                             AuthorId = 1
                         });
+                });
+
+            modelBuilder.Entity("eBook_Library_Service.Models.BorrowRequest", b =>
+                {
+                    b.Property<int>("BorrowRequestId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("BorrowRequestId"));
+
+                    b.Property<int>("BookId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("RequestDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("BorrowRequestId");
+
+                    b.ToTable("BorrowRequests");
+                });
+
+            modelBuilder.Entity("eBook_Library_Service.Models.Contact", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FullName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Message")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Subject")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("SubmissionDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Contacts");
                 });
 
             modelBuilder.Entity("eBook_Library_Service.Models.Users", b =>

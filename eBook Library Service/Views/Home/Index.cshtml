@@ -1,25 +1,30 @@
 ﻿<main class="main">
-
     <!-- Hero Section -->
     <section id="hero" class="hero section dark-background">
-
         <div class="container">
-            <div class="row gy-4">
+            <div class="row gy-4 align-items-center">
                 <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center" data-aos="zoom-out">
-                    <h1>Your eBooks, Your Way</h1>
-                    <p>Discover, organize, and enjoy your eBooks in one place.</p>
-                    <div class="d-flex">
-                        <a href="/Account/Register" class="btn-get-started">Get Started</a>
-                        <a href="https://www.youtube.com/watch?v=kul-g_30HuU" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
+                    <h1 class="hero-title">Your eBooks, Your Way</h1>
+                    <p class="hero-subtitle">Discover, organize, and enjoy your eBooks in one place.</p>
+                    <div class="hero-buttons d-flex gap-3">
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <a href="/Book/UserIndex" class="btn-get-started">Explore eBooks</a>
+                        }
+                        else
+                        {
+                            <a href="/Account/Register" class="btn-get-started">Get Started</a>
+                        }
+                        <a href="https://www.youtube.com/watch?v=kul-g_30HuU" class="glightbox btn-watch-video d-flex align-items-center">
+                            <i class="bi bi-play-circle"></i>
+                            <span>Watch Video</span>
+                        </a>
                     </div>
                 </div>
                 <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="200">
-                    <img src="~/assets/img/hero-img.png" class="img-fluid animated" alt="">
+                    <img src="~/assets/img/hero-img.png" class="img-fluid animated" alt="eBook Library">
                 </div>
             </div>
         </div>
-
     </section><!-- /Hero Section -->
-
-
 </main>

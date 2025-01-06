@@ -17,6 +17,7 @@
     --heading-font: "Jost", sans-serif;
     --nav-font: "Poppins", sans-serif;
     --navbar-height: 80px;
+    --x:80px;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
@@ -45,7 +46,12 @@
     --background-color: #f5f6f8;
     --surface-color: #ffffff;
 }
+/* Ensure main content is below the navbar */
+main {
+    padding-top: var(--x); /* Use the navbar height variable */
+    margin-bottom: 100px; /* Add margin to prevent footer overlap */
 
+}
 .dark-background {
     --background-color: #37517e;
     --default-color: #ffffff;

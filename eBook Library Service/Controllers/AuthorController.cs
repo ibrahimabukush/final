@@ -1,5 +1,6 @@
 ﻿using eBook_Library_Service.Data;
 using eBook_Library_Service.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace eBook_Library_Service.Controllers
@@ -12,15 +13,17 @@ namespace eBook_Library_Service.Controllers
         {
             authors = new Repository<Author>(context);
         }
+        [Authorize(Policy = "AdminOnly")]
         public async Task<IActionResult> Index()
         {
             return View(await authors.GetAllsync());
         }
+        [Authorize(Policy = "AdminOnly")]
         public async Task<IActionResult> Details(int id)
         {
             return View(await authors.GetByIdAsync(id, new QueryOptions<Author>() { Includes = "BookAuthors.Book" }));
         }
-    
+
         [HttpGet]
         public IActionResult Create()
         {
@@ -28,6 +31,7 @@ namespace eBook_Library_Service.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Policy = "AdminOnly")]
         public async Task<IActionResult> Create([Bind("AuthorId, Name")] Author author)
         {
             // Debug: Log or inspect the incoming author object
@@ -57,25 +61,29 @@ namespace eBook_Library_Service.Controllers
         }
         //Author Delete
         [HttpGet]
+        [Authorize(Policy = "AdminOnly")]
         public async Task<IActionResult> Delete(int id)
         {
-            return View(await authors.GetByIdAsync(id,new QueryOptions<Author> { Includes= "BookAuthors.Book"}));
-        
+            return View(await authors.GetByIdAsync(id, new QueryOptions<Author> { Includes = "BookAuthors.Book" }));
+
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Policy = "AdminOnly")]
         public async Task<IActionResult> Delete(Author author)
         {
             await authors.DeleteAsync(author.AuthorId);
             return RedirectToAction("Index");
         }
         [HttpGet]
+        [Authorize(Policy = "AdminOnly")]
         public async Task<IActionResult> Edit(int id)
         {
             return View(await authors.GetByIdAsync(id, new QueryOptions<Author> { Includes = "BookAuthors.Book" }));
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Policy = "AdminOnly")]
         public async Task<IActionResult> Edit(Author author)
         {
             if (ModelState.IsValid)

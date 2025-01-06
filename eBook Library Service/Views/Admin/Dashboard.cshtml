@@ -1,0 +1,30 @@
+﻿@model eBook_Library_Service.ViewModels.AdminDashboardViewModel
+
+<h2>Admin Dashboard</h2>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Total Books</h5>
+                <p class="card-text">@Model.TotalBooks</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Total Users</h5>
+                <p class="card-text">@Model.TotalUsers</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Pending Borrow Requests</h5>
+                <p class="card-text">@Model.PendingBorrowRequests</p>
+            </div>
+        </div>
+    </div>
+</div>
