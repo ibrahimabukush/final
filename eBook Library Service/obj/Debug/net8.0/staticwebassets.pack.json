@@ -541,6 +541,10 @@
       "PackagePath": "staticwebassets\\images\\8eda3e23-7619-485a-839b-45cee9b577bb_HideAndSeek.jpg"
     },
     {
+      "Id": "C:\\Users\\ibrah\\source\\repos\\newebook\\eBook Library Service\\wwwroot\\images\\8f926f23-f27f-4037-a80a-e16bca9e0172_1003w-53S3IzrNxvY.webp",
+      "PackagePath": "staticwebassets\\images\\8f926f23-f27f-4037-a80a-e16bca9e0172_1003w-53S3IzrNxvY.webp"
+    },
+    {
       "Id": "C:\\Users\\ibrah\\source\\repos\\newebook\\eBook Library Service\\wwwroot\\images\\BookDefult.png",
       "PackagePath": "staticwebassets\\images\\BookDefult.png"
     },
@@ -593,6 +597,10 @@
       "PackagePath": "staticwebassets\\images\\f939262e-f008-4b7c-b987-d64a3c5abc77_Soul.jpg"
     },
     {
+      "Id": "C:\\Users\\ibrah\\source\\repos\\newebook\\eBook Library Service\\wwwroot\\uploads\\epub\\2db22422-8b0e-4522-afa3-770850bf003f_Skin11.pptx",
+      "PackagePath": "staticwebassets\\uploads\\epub\\2db22422-8b0e-4522-afa3-770850bf003f_Skin11.pptx"
+    },
+    {
       "Id": "C:\\Users\\ibrah\\source\\repos\\newebook\\eBook Library Service\\wwwroot\\uploads\\epub\\3c32b3a4-6ac4-4906-b04f-b1066291cc10_1720002777632.pdf",
       "PackagePath": "staticwebassets\\uploads\\epub\\3c32b3a4-6ac4-4906-b04f-b1066291cc10_1720002777632.pdf"
     },
@@ -617,6 +625,10 @@
       "PackagePath": "staticwebassets\\uploads\\f2b\\b3e8a8bf-7511-4d5f-baf6-650d79142477_1720002777632.pdf"
     },
     {
+      "Id": "C:\\Users\\ibrah\\source\\repos\\newebook\\eBook Library Service\\wwwroot\\uploads\\f2b\\c6ccf696-34e4-4b0d-a8c8-4a68df2802a5_Skin11.pptx",
+      "PackagePath": "staticwebassets\\uploads\\f2b\\c6ccf696-34e4-4b0d-a8c8-4a68df2802a5_Skin11.pptx"
+    },
+    {
       "Id": "C:\\Users\\ibrah\\source\\repos\\newebook\\eBook Library Service\\wwwroot\\uploads\\mobi\\34f40e71-ddef-41de-a47e-badb578738d4_Skin11.pptx",
       "PackagePath": "staticwebassets\\uploads\\mobi\\34f40e71-ddef-41de-a47e-badb578738d4_Skin11.pptx"
     },
@@ -629,12 +641,20 @@
       "PackagePath": "staticwebassets\\uploads\\mobi\\bbb4a61a-df26-47a1-9f98-5ad8ba3ba4bb_1720002777632.pdf"
     },
     {
+      "Id": "C:\\Users\\ibrah\\source\\repos\\newebook\\eBook Library Service\\wwwroot\\uploads\\mobi\\e104d244-e2da-413e-bc1a-e233ff1b2426_Skin_Final_Cleaned.docx",
+      "PackagePath": "staticwebassets\\uploads\\mobi\\e104d244-e2da-413e-bc1a-e233ff1b2426_Skin_Final_Cleaned.docx"
+    },
+    {
       "Id": "C:\\Users\\ibrah\\source\\repos\\newebook\\eBook Library Service\\wwwroot\\uploads\\pdf\\08d13e2e-e554-431d-b6fe-926da3075c1e_1720002777632.pdf",
       "PackagePath": "staticwebassets\\uploads\\pdf\\08d13e2e-e554-431d-b6fe-926da3075c1e_1720002777632.pdf"
     },
     {
       "Id": "C:\\Users\\ibrah\\source\\repos\\newebook\\eBook Library Service\\wwwroot\\uploads\\pdf\\26eb3a12-cb2f-44f3-a14e-c0c962a49e72_326501905-326087244 (1).pdf",
       "PackagePath": "staticwebassets\\uploads\\pdf\\26eb3a12-cb2f-44f3-a14e-c0c962a49e72_326501905-326087244 (1).pdf"
+    },
+    {
+      "Id": "C:\\Users\\ibrah\\source\\repos\\newebook\\eBook Library Service\\wwwroot\\uploads\\pdf\\2701a3c0-269f-453a-934e-d1561be1f7e8_Skin_Final_Cleaned.docx",
+      "PackagePath": "staticwebassets\\uploads\\pdf\\2701a3c0-269f-453a-934e-d1561be1f7e8_Skin_Final_Cleaned.docx"
     },
     {
       "Id": "C:\\Users\\ibrah\\source\\repos\\newebook\\eBook Library Service\\wwwroot\\uploads\\pdf\\a305e592-9970-4a4f-8e01-5faa084113cd_1720002777632.pdf",

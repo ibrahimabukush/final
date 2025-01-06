@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "EioBhoMo9Ls3QxJ2yecmTiCvP5Sfuu7vDhwJPKYQZ5Q=",
+  "Hash": "onWMxPowOR4krGBZZ9JQbKPmLFEGIYIZgu2C8M6SlC8=",
   "Source": "eBook Library Service",
   "BasePath": "_content/eBook Library Service",
   "Mode": "Default",
@@ -2601,6 +2601,25 @@
       "OriginalItemSpec": "wwwroot\\images\\8eda3e23-7619-485a-839b-45cee9b577bb_HideAndSeek.jpg"
     },
     {
+      "Identity": "C:\\Users\\ibrah\\source\\repos\\newebook\\eBook Library Service\\wwwroot\\images\\8f926f23-f27f-4037-a80a-e16bca9e0172_1003w-53S3IzrNxvY.webp",
+      "SourceId": "eBook Library Service",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ibrah\\source\\repos\\newebook\\eBook Library Service\\wwwroot\\",
+      "BasePath": "_content/eBook Library Service",
+      "RelativePath": "images/8f926f23-f27f-4037-a80a-e16bca9e0172_1003w-53S3IzrNxvY.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\8f926f23-f27f-4037-a80a-e16bca9e0172_1003w-53S3IzrNxvY.webp"
+    },
+    {
       "Identity": "C:\\Users\\ibrah\\source\\repos\\newebook\\eBook Library Service\\wwwroot\\images\\a836840d-6170-40fd-83b8-3d5abef9c97c_images.jpg",
       "SourceId": "eBook Library Service",
       "SourceType": "Discovered",
@@ -2848,6 +2867,25 @@
       "OriginalItemSpec": "wwwroot\\images\\Soul.jpg"
     },
     {
+      "Identity": "C:\\Users\\ibrah\\source\\repos\\newebook\\eBook Library Service\\wwwroot\\uploads\\epub\\2db22422-8b0e-4522-afa3-770850bf003f_Skin11.pptx",
+      "SourceId": "eBook Library Service",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ibrah\\source\\repos\\newebook\\eBook Library Service\\wwwroot\\",
+      "BasePath": "_content/eBook Library Service",
+      "RelativePath": "uploads/epub/2db22422-8b0e-4522-afa3-770850bf003f_Skin11.pptx",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\epub\\2db22422-8b0e-4522-afa3-770850bf003f_Skin11.pptx"
+    },
+    {
       "Identity": "C:\\Users\\ibrah\\source\\repos\\newebook\\eBook Library Service\\wwwroot\\uploads\\epub\\3c32b3a4-6ac4-4906-b04f-b1066291cc10_1720002777632.pdf",
       "SourceId": "eBook Library Service",
       "SourceType": "Discovered",
@@ -2962,6 +3000,25 @@
       "OriginalItemSpec": "wwwroot\\uploads\\f2b\\b3e8a8bf-7511-4d5f-baf6-650d79142477_1720002777632.pdf"
     },
     {
+      "Identity": "C:\\Users\\ibrah\\source\\repos\\newebook\\eBook Library Service\\wwwroot\\uploads\\f2b\\c6ccf696-34e4-4b0d-a8c8-4a68df2802a5_Skin11.pptx",
+      "SourceId": "eBook Library Service",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ibrah\\source\\repos\\newebook\\eBook Library Service\\wwwroot\\",
+      "BasePath": "_content/eBook Library Service",
+      "RelativePath": "uploads/f2b/c6ccf696-34e4-4b0d-a8c8-4a68df2802a5_Skin11.pptx",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\f2b\\c6ccf696-34e4-4b0d-a8c8-4a68df2802a5_Skin11.pptx"
+    },
+    {
       "Identity": "C:\\Users\\ibrah\\source\\repos\\newebook\\eBook Library Service\\wwwroot\\uploads\\mobi\\34f40e71-ddef-41de-a47e-badb578738d4_Skin11.pptx",
       "SourceId": "eBook Library Service",
       "SourceType": "Discovered",
@@ -3019,6 +3076,25 @@
       "OriginalItemSpec": "wwwroot\\uploads\\mobi\\bbb4a61a-df26-47a1-9f98-5ad8ba3ba4bb_1720002777632.pdf"
     },
     {
+      "Identity": "C:\\Users\\ibrah\\source\\repos\\newebook\\eBook Library Service\\wwwroot\\uploads\\mobi\\e104d244-e2da-413e-bc1a-e233ff1b2426_Skin_Final_Cleaned.docx",
+      "SourceId": "eBook Library Service",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ibrah\\source\\repos\\newebook\\eBook Library Service\\wwwroot\\",
+      "BasePath": "_content/eBook Library Service",
+      "RelativePath": "uploads/mobi/e104d244-e2da-413e-bc1a-e233ff1b2426_Skin_Final_Cleaned.docx",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\mobi\\e104d244-e2da-413e-bc1a-e233ff1b2426_Skin_Final_Cleaned.docx"
+    },
+    {
       "Identity": "C:\\Users\\ibrah\\source\\repos\\newebook\\eBook Library Service\\wwwroot\\uploads\\pdf\\08d13e2e-e554-431d-b6fe-926da3075c1e_1720002777632.pdf",
       "SourceId": "eBook Library Service",
       "SourceType": "Discovered",
@@ -3055,6 +3131,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\pdf\\26eb3a12-cb2f-44f3-a14e-c0c962a49e72_326501905-326087244 (1).pdf"
+    },
+    {
+      "Identity": "C:\\Users\\ibrah\\source\\repos\\newebook\\eBook Library Service\\wwwroot\\uploads\\pdf\\2701a3c0-269f-453a-934e-d1561be1f7e8_Skin_Final_Cleaned.docx",
+      "SourceId": "eBook Library Service",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ibrah\\source\\repos\\newebook\\eBook Library Service\\wwwroot\\",
+      "BasePath": "_content/eBook Library Service",
+      "RelativePath": "uploads/pdf/2701a3c0-269f-453a-934e-d1561be1f7e8_Skin_Final_Cleaned.docx",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\pdf\\2701a3c0-269f-453a-934e-d1561be1f7e8_Skin_Final_Cleaned.docx"
     },
     {
       "Identity": "C:\\Users\\ibrah\\source\\repos\\newebook\\eBook Library Service\\wwwroot\\uploads\\pdf\\a305e592-9970-4a4f-8e01-5faa084113cd_1720002777632.pdf",
