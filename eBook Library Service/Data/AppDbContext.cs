@@ -22,8 +22,7 @@ namespace eBook_Library_Service.Data
             modelBuilder.Entity<BookAuthor>().HasOne(ba => ba.Author)
                 .WithMany(a => a.BookAuthors)
                 .HasForeignKey(ba => ba.AuthorId);
-<<<<<<< HEAD
-            //seed data
+
             modelBuilder.Entity<Author>().HasData(new Author { AuthorId = 1, Name = "Author1" });
             modelBuilder.Entity<Author>().HasData(new Author { AuthorId = 2, Name = "Author2" });
             modelBuilder.Entity<Book>().HasData(new Book
@@ -76,9 +75,7 @@ namespace eBook_Library_Service.Data
             modelBuilder.Entity<BookAuthor>().HasData(new BookAuthor { BookId = 1, AuthorId = 2 });
             modelBuilder.Entity<BookAuthor>().HasData(new BookAuthor { BookId = 2, AuthorId = 2 });
             modelBuilder.Entity<BookAuthor>().HasData(new BookAuthor { BookId = 3, AuthorId = 1 });
-=======
-            
->>>>>>> 38e31174d50d8acd7bc64d6bcbcea5afdde2d9a0
+
 
         }
     }

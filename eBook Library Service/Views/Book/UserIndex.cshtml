@@ -91,10 +91,7 @@
                             </p>
 
                             <!-- Pass BookId and DiscountEndDate to JavaScript -->
-<<<<<<< HEAD
-=======
-                           
->>>>>>> 38e31174d50d8acd7bc64d6bcbcea5afdde2d9a0
+
                         }
                         <div>
                             <p style="color: #28a745;">Borrow price: @book.BorrowPrice.ToString("c")</p>
@@ -102,18 +99,18 @@
                         </div>
 
                         <div class="book-price">
-<<<<<<< HEAD
+
                             
                             <div class="book-price">
                                 <button type="button" class="btn btn-add-to-cart" data-toggle="modal" data-target="#addToCartModal">Add to Cart</button>
                                 <a class="btn btn-borrow">Borrow</a>
                                 <a class="btn btn-buy">Buy</a>
                             </div>
-=======
+
                             <button type="button" class="btn btn-add-to-cart" data-toggle="modal" data-target="#addToCartModal">Add to Cart</button>
                             <a asp-action="AddEdit" asp-route-id="@book.BookId" class="btn btn-borrow">Borrow</a>
                             <a asp-action="AddEdit" asp-route-id="@book.BookId" class="btn btn-buy">Buy</a>
->>>>>>> 38e31174d50d8acd7bc64d6bcbcea5afdde2d9a0
+
                         </div>
                     </div>
                 </div>
@@ -123,11 +120,11 @@
             // Countdown timer for each book
             var countdownDate = new Date('@book.DiscountEndDate.Value.ToString("yyyy-MM-ddTHH:mm:ss")').getTime();
 
-<<<<<<< HEAD
+
             var x = setInterval(function () {
-=======
+
             var x = setInterval(function() {
->>>>>>> 38e31174d50d8acd7bc64d6bcbcea5afdde2d9a0
+
                 var now = new Date().getTime();
                 var distance = countdownDate - now;
 
@@ -164,8 +161,7 @@
             }
         });
     }
-<<<<<<< HEAD
+
 </script>
-=======
+
 </script>
->>>>>>> 38e31174d50d8acd7bc64d6bcbcea5afdde2d9a0

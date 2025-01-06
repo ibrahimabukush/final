@@ -27,8 +27,7 @@
                         <!-- Pass BookId and DiscountEndDate to JavaScript -->
                     }
                     <div>
-<<<<<<< HEAD
-=======
+
                     @if (book.DiscountEndDate.HasValue && book.DiscountEndDate.Value > DateTime.Now)
                     {
                         <p class="card-text" style="color: #dc3545; font-weight: bold; font-size: 1rem;">Discount ends in: <span id="countdown-@book.BookId"></span></p>
@@ -45,12 +44,12 @@
                         <!-- Pass BookId and DiscountEndDate to JavaScript -->
                     }
                     <div>
->>>>>>> 38e31174d50d8acd7bc64d6bcbcea5afdde2d9a0
+
                         <p style="color: #28a745;">Borrow price: @book.BorrowPrice.ToString("c")</p>
                         <p style="color: #28a745;">Buy price: @book.BuyPrice.ToString("c")</p>
                     </div>
                     <div class="book-price">
-<<<<<<< HEAD
+
                         <button type="button" class="btn btn-add-to-cart" data-toggle="modal" data-target="#addToCartModal">Add to Cart</button>
                     </div>
                 </div>
@@ -58,7 +57,7 @@
         </div>
     </a>
 }
-=======
+
 
                         <button type="button" class="btn btn-add-to-cart" data-toggle="modal" data-target="#addToCartModal">Add to Cart</button>
                     </div>
@@ -68,4 +67,4 @@
         </a>
     
 }
->>>>>>> 38e31174d50d8acd7bc64d6bcbcea5afdde2d9a0
+

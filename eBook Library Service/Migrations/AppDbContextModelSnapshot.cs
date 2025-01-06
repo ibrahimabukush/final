@@ -213,22 +213,20 @@ namespace eBook_Library_Service.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Formats")
-<<<<<<< HEAD
+
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ImageUrl")
                         .HasColumnType("nvarchar(max)");
 
-=======
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
+                 
                     b.Property<string>("ImageUrl")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
->>>>>>> 38e31174d50d8acd7bc64d6bcbcea5afdde2d9a0
+
                     b.Property<string>("MobiFilePath")
                         .HasColumnType("nvarchar(max)");
 
@@ -254,7 +252,7 @@ namespace eBook_Library_Service.Migrations
                     b.HasKey("BookId");
 
                     b.ToTable("Books");
-<<<<<<< HEAD
+
 
                     b.HasData(
                         new
@@ -308,8 +306,6 @@ namespace eBook_Library_Service.Migrations
                             Title = "To Kill a Mockingbird",
                             YearPublished = 1960
                         });
-=======
->>>>>>> 38e31174d50d8acd7bc64d6bcbcea5afdde2d9a0
                 });
 
             modelBuilder.Entity("eBook_Library_Service.Models.BookAuthor", b =>
