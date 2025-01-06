@@ -10,6 +10,11 @@ namespace eBook_Library_Service.Models
         {
             Stock = 3;
             BookAuthors = new List<BookAuthor>();
+            
+            EpubFilePath = null; // Initialize as null
+            F2bFilePath = null;  // Initialize as null
+            MobiFilePath = null; // Initialize as null
+            PdfFilePath = null;
         }
       
         public int BookId { get; set; }
@@ -54,8 +59,26 @@ namespace eBook_Library_Service.Models
         public string Category { get; set; }
         [NotMapped]
         public IFormFile ImageFile { get; set; }
-        public string ImageUrl { get; set; }= "images/BookDefult.png";
+        public string? ImageUrl { get; set; }= "images/BookDefult.png";
 
+        public string? EpubFilePath { get; set; } // Nullable
+        public string? F2bFilePath { get; set; }  // Nullable
+        public string? MobiFilePath { get; set; } // Nullable
+        public string? PdfFilePath { get; set; }  // Nullable
+
+        // File upload properties (not mapped to the database)
+        [NotMapped]
+            public IFormFile EpubFile { get; set; }
+
+            [NotMapped]
+            public IFormFile F2bFile { get; set; }
+
+            [NotMapped]
+            public IFormFile MobiFile { get; set; }
+
+            [NotMapped]
+            public IFormFile PdfFile { get; set; }
+        public string Formats { get; set; } = "epub,f2b,mobi,PDF";
 
         // Navigation property for authors of the book (Many-to-many relation with Author)
         public virtual ICollection<BookAuthor> BookAuthors { get; set; }=new List<BookAuthor>();

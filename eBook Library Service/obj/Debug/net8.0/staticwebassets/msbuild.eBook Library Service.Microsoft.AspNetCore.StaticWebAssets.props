@@ -2250,6 +2250,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\5df6a456-52dd-450e-aca4-d439a378449b_images.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\65b08311-51ce-4264-93b5-3e0c09db6bb3_shadow.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>eBook Library Service</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/eBook Library Service</BasePath>
+      <RelativePath>images/65b08311-51ce-4264-93b5-3e0c09db6bb3_shadow.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>fjm9qhimix</Fingerprint>
+      <Integrity>W7hkiMPHZigMlOOtsDkPaaVipXRbQs7xfs2P7Nhzkwk=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\65b08311-51ce-4264-93b5-3e0c09db6bb3_shadow.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\6cc5ea98-b606-4f41-9cf3-a925fbf621c0_HideAndSeek.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>eBook Library Service</SourceId>
@@ -2573,6 +2591,150 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\Soul.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\epub\3c32b3a4-6ac4-4906-b04f-b1066291cc10_1720002777632.pdf'))">
+      <SourceType>Package</SourceType>
+      <SourceId>eBook Library Service</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/eBook Library Service</BasePath>
+      <RelativePath>uploads/epub/3c32b3a4-6ac4-4906-b04f-b1066291cc10_1720002777632.pdf</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>i550gs0ms5</Fingerprint>
+      <Integrity>6mWy3fiAoIP699qVtG1+92ZWraoRfK5+4+NySZMKiE0=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\epub\3c32b3a4-6ac4-4906-b04f-b1066291cc10_1720002777632.pdf'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\epub\a32e89a1-4bfc-43ee-9e5f-928c8c83ba49_1720002777632.pdf'))">
+      <SourceType>Package</SourceType>
+      <SourceId>eBook Library Service</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/eBook Library Service</BasePath>
+      <RelativePath>uploads/epub/a32e89a1-4bfc-43ee-9e5f-928c8c83ba49_1720002777632.pdf</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>i550gs0ms5</Fingerprint>
+      <Integrity>6mWy3fiAoIP699qVtG1+92ZWraoRfK5+4+NySZMKiE0=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\epub\a32e89a1-4bfc-43ee-9e5f-928c8c83ba49_1720002777632.pdf'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\f2b\41f3968d-7048-4a04-93fa-d7794cb8ae86_1720002777632.pdf'))">
+      <SourceType>Package</SourceType>
+      <SourceId>eBook Library Service</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/eBook Library Service</BasePath>
+      <RelativePath>uploads/f2b/41f3968d-7048-4a04-93fa-d7794cb8ae86_1720002777632.pdf</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>i550gs0ms5</Fingerprint>
+      <Integrity>6mWy3fiAoIP699qVtG1+92ZWraoRfK5+4+NySZMKiE0=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\f2b\41f3968d-7048-4a04-93fa-d7794cb8ae86_1720002777632.pdf'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\f2b\b3e8a8bf-7511-4d5f-baf6-650d79142477_1720002777632.pdf'))">
+      <SourceType>Package</SourceType>
+      <SourceId>eBook Library Service</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/eBook Library Service</BasePath>
+      <RelativePath>uploads/f2b/b3e8a8bf-7511-4d5f-baf6-650d79142477_1720002777632.pdf</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>i550gs0ms5</Fingerprint>
+      <Integrity>6mWy3fiAoIP699qVtG1+92ZWraoRfK5+4+NySZMKiE0=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\f2b\b3e8a8bf-7511-4d5f-baf6-650d79142477_1720002777632.pdf'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\mobi\42b0a7d5-3832-45ba-868a-55545db4a07c_1720002777632.pdf'))">
+      <SourceType>Package</SourceType>
+      <SourceId>eBook Library Service</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/eBook Library Service</BasePath>
+      <RelativePath>uploads/mobi/42b0a7d5-3832-45ba-868a-55545db4a07c_1720002777632.pdf</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>i550gs0ms5</Fingerprint>
+      <Integrity>6mWy3fiAoIP699qVtG1+92ZWraoRfK5+4+NySZMKiE0=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\mobi\42b0a7d5-3832-45ba-868a-55545db4a07c_1720002777632.pdf'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\mobi\bbb4a61a-df26-47a1-9f98-5ad8ba3ba4bb_1720002777632.pdf'))">
+      <SourceType>Package</SourceType>
+      <SourceId>eBook Library Service</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/eBook Library Service</BasePath>
+      <RelativePath>uploads/mobi/bbb4a61a-df26-47a1-9f98-5ad8ba3ba4bb_1720002777632.pdf</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>i550gs0ms5</Fingerprint>
+      <Integrity>6mWy3fiAoIP699qVtG1+92ZWraoRfK5+4+NySZMKiE0=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\mobi\bbb4a61a-df26-47a1-9f98-5ad8ba3ba4bb_1720002777632.pdf'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\pdf\08d13e2e-e554-431d-b6fe-926da3075c1e_1720002777632.pdf'))">
+      <SourceType>Package</SourceType>
+      <SourceId>eBook Library Service</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/eBook Library Service</BasePath>
+      <RelativePath>uploads/pdf/08d13e2e-e554-431d-b6fe-926da3075c1e_1720002777632.pdf</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>i550gs0ms5</Fingerprint>
+      <Integrity>6mWy3fiAoIP699qVtG1+92ZWraoRfK5+4+NySZMKiE0=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\pdf\08d13e2e-e554-431d-b6fe-926da3075c1e_1720002777632.pdf'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\pdf\a305e592-9970-4a4f-8e01-5faa084113cd_1720002777632.pdf'))">
+      <SourceType>Package</SourceType>
+      <SourceId>eBook Library Service</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/eBook Library Service</BasePath>
+      <RelativePath>uploads/pdf/a305e592-9970-4a4f-8e01-5faa084113cd_1720002777632.pdf</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>i550gs0ms5</Fingerprint>
+      <Integrity>6mWy3fiAoIP699qVtG1+92ZWraoRfK5+4+NySZMKiE0=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\pdf\a305e592-9970-4a4f-8e01-5faa084113cd_1720002777632.pdf'))</OriginalItemSpec>
     </StaticWebAsset>
   </ItemGroup>
 </Project>

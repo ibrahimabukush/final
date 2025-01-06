@@ -5,11 +5,14 @@
 }
 <h1>@ViewBag.Operation @Model.Title</h1>
 <form asp-action="AddEdit" method="post" enctype="multipart/form-data">
+    <div asp-validation-summary="All" class="text-danger"></div> <!-- Add this line -->
     <input type="hidden" asp-for="BookId" />
     <div class="form-group">
         <label asp-for="Title"></label>
-        <input asp-for="Title" class="form-control" name="Title" />
+        <input asp-for="Title" class="form-control" />
         <span asp-validation-for="Title" class="text-danger"></span>
+    </div>
+
     </div>
     <div class="form-group">
         <label asp-for="Publisher"></label>
@@ -59,6 +62,22 @@
     <div class="form-group">
         <label asp-for="ImageFile"></label>
         <input type="file" class="form-control" id="ImageFile" name="ImageFile" asp-for="ImageFile" />
+    </div>
+    <div>
+        <label asp-for="EpubFile"></label>
+        <input asp-for="EpubFile" type="file" />
+    </div>
+    <div>
+        <label asp-for="F2bFile"></label>
+        <input asp-for="F2bFile" type="file" />
+    </div>
+    <div>
+        <label asp-for="MobiFile"></label>
+        <input asp-for="MobiFile" type="file" />
+    </div>
+    <div>
+        <label asp-for="PdfFile"></label>
+        <input asp-for="PdfFile" type="file" />
     </div>
     <div class="form-group">
         <label for="authorSearch">Search Authors:</label>

@@ -185,20 +185,26 @@
                     }
                 </div>
                 <div>
-                    @if (Model.DiscountPrice.HasValue && Model.DiscountPrice.Value > 0 && Model.BuyPrice > 0)
+                    @if (Model.DiscountEndDate.HasValue && Model.DiscountEndDate.Value > DateTime.Now)
                     {
-                        @if (Model.DiscountEndDate.HasValue && Model.DiscountEndDate.Value > DateTime.Now)
-                        {
-                            <p class="card-text" style="color: #dc3545; font-weight: bold; font-size: 1rem;">Discount ends in: <span id="countdown-@Model.BookId"></span></p>
-                            var discountAmount = @Model.BuyPrice * (@Model.DiscountPrice.Value / 100);
-                            var discountedPrice1 = @Model.BuyPrice - discountAmount;
-                            <p class="card-text" style="color: #dc3545; font-weight: bold; font-size: 1.2rem;">
-                                <span>@Model.DiscountPrice.Value% off</span>
-                            </p>
-                            <p class="card-text" style="color: #dc3545; font-weight: bold; font-size: 1.2rem;">
-                                <span style="text-decoration: line-through; color: #6c757d;">@Model.BuyPrice.ToString("c")</span>
-                                <span style="color: #28a745;">@discountedPrice1.ToString("c")</span>
-                            </p>
+                        <p class="card-text" style="color: #dc3545; font-weight: bold; font-size: 1rem;">Discount ends in: <span id="countdown-@Model.BookId"></span></p>
+                        var originalPrice = Model.BuyPrice / (1 - (Model.DiscountPrice.Value / 100));
+
+                        <p class="card-text" style="color: #dc3545; font-weight: bold; font-size: 1.2rem;">
+                            <span>@Model.DiscountPrice.Value% off</span>
+                        </p>
+
+                        <p class="card-text" style="color: #dc3545; font-weight: bold; font-size: 1.2rem;">
+                            <span style="text-decoration: line-through; color: #6c757d;">@originalPrice.ToString("c")</span>
+                        </p>
+
+                        <!-- Pass BookId and DiscountEndDate to JavaScript -->
+                    }
+                    <div>
+                        <span style="color: #28a745;">Borrow price: @Model.BorrowPrice.ToString("c")</span>
+                        <span style="color: #28a745;">Buy price: @Model.BuyPrice.ToString("c")</span>
+                    </div>
+                   
                             <script>
                                 // Countdown timer for each book
                                 var countdownDate = new Date('@Model.DiscountEndDate.Value.ToString("yyyy-MM-ddTHH:mm:ss")').getTime();
@@ -223,19 +229,17 @@
                                     }
                                 }, 1000);
                             </script>
-                        }
-                    }
-                    else
-                    {
-                        <p class="card-text" style="color: #28a745; font-weight: bold; font-size: 1.2rem;">
-                            @Model.BuyPrice.ToString("c")
-                        </p>
-                    }
+                        
+                    
+                   
+                    
+                        
+                    
                 </div>
 
                 <!-- Price and Add to Cart Section -->
                 <div class="book-price">
-                    <p class="price">Price: <span class="green-price">@Model.BuyPrice.ToString("C")</span></p>
+                   
                     <button type="button" class="btn btn-add-to-cart" data-toggle="modal" data-target="#addToCartModal">Add to Cart</button>
                 </div>
             </div>
