@@ -1,116 +1,195 @@
-﻿
-@model Book
+﻿@model Book
 
 @{
     ViewBag.Title = $"{ViewBag.Operation}";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<h1>@ViewBag.Operation @Model.Title</h1>
-<form asp-action="AddEdit" method="post" enctype="multipart/form-data">
-    <div asp-validation-summary="All" class="text-danger"></div> <!-- Add this line -->
-    <input type="hidden" asp-for="BookId" />
-    <div class="form-group">
-        <label asp-for="Title"></label>
-        <input asp-for="Title" class="form-control" />
-        <span asp-validation-for="Title" class="text-danger"></span>
-    </div>
 
-    </div>
-    <div class="form-group">
-        <label asp-for="Publisher"></label>
-        <input asp-for="Publisher" class="form-control" name="Publisher" />
-        <span asp-validation-for="Publisher" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="Description"></label>
-        <input asp-for="Description" class="form-control" name="Description" />
-        <span asp-validation-for="Description" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="YearPublished"></label>
-        <input asp-for="YearPublished" class="form-control" name="YearPublished" />
-        <span asp-validation-for="YearPublished" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="BorrowPrice"></label>
-        <input asp-for="BorrowPrice" class="form-control" name="BorrowPrice" />
-        <span asp-validation-for="BorrowPrice" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="BuyPrice"></label>
-        <input asp-for="BuyPrice" class="form-control" name="BuyPrice" />
-        <span asp-validation-for="BuyPrice" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="DiscountPrice"></label>
-        <input asp-for="DiscountPrice" class="form-control" name="DiscountPrice" />
-        <span asp-validation-for="DiscountPrice" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="DiscountEndDate"></label>
-        <input asp-for="DiscountEndDate" class="form-control" name="DiscountEndDate" />
-        <span asp-validation-for="DiscountEndDate" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="AgeLimit"></label>
-        <input asp-for="AgeLimit" class="form-control" name="AgeLimit" />
-        <span asp-validation-for="AgeLimit" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="Category"></label>
-        <input asp-for="Category" class="form-control" name="Category" />
-        <span asp-validation-for="Category" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="ImageFile"></label>
-        <input type="file" class="form-control" id="ImageFile" name="ImageFile" asp-for="ImageFile" />
-    </div>
-    <div>
-        <label asp-for="EpubFile"></label>
-        <input asp-for="EpubFile" type="file" />
-    </div>
-    <div>
-        <label asp-for="F2bFile"></label>
-        <input asp-for="F2bFile" type="file" />
-    </div>
-    <div>
-        <label asp-for="MobiFile"></label>
-        <input asp-for="MobiFile" type="file" />
-    </div>
-    <div>
-        <label asp-for="PdfFile"></label>
-        <input asp-for="PdfFile" type="file" />
-    </div>
-    <div class="form-group">
-        <label for="authorSearch">Search Authors:</label>
-        <input type="text" id="authorSearch" class="form-control" onkeyup="filterAuthors()" placeholder="Search for authors..">
-    </div>
-    <div class="row">
-        <div class="col">
-            @if (ViewBag.Authors != null)
-            {
-                <div id="authorList">
-                    @foreach (Author author in ViewBag.Authors)
-                    {
-                        <div class="form-check">
-                            @{
-                                bool isChecked = Model.BookAuthors != null && Model.BookAuthors.Any(i => i.AuthorId == author.AuthorId);
-                            }
-                            <input type="checkbox" class="form-check-input" id="author_@author.AuthorId" name="authorIds" value="@author.AuthorId" @(isChecked ? "checked" : "") />
-                            <label class="form-check-label" for="author_@author.AuthorId">@author.Name</label>
+<div class="container mt-5">
+    <h1 class="display-4 mb-4">@ViewBag.Operation @Model.Title</h1>
+    <form asp-action="AddEdit" method="post" enctype="multipart/form-data" class="needs-validation" novalidate>
+        <div asp-validation-summary="All" class="alert alert-danger"></div> <!-- Validation summary -->
+
+        <input type="hidden" asp-for="BookId" />
+
+        <!-- Book Details Section -->
+        <div class="card mb-4">
+            <div class="card-header bg-primary text-white">
+                <h5 class="card-title mb-0">Book Details</h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group mb-3">
+                            <label asp-for="Title" class="form-label">Title</label>
+                            <input asp-for="Title" class="form-control" required />
+                            <span asp-validation-for="Title" class="text-danger"></span>
                         </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group mb-3">
+                            <label asp-for="Publisher" class="form-label">Publisher</label>
+                            <input asp-for="Publisher" class="form-control" required />
+                            <span asp-validation-for="Publisher" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="Description" class="form-label">Description</label>
+                    <textarea asp-for="Description" class="form-control" rows="3"></textarea>
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group mb-3">
+                            <label asp-for="YearPublished" class="form-label">Year Published</label>
+                            <input asp-for="YearPublished" class="form-control" required />
+                            <span asp-validation-for="YearPublished" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group mb-3">
+                            <label asp-for="BorrowPrice" class="form-label">Borrow Price</label>
+                            <input asp-for="BorrowPrice" class="form-control" required />
+                            <span asp-validation-for="BorrowPrice" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group mb-3">
+                            <label asp-for="BuyPrice" class="form-label">Buy Price</label>
+                            <input asp-for="BuyPrice" class="form-control" required />
+                            <span asp-validation-for="BuyPrice" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group mb-3">
+                            <label asp-for="DiscountPrice" class="form-label">Discount Price</label>
+                            <input asp-for="DiscountPrice" class="form-control" />
+                            <span asp-validation-for="DiscountPrice" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group mb-3">
+                            <label asp-for="DiscountEndDate" class="form-label">Discount End Date</label>
+                            <input asp-for="DiscountEndDate" class="form-control" type="date" />
+                            <span asp-validation-for="DiscountEndDate" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group mb-3">
+                            <label asp-for="AgeLimit" class="form-label">Age Limit</label>
+                            <input asp-for="AgeLimit" class="form-control" />
+                            <span asp-validation-for="AgeLimit" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group mb-3">
+                            <label asp-for="Category" class="form-label">Category</label>
+                            <input asp-for="Category" class="form-control" />
+                            <span asp-validation-for="Category" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- File Uploads Section -->
+        <div class="card mb-4">
+            <div class="card-header bg-primary text-white">
+                <h5 class="card-title mb-0">File Uploads</h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group mb-3">
+                            <label asp-for="ImageFile" class="form-label">Cover Image</label>
+                            <input type="file" class="form-control" id="ImageFile" name="ImageFile" asp-for="ImageFile" />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group mb-3">
+                            <label asp-for="EpubFile" class="form-label">ePub File</label>
+                            <input asp-for="EpubFile" type="file" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group mb-3">
+                            <label asp-for="F2bFile" class="form-label">F2b File</label>
+                            <input asp-for="F2bFile" type="file" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group mb-3">
+                            <label asp-for="MobiFile" class="form-label">Mobi File</label>
+                            <input asp-for="MobiFile" type="file" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group mb-3">
+                            <label asp-for="PdfFile" class="form-label">PDF File</label>
+                            <input asp-for="PdfFile" type="file" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Authors Section -->
+        <div class="card mb-4">
+            <div class="card-header bg-primary text-white">
+                <h5 class="card-title mb-0">Authors</h5>
+            </div>
+            <div class="card-body">
+                <div class="form-group mb-3">
+                    <label for="authorSearch" class="form-label">Search Authors:</label>
+                    <input type="text" id="authorSearch" class="form-control" onkeyup="filterAuthors()" placeholder="Search for authors..." />
+                </div>
+
+                <div id="authorList" class="row">
+                    @if (ViewBag.Authors != null)
+                    {
+                        foreach (Author author in ViewBag.Authors)
+                        {
+                            <div class="col-md-4 mb-3">
+                                <div class="form-check">
+                                    @{
+                                        bool isChecked = Model.BookAuthors != null && Model.BookAuthors.Any(i => i.AuthorId == author.AuthorId);
+                                    }
+                                    <input type="checkbox" class="form-check-input" id="author_@author.AuthorId" name="authorIds" value="@author.AuthorId" @(isChecked ? "checked" : "") />
+                                    <label class="form-check-label" for="author_@author.AuthorId">@author.Name</label>
+                                </div>
+                            </div>
+                        }
+                    }
+                    else
+                    {
+                        <p class="text-muted">No authors found.</p>
                     }
                 </div>
-            }
-            else
-            {
-                <p>No authors found.</p>
-            }
+            </div>
         </div>
-    </div>
-    <button type="submit" class="btn btn-primary">Save</button>
-    <a asp-action="Index" asp-controller="Book" class="btn btn-outline-dark">Cancel</a>
-</form>
+
+        <!-- Form Buttons -->
+        <div class="text-end">
+            <button type="submit" class="btn btn-primary btn-lg">Save</button>
+            <a asp-action="Index" asp-controller="Book" class="btn btn-outline-secondary btn-lg">Cancel</a>
+        </div>
+    </form>
+</div>
 
 <script>
     function filterAuthors() {
@@ -118,7 +197,7 @@
         input = document.getElementById('authorSearch');
         filter = input.value.toLowerCase();
         authorList = document.getElementById("authorList");
-        authors = authorList.getElementsByClassName('form-check');
+        authors = authorList.getElementsByClassName('col-md-4');
 
         for (i = 0; i < authors.length; i++) {
             label = authors[i].getElementsByTagName("label")[0];

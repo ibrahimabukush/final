@@ -12,6 +12,8 @@ namespace eBook_Library_Service.Data
         public DbSet<BookAuthor> BookAuthors { get; set; }
         public DbSet<BorrowRequest> BorrowRequests { get; set; }
         public DbSet<Contact> Contacts { get; set; }
+        public DbSet<ShoppingCart> ShoppingCarts { get; set; }
+        public DbSet<ShoppingCartItem> ShoppingCartItems { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -76,7 +78,20 @@ namespace eBook_Library_Service.Data
             modelBuilder.Entity<BookAuthor>().HasData(new BookAuthor { BookId = 2, AuthorId = 2 });
             modelBuilder.Entity<BookAuthor>().HasData(new BookAuthor { BookId = 3, AuthorId = 1 });
 
+            modelBuilder.Entity<ShoppingCart>()
+           .HasOne(sc => sc.User)
+           .WithMany()
+           .HasForeignKey(sc => sc.UserId);
 
+            modelBuilder.Entity<ShoppingCartItem>()
+                .HasOne(sci => sci.Book)
+                .WithMany()
+                .HasForeignKey(sci => sci.BookId);
+
+            modelBuilder.Entity<ShoppingCartItem>()
+                .HasOne(sci => sci.ShoppingCart)
+                .WithMany(sc => sc.Items)
+                .HasForeignKey(sci => sci.ShoppingCartId);
         }
     }
 }

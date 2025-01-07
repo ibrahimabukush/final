@@ -1,9 +1,11 @@
 ﻿@model eBook_Library_Service.Models.Book
 @{
     ViewBag.Title = "Book Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <style>
+    /* Modern and Elegant Styles */
     .book-details-container {
         display: flex;
         justify-content: center;
@@ -16,34 +18,54 @@
         display: flex;
         flex-direction: row;
         background-color: #fff;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 12px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
         overflow: hidden;
-        max-width: 900px;
+        max-width: 1000px;
         width: 100%;
         position: relative;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .book-image img {
-        width: 350px;
-        height: auto;
-        object-fit: cover;
+        .book-details:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        }
+
+    .book-image {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #f1f1f1;
+        padding: 2rem;
     }
+
+        .book-image img {
+            width: 100%;
+            height: 100%;
+            max-height: 500px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
 
     .book-info {
+        flex: 1.5;
         padding: 2rem;
-        flex-grow: 1;
     }
 
         .book-info h1 {
             font-size: 2.5rem;
             color: #333;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
         }
 
         .book-info p {
-            margin-bottom: 0.5rem;
+            margin-bottom: 1rem;
             color: #555;
+            font-size: 1.1rem;
+            line-height: 1.6;
         }
 
         .book-info .book-category,
@@ -52,6 +74,7 @@
         .book-info .book-description,
         .book-info .book-age-limit {
             font-size: 1.1rem;
+            color: #555;
         }
 
         .book-info .book-authors ul {
@@ -61,6 +84,8 @@
 
         .book-info .book-authors li {
             margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+            color: #555;
         }
 
         .book-info .green-price {
@@ -69,63 +94,50 @@
         }
 
     .book-price {
-        margin-top: 1rem;
+        margin-top: 1.5rem;
     }
 
-    .btn-add-to-cart {
+    .btn-add-to-cart, .btn-buy-direct, .btn-borrow {
         background-color: #007bff;
         color: #fff;
         border: none;
         padding: 0.75rem 1.5rem;
-        border-radius: 5px;
+        border-radius: 6px;
         cursor: pointer;
         font-size: 1rem;
+        transition: background-color 0.3s ease;
+        margin-right: 0.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
     }
 
-        .btn-add-to-cart:hover {
-            background-color: #0056b3;
-        }
-
-    .modal-content {
-        border-radius: 10px;
+    .btn-buy-direct {
+        background-color: #28a745;
     }
 
-    .modal-header {
-        border-bottom: none;
+    .btn-borrow {
+        background-color: #ffc107;
     }
 
-    .modal-title {
-        font-size: 1.5rem;
-        color: #333;
-    }
-
-    .modal-body {
-        padding: 2rem;
-    }
-
-        .modal-body .form-control {
-            font-size: 1rem;
-            padding: 0.75rem;
-        }
-
-        .modal-body .btn {
-            font-size: 1rem;
-            padding: 0.75rem;
+        .btn-add-to-cart:hover, .btn-buy-direct:hover, .btn-borrow:hover {
+            opacity: 0.9;
         }
 
     .back-to-list-btn {
         position: absolute;
-        bottom: 1rem;
-        left: 1rem;
-        background-color: #007bff;
+        bottom: 1.5rem;
+        left: 1.5rem;
+        background-color: #6c757d;
         color: #fff;
         border: none;
         padding: 0.75rem 1.5rem;
-        border-radius: 5px;
+        border-radius: 6px;
         cursor: pointer;
         font-size: 1rem;
         display: flex;
         align-items: center;
+        transition: background-color 0.3s ease;
     }
 
         .back-to-list-btn i {
@@ -133,8 +145,50 @@
         }
 
         .back-to-list-btn:hover {
-            background-color: #0056b3;
+            background-color: #5a6268;
         }
+
+    .discount-section {
+        background-color: #fff3e6;
+        padding: 1rem;
+        border-radius: 8px;
+        margin-bottom: 1.5rem;
+    }
+
+    .discount-timer {
+        font-size: 1rem;
+        color: #e67e22;
+        margin-bottom: 0.5rem;
+    }
+
+    .discount-percent {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #e67e22;
+        margin-bottom: 0.5rem;
+    }
+
+    .original-price {
+        font-size: 1rem;
+        color: #777;
+        text-decoration: line-through;
+    }
+
+    .pricing-section {
+        margin-bottom: 1.5rem;
+    }
+
+    .borrow-price, .buy-price {
+        font-size: 1.1rem;
+        color: #333;
+        margin-bottom: 0.5rem;
+    }
+
+    .action-buttons {
+        display: flex;
+        gap: 0.5rem;
+        margin-top: 1.5rem;
+    }
 </style>
 
 <body>
@@ -174,70 +228,114 @@
                 <div class="book-age-limit">
                     <strong>Age Limit:</strong> @Model.AgeLimit
                 </div>
-                <div class="book-discount-price">
-                    @if (Model.DiscountPrice.HasValue)
-                    {
-                        <span class="green-price">@Model.DiscountPrice.Value.ToString("C")</span>
-                    }
-                    else
-                    {
-                        <span class="green-price">No Discount</span>
-                    }
-                </div>
-                <div>
-                    @if (Model.DiscountEndDate.HasValue && Model.DiscountEndDate.Value > DateTime.Now)
-                    {
-                        <p class="card-text" style="color: #dc3545; font-weight: bold; font-size: 1rem;">Discount ends in: <span id="countdown-@Model.BookId"></span></p>
-                        var originalPrice = Model.BuyPrice / (1 - (Model.DiscountPrice.Value / 100));
 
-
-                        <p class="card-text" style="color: #dc3545; font-weight: bold; font-size: 1.2rem;">
-                            <span>@Model.DiscountPrice.Value% off</span>
-                        </p>
-
-                        <p class="card-text" style="color: #dc3545; font-weight: bold; font-size: 1.2rem;">
-                            <span style="text-decoration: line-through; color: #6c757d;">@originalPrice.ToString("c")</span>
-                        </p>
-
-                        <!-- Pass BookId and DiscountEndDate to JavaScript -->
-                    }
-                    <div>
-                        <span style="color: #28a745;">Borrow price: @Model.BorrowPrice.ToString("c")</span>
-                        <span style="color: #28a745;">Buy price: @Model.BuyPrice.ToString("c")</span>
+                <!-- Discount Section -->
+                @if (Model.DiscountPrice.HasValue && Model.DiscountEndDate.HasValue && Model.DiscountEndDate.Value > DateTime.Now)
+                {
+                    <div class="discount-section">
+                        <p class="discount-timer">Discount ends in: <span id="countdown-@Model.BookId"></span></p>
+                        <p class="discount-percent">@Model.DiscountPrice.Value% off</p>
+                        @{
+                            var originalPrice = Model.BuyPrice / (1 - (Model.DiscountPrice.Value / 100));
+                        }
+                        <p class="original-price"><del>@originalPrice.ToString("c")</del></p>
                     </div>
+                }
 
-                    <script>
-                        // Countdown timer for each book
-                        var countdownDate = new Date('@Model.DiscountEndDate.Value.ToString("yyyy-MM-ddTHH:mm:ss")').getTime();
-
-                        var x = setInterval(function () {
-                            var now = new Date().getTime();
-                            var distance = countdownDate - now;
-
-                            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                            if (distance < 0) {
-                                clearInterval(x);
-                                document.getElementById("countdown-@Model.BookId").innerHTML = "Discount expired";
-                            } else {
-                                document.getElementById("countdown-@Model.BookId").innerHTML =
-                                    days + "d " + hours + "h " + minutes + "m " + seconds + "s";
-                            }
-                        }, 1000);
-                    </script>
+                <!-- Pricing Section -->
+                <div class="pricing-section">
+                    <p class="borrow-price"><strong>Borrow Price:</strong> @Model.BorrowPrice.ToString("c")</p>
+                    <p class="buy-price"><strong>Buy Price:</strong> @Model.BuyPrice.ToString("c")</p>
                 </div>
 
-                <!-- Add to Cart Button -->
-                <button class="btn-add-to-cart">Add to Cart</button>
+                <!-- Action Buttons -->
+                <div class="action-buttons">
+                    <!-- Buy Direct -->
+                    <form asp-controller="ShoppingCart" asp-action="AddToCart" method="post" data-ajax="true">
+                        <input type="hidden" name="bookId" value="@Model.BookId" />
+                        <input type="hidden" name="isForBorrow" value="false" />
+                        <button type="submit" class="btn btn-buy-direct">
+                            <i class="fas fa-shopping-cart"></i> Buy Now
+                        </button>
+                    </form>
+
+                    <!-- Borrow -->
+                    <form asp-controller="ShoppingCart" asp-action="AddToCart" method="post" data-ajax="true">
+                        <input type="hidden" name="bookId" value="@Model.BookId" />
+                        <input type="hidden" name="isForBorrow" value="true" />
+                        <button type="submit" class="btn btn-borrow">
+                            <i class="fas fa-book"></i> Borrow
+                        </button>
+                    </form>
+
+                    <!-- Add to Cart -->
+                    <form asp-controller="ShoppingCart" asp-action="AddToCart" method="post" data-ajax="true">
+                        <input type="hidden" name="bookId" value="@Model.BookId" />
+                        <input type="hidden" name="isForBorrow" value="false" />
+                        <button type="submit" class="btn btn-add-to-cart">
+                            <i class="fas fa-cart-plus"></i> Add to Cart
+                        </button>
+                    </form>
+                </div>
             </div>
 
             <!-- Back to List Button -->
-            <button class="back-to-list-btn" onclick="window.location.href='@Url.Action("Index", "Book")'">
+            <button class="back-to-list-btn" onclick="window.location.href='@Url.Action("UserIndex", "Book")'">
                 <i class="fas fa-arrow-left"></i> Back to List
             </button>
         </div>
     </main>
+
+    <script>
+        // Countdown timer for the discount
+        var countdownDate = new Date('@Model.DiscountEndDate.Value.ToString("yyyy-MM-ddTHH:mm:ss")').getTime();
+
+        var x = setInterval(function () {
+            var now = new Date().getTime();
+            var distance = countdownDate - now;
+
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown-@Model.BookId").innerHTML = "Discount expired";
+            } else {
+                document.getElementById("countdown-@Model.BookId").innerHTML =
+                    days + "d " + hours + "h " + minutes + "m " + seconds + "s";
+            }
+        }, 1000);
+
+        // Handle form submissions asynchronously
+        document.addEventListener('DOMContentLoaded', function () {
+            const forms = document.querySelectorAll('form[data-ajax="true"]');
+            forms.forEach(form => {
+                form.addEventListener('submit', function (e) {
+                    e.preventDefault(); // Prevent the default form submission
+
+                    const formData = new FormData(form);
+
+                    fetch(form.action, {
+                        method: 'POST',
+                        body: formData,
+                        headers: {
+                            'X-Requested-With': 'XMLHttpRequest'
+                        },
+                        redirect: 'follow' // Allow the browser to follow the redirect
+                    })
+                        .then(response => {
+                            if (response.redirected) {
+                                // If the server returns a redirect, navigate to the new location
+                                window.location.href = response.url;
+                            }
+                        })
+                        .catch(error => {
+                            console.error('Error:', error);
+                        });
+                });
+            });
+        });
+    </script>
 </body>

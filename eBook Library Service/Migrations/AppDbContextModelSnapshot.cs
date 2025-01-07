@@ -170,6 +170,18 @@ namespace eBook_Library_Service.Migrations
                     b.HasKey("AuthorId");
 
                     b.ToTable("Authors");
+
+                    b.HasData(
+                        new
+                        {
+                            AuthorId = 1,
+                            Name = "Author1"
+                        },
+                        new
+                        {
+                            AuthorId = 2,
+                            Name = "Author2"
+                        });
                 });
 
             modelBuilder.Entity("eBook_Library_Service.Models.Book", b =>
@@ -213,19 +225,11 @@ namespace eBook_Library_Service.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Formats")
-
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ImageUrl")
                         .HasColumnType("nvarchar(max)");
-
-
-                 
-                    b.Property<string>("ImageUrl")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
 
                     b.Property<string>("MobiFilePath")
                         .HasColumnType("nvarchar(max)");
@@ -253,7 +257,6 @@ namespace eBook_Library_Service.Migrations
 
                     b.ToTable("Books");
 
-
                     b.HasData(
                         new
                         {
@@ -266,7 +269,7 @@ namespace eBook_Library_Service.Migrations
                             DiscountEndDate = new DateTime(2025, 12, 31, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DiscountPrice = 12.99m,
                             Formats = "epub,f2b,mobi,PDF",
-                            ImageUrl = "images/BookDefult.png",
+                            ImageUrl = "images/BookDefault.png",
                             Publisher = "Scribner",
                             Stock = 3,
                             Title = "The Great Gatsby",
@@ -283,7 +286,7 @@ namespace eBook_Library_Service.Migrations
                             DiscountEndDate = new DateTime(2025, 11, 30, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DiscountPrice = 10.99m,
                             Formats = "epub,f2b,mobi,PDF",
-                            ImageUrl = "images/BookDefult.png",
+                            ImageUrl = "images/BookDefault.png",
                             Publisher = "Secker & Warburg",
                             Stock = 3,
                             Title = "1984",
@@ -300,7 +303,7 @@ namespace eBook_Library_Service.Migrations
                             DiscountEndDate = new DateTime(2025, 10, 31, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DiscountPrice = 11.99m,
                             Formats = "epub,f2b,mobi,PDF",
-                            ImageUrl = "images/BookDefult.png",
+                            ImageUrl = "images/BookDefault.png",
                             Publisher = "J.B. Lippincott & Co.",
                             Stock = 3,
                             Title = "To Kill a Mockingbird",
@@ -321,6 +324,28 @@ namespace eBook_Library_Service.Migrations
                     b.HasIndex("AuthorId");
 
                     b.ToTable("BookAuthors");
+
+                    b.HasData(
+                        new
+                        {
+                            BookId = 1,
+                            AuthorId = 1
+                        },
+                        new
+                        {
+                            BookId = 1,
+                            AuthorId = 2
+                        },
+                        new
+                        {
+                            BookId = 2,
+                            AuthorId = 2
+                        },
+                        new
+                        {
+                            BookId = 3,
+                            AuthorId = 1
+                        });
                 });
 
             modelBuilder.Entity("eBook_Library_Service.Models.BorrowRequest", b =>
@@ -380,6 +405,54 @@ namespace eBook_Library_Service.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Contacts");
+                });
+
+            modelBuilder.Entity("eBook_Library_Service.Models.ShoppingCart", b =>
+                {
+                    b.Property<int>("ShoppingCartId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ShoppingCartId"));
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("ShoppingCartId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("ShoppingCarts");
+                });
+
+            modelBuilder.Entity("eBook_Library_Service.Models.ShoppingCartItem", b =>
+                {
+                    b.Property<int>("ShoppingCartItemId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ShoppingCartItemId"));
+
+                    b.Property<int>("BookId")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("IsForBorrow")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ShoppingCartId")
+                        .HasColumnType("int");
+
+                    b.HasKey("ShoppingCartItemId");
+
+                    b.HasIndex("BookId");
+
+                    b.HasIndex("ShoppingCartId");
+
+                    b.ToTable("ShoppingCartItems");
                 });
 
             modelBuilder.Entity("eBook_Library_Service.Models.Users", b =>
@@ -521,6 +594,36 @@ namespace eBook_Library_Service.Migrations
                     b.Navigation("Book");
                 });
 
+            modelBuilder.Entity("eBook_Library_Service.Models.ShoppingCart", b =>
+                {
+                    b.HasOne("eBook_Library_Service.Models.Users", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("eBook_Library_Service.Models.ShoppingCartItem", b =>
+                {
+                    b.HasOne("eBook_Library_Service.Models.Book", "Book")
+                        .WithMany()
+                        .HasForeignKey("BookId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("eBook_Library_Service.Models.ShoppingCart", "ShoppingCart")
+                        .WithMany("Items")
+                        .HasForeignKey("ShoppingCartId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Book");
+
+                    b.Navigation("ShoppingCart");
+                });
+
             modelBuilder.Entity("eBook_Library_Service.Models.Author", b =>
                 {
                     b.Navigation("BookAuthors");
@@ -529,6 +632,11 @@ namespace eBook_Library_Service.Migrations
             modelBuilder.Entity("eBook_Library_Service.Models.Book", b =>
                 {
                     b.Navigation("BookAuthors");
+                });
+
+            modelBuilder.Entity("eBook_Library_Service.Models.ShoppingCart", b =>
+                {
+                    b.Navigation("Items");
                 });
 #pragma warning restore 612, 618
         }

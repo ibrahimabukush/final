@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("eBook Library Service")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+aedb4e1ef892caa72dfc8263575c439dbe27b9bd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a046150e74c6aca3a6acd8697febc5f8fe4570be")]
 [assembly: System.Reflection.AssemblyProductAttribute("eBook Library Service")]
 [assembly: System.Reflection.AssemblyTitleAttribute("eBook Library Service")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

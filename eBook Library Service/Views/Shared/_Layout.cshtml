@@ -58,7 +58,12 @@
                         <!-- Regular User Links -->
                         <li><a href="/Home/About">About</a></li>
                         <li><a href="/Home/Contact">Contact</a></li>
-                        <li><a href="#">Services</a></li>
+                        <li>
+                            <a href="/ShoppingCart" class="cart-icon">
+                                <i class="bi bi-cart"></i>
+                                <span class="cart-count">0</span> <!-- Optional: Display the number of items in the cart -->
+                            </a>
+                        </li>
 
 
                     }
@@ -70,7 +75,44 @@
 
 
         </div>
+        <style>
+            .cart-icon {
+                position: relative;
+                font-size: 1.5rem;
+                color: #000; /* Change the color as needed */
+                text-decoration: none;
+            }
 
+                .cart-icon:hover {
+                    color: #007bff; /* Change the hover color as needed */
+                }
+
+            .cart-count {
+                position: absolute;
+                top: -10px;
+                right: -10px;
+                background-color: #dc3545; /* Red background for the count badge */
+                color: #fff; /* White text for the count badge */
+                font-size: 0.75rem;
+                padding: 0.25rem 0.5rem;
+                border-radius: 50%;
+            }
+        </style>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                // Fetch the cart count from the server (you need to implement this API endpoint)
+                fetch('/ShoppingCart/GetCartCount')
+                    .then(response => response.json())
+                    .then(data => {
+                        // Update the cart count in the UI
+                        const cartCount = document.querySelector('.cart-count');
+                        if (cartCount) {
+                            cartCount.textContent = data.count;
+                        }
+                    })
+                    .catch(error => console.error('Error fetching cart count:', error));
+            });
+        </script>
 
         <div class="auth-buttons">
             <partial name="_LoginPartial" />

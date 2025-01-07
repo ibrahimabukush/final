@@ -5,40 +5,143 @@
 }
 
 <style>
-    .book-price {
-        display: flex;
-        gap: 0.5rem; /* Space between buttons */
-        margin-top: 1rem; /* Add some space above the buttons */
+    /* Book Card Styling */
+    .book-card {
+        border: 1px solid #e0e0e0;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        background-color: #fff;
+        margin-bottom: 20px;
+        width: 200px; /* Smaller card width */
+        text-decoration: none; /* Remove underline from anchor tag */
+        color: inherit; /* Inherit text color */
     }
 
-    .btn-add-to-cart, .btn-borrow, .btn-buy {
-        padding: 0.25rem 0.5rem; /* Smaller padding */
-        font-size: 0.8rem; /* Smaller font size */
-        border-radius: 5px; /* Rounded corners */
-        text-align: center;
-        white-space: nowrap; /* Prevent text from wrapping */
+        .book-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .book-card img {
+            width: 100%;
+            height: 150px; /* Smaller image height */
+            object-fit: cover; /* Ensures the image covers the area without distortion */
+        }
+
+    .book-card-body {
+        padding: 12px;
+    }
+
+    .book-card-title {
+        font-size: 1rem; /* Smaller font size */
+        font-weight: bold;
+        margin-bottom: 8px;
+        color: #333;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis; /* Truncate long titles */
+    }
+
+    .book-card-description {
+        font-size: 0.75rem; /* Smaller font size */
+        color: #555;
+        margin-bottom: 8px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2; /* Limit description to 2 lines */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .book-card-meta {
+        font-size: 0.75rem; /* Smaller font size */
+        color: #777;
+        margin-bottom: 8px;
+    }
+
+        .book-card-meta strong {
+            color: #333;
+        }
+
+    .discount-section {
+        background-color: #fff3e6;
+        padding: 6px;
+        border-radius: 6px;
+        margin-bottom: 8px;
+    }
+
+    .discount-timer {
+        font-size: 0.75rem; /* Smaller font size */
+        color: #e67e22;
+        margin-bottom: 4px;
+    }
+
+    .discount-percent {
+        font-size: 0.875rem; /* Smaller font size */
+        font-weight: bold;
+        color: #e67e22;
+        margin-bottom: 4px;
+    }
+
+    .original-price {
+        font-size: 0.75rem; /* Smaller font size */
+        color: #777;
+        text-decoration: line-through;
+    }
+
+    .pricing-section {
+        margin-bottom: 8px;
+    }
+
+    .borrow-price, .buy-price {
+        font-size: 0.875rem; /* Smaller font size */
+        color: #333;
+        margin-bottom: 4px;
+    }
+
+    .book-actions {
+        display: flex;
+        gap: 6px;
+        margin-top: 8px;
+    }
+
+    .btn-add-to-cart, .btn-borrow, .btn-buy-now {
+        flex: 1;
+        padding: 6px;
+        border: none;
+        border-radius: 6px;
+        font-size: 0.75rem; /* Smaller font size */
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
     }
 
     .btn-add-to-cart {
-        background-color: #007bff; /* Blue color */
-        color: white;
-        border: 1px solid #007bff;
+        background-color: #007bff;
+        color: #fff;
     }
+
+        .btn-add-to-cart:hover {
+            background-color: #0056b3;
+        }
 
     .btn-borrow {
-        background-color: #28a745; /* Green color */
-        color: white;
-        border: 1px solid #28a745;
+        background-color: #28a745;
+        color: #fff;
     }
 
-    .btn-buy {
-        background-color: #dc3545; /* Red color */
-        color: white;
-        border: 1px solid #dc3545;
+        .btn-borrow:hover {
+            background-color: #218838;
+        }
+
+    .btn-buy-now {
+        background-color: #dc3545;
+        color: #fff;
     }
 
-        .btn-add-to-cart:hover, .btn-borrow:hover, .btn-buy:hover {
-            opacity: 0.8; /* Slightly transparent on hover */
+        .btn-buy-now:hover {
+            background-color: #c82333;
         }
 </style>
 
@@ -65,82 +168,88 @@
 </form>
 
 <!-- Books List -->
-<div id="bookList" class="book-list mt-4">
+<div id="bookList" class="book-list mt-4" style="display: flex; flex-wrap: wrap; gap: 16px;">
     @foreach (var book in Model)
     {
-        <a asp-action="Details" asp-route-id="@book.BookId">
-            <div class="book-card">
-                <img src="@Url.Content("~/images/" + book.ImageUrl)" alt="@book.Description" />
-                <div class="book-card-body">
-                    <h5>@book.Title</h5>
-                    <p>@book.Description</p>
+        <a asp-action="Details" asp-route-id="@book.BookId" class="book-card">
+            <img src="@Url.Content("~/images/" + book.ImageUrl)" alt="@book.Title" />
+            <div class="book-card-body">
+                <h5 class="book-card-title">@book.Title</h5>
+                <p class="book-card-description">@book.Description</p>
+                <div class="book-card-meta">
                     <p><strong>Published:</strong> @book.YearPublished</p>
                     <p><strong>Category:</strong> @book.Category</p>
-                    <div>
-                        @if (book.DiscountEndDate.HasValue && book.DiscountEndDate.Value > DateTime.Now)
-                        {
-                            <p class="card-text" style="color: #dc3545; font-weight: bold; font-size: 1rem;">Discount ends in: <span id="countdown-@book.BookId"></span></p>
-                            var originalPrice = book.BuyPrice / (1 - (book.DiscountPrice.Value / 100));
+                </div>
 
-                            <p class="card-text" style="color: #dc3545; font-weight: bold; font-size: 1.2rem;">
-                                <span>@book.DiscountPrice.Value% off</span>
-                            </p>
-
-                            <p class="card-text" style="color: #dc3545; font-weight: bold; font-size: 1.2rem;">
-                                <span style="text-decoration: line-through; color: #6c757d;">@originalPrice.ToString("c")</span>
-                            </p>
-
-                            <!-- Pass BookId and DiscountEndDate to JavaScript -->
-
-                        }
-                        <div>
-                            <p style="color: #28a745;">Borrow price: @book.BorrowPrice.ToString("c")</p>
-                            <p style="color: #28a745;">Buy price: @book.BuyPrice.ToString("c")</p>
-                        </div>
-
-                        <div class="book-price">
-
-                            
-                            <div class="book-price">
-                                <button type="button" class="btn btn-add-to-cart" data-toggle="modal" data-target="#addToCartModal">Add to Cart</button>
-                                <a class="btn btn-borrow">Borrow</a>
-                                <a class="btn btn-buy">Buy</a>
-                            </div>
-
-                        
-
-                        </div>
+                <!-- Discount Section -->
+                @if (book.DiscountEndDate.HasValue && book.DiscountEndDate.Value > DateTime.Now)
+                {
+                    <div class="discount-section">
+                        <p class="discount-timer">Discount ends in: <span id="countdown-@book.BookId"></span></p>
+                        <p class="discount-percent">@book.DiscountPrice.Value% off</p>
+                        <p class="original-price"><del>@((book.BuyPrice / (1 - (book.DiscountPrice.Value / 100))).ToString("c"))</del></p>
                     </div>
+                }
+
+                <!-- Pricing Section -->
+                <div class="pricing-section">
+                    <p class="borrow-price"><strong>Borrow Price:</strong> @book.BorrowPrice.ToString("c")</p>
+                    <p class="buy-price"><strong>Buy Price:</strong> @book.BuyPrice.ToString("c")</p>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="book-actions">
+                    <form asp-controller="ShoppingCart" asp-action="AddToCart" method="post">
+                        <input type="hidden" name="bookId" value="@book.BookId" />
+                        <input type="hidden" name="isForBorrow" value="false" />
+                        <button type="submit" class="btn btn-add-to-cart">Add to Cart</button>
+                    </form>
+                    <form asp-controller="ShoppingCart" asp-action="AddToCart" method="post">
+                        <input type="hidden" name="bookId" value="@book.BookId" />
+                        <input type="hidden" name="isForBorrow" value="true" />
+                        <button type="submit" class="btn btn-borrow">Borrow</button>
+                    </form>
+                    <form asp-controller="ShoppingCart" asp-action="BuyNow" method="post">
+                        <input type="hidden" name="bookId" value="@book.BookId" />
+                        <button type="submit" class="btn btn-buy-now">Buy Now</button>
+                    </form>
                 </div>
             </div>
         </a>
+
         <script>
             // Countdown timer for each book
-            var countdownDate = new Date('@book.DiscountEndDate.Value.ToString("yyyy-MM-ddTHH:mm:ss")').getTime();
+            function startCountdown(bookId, discountEndDate) {
+                var countdownDate = new Date(discountEndDate).getTime();
 
+                var x = setInterval(function () {
+                    var now = new Date().getTime();
+                    var distance = countdownDate - now;
 
-            var x = setInterval(function () {
+                    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            var x = setInterval(function() {
+                    // Display the countdown
+                    document.getElementById("countdown-" + bookId).innerHTML = days + "d " + hours + "h "
+                        + minutes + "m " + seconds + "s ";
 
-                var now = new Date().getTime();
-                var distance = countdownDate - now;
+                    // If the countdown is finished
+                    if (distance < 0) {
+                        clearInterval(x);
+                        document.getElementById("countdown-" + bookId).innerHTML = "EXPIRED";
+                    }
+                }, 1000);
+            }
 
-                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                // Display the countdown
-                document.getElementById("countdown-@book.BookId").innerHTML = days + "d " + hours + "h "
-                    + minutes + "m " + seconds + "s ";
-
-                // If the countdown is finished
-                if (distance < 0) {
-                    clearInterval(x);
-                    document.getElementById("countdown-@book.BookId").innerHTML = "EXPIRED";
-                }
-            }, 1000);
+            // Start the countdown for each book
+            @if (book.DiscountEndDate.HasValue)
+            {
+                <text>
+                    startCountdown(@book.BookId, '@book.DiscountEndDate.Value.ToString("yyyy-MM-ddTHH:mm:ss")');
+                </text>
+            }
         </script>
     }
 </div>
@@ -159,7 +268,4 @@
             }
         });
     }
-
-</script>
-
 </script>
