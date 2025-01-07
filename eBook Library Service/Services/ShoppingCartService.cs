@@ -81,8 +81,11 @@ namespace eBook_Library_Service.Services
         public async Task ClearCartAsync()
         {
             var cart = await GetCartAsync();
-            cart.Items.Clear();
-            await _context.SaveChangesAsync();
+            if (cart != null)
+            {
+                cart.Items.Clear(); // Remove all items from the cart
+                await _context.SaveChangesAsync(); // Save changes to the database
+            }
         }
     }
 }

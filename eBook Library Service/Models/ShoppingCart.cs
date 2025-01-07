@@ -6,5 +6,6 @@
         public string UserId { get; set; } // Link to the user who owns the cart
         public Users User { get; set; } // Navigation property
         public List<ShoppingCartItem> Items { get; set; } = new List<ShoppingCartItem>(); // List of items in the cart
+        public decimal TotalPrice => Items.Sum(item => item.Quantity * item.Book.BuyPrice);
     }
 }

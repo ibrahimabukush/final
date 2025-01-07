@@ -1,0 +1,100 @@
+﻿@{
+    ViewData["Title"] = "Stripe Checkout";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-lg">
+                <div class="card-header bg-dark text-white text-center py-4">
+                    <h2 class="card-title mb-0">Checkout</h2>
+                    <p class="mb-0">Complete your purchase securely with Stripe</p>
+                </div>
+                <div class="card-body p-4">
+                    <div id="payment-form">
+                        <!-- Stripe Card Element -->
+                        <div class="form-group mb-4">
+                            <label for="card-element" class="form-label">Card Details</label>
+                            <div id="card-element" class="form-control p-3">
+                                <!-- Stripe card element will be inserted here -->
+                            </div>
+                        </div>
+
+                        <!-- Error Message -->
+                        <div id="error-message" class="alert alert-danger d-none mt-3"></div>
+
+                        <!-- Pay Now Button -->
+                        <button id="submit-button" class="btn btn-dark btn-lg btn-block w-100 py-2">
+                            <span id="submit-text">Pay Now</span>
+                            <span id="spinner" class="spinner-border spinner-border-sm d-none" role="status"></span>
+                        </button>
+
+                        <!-- Cancel Payment Button -->
+                        <a href="@Url.Action("Index", "ShoppingCart")" class="btn btn-outline-dark btn-lg btn-block w-100 mt-3 py-2">
+                            Cancel Payment
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://js.stripe.com/v3/"></script>
+    <script>
+        var stripe = Stripe('@ViewBag.StripePublishableKey');
+        var elements = stripe.elements();
+        var cardElement = elements.create('card', {
+            style: {
+                base: {
+                    fontSize: '16px',
+                    color: '#495057',
+                    '::placeholder': {
+                        color: '#6c757d'
+                    }
+                },
+                invalid: {
+                    color: '#dc3545',
+                    iconColor: '#dc3545'
+                }
+            }
+        });
+        cardElement.mount('#card-element');
+
+        var submitButton = document.getElementById('submit-button');
+        var errorMessage = document.getElementById('error-message');
+        var submitText = document.getElementById('submit-text');
+        var spinner = document.getElementById('spinner');
+
+        submitButton.addEventListener('click', function (event) {
+            event.preventDefault();
+
+            // Disable the button and show the spinner
+            submitButton.disabled = true;
+            submitText.textContent = "Processing...";
+            spinner.classList.remove('d-none');
+
+            // Confirm the payment
+            stripe.confirmCardPayment('@ViewBag.StripeClientSecret', {
+                payment_method: {
+                    card: cardElement,
+                }
+            }).then(function (result) {
+                if (result.error) {
+                    // Show error message
+                    errorMessage.textContent = result.error.message;
+                    errorMessage.classList.remove('d-none');
+
+                    // Reset the button
+                    submitButton.disabled = false;
+                    submitText.textContent = "Pay Now";
+                    spinner.classList.add('d-none');
+                } else {
+                    // Redirect to the success page
+                    window.location.href = '@Url.Action("PaymentSuccess", "Payment")';
+                }
+            });
+        });
+    </script>
+}

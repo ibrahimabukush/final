@@ -1059,6 +1059,22 @@
           }
         }
       },
+      "PayPal/1.9.1": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "7.0.1"
+        },
+        "compile": {
+          "lib/net451/PayPal.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net451/PayPal.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Stripe.net/47.2.0": {
         "type": "package",
         "dependencies": {
@@ -3919,6 +3935,23 @@
         "packageIcon.png"
       ]
     },
+    "PayPal/1.9.1": {
+      "sha512": "b3vq6Lc9CwSooCX2tsZ02zb7E/K/cA6EILCoMynue+ZeVuitJNqt0YwxPnp7uN0Pccob02oDlpAjRLH+GRCRxA==",
+      "type": "package",
+      "path": "paypal/1.9.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/PayPal.dll",
+        "lib/net40/PayPal.xml",
+        "lib/net45/PayPal.dll",
+        "lib/net45/PayPal.xml",
+        "lib/net451/PayPal.dll",
+        "lib/net451/PayPal.xml",
+        "paypal.1.9.1.nupkg.sha512",
+        "paypal.nuspec"
+      ]
+    },
     "Stripe.net/47.2.0": {
       "sha512": "e1FR3JTUbSWYDxE78APyml5V2SV3wS6z/eIQN2OAdtrRSoahOCAK4OcWiHn4582HPf2mJmS1AvyDZO+OqAHOfw==",
       "type": "package",
@@ -6242,6 +6275,7 @@
       "Microsoft.EntityFrameworkCore.Design >= 9.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 9.0.0",
       "Microsoft.EntityFrameworkCore.Tools >= 9.0.0",
+      "PayPal >= 1.9.1",
       "Stripe.net >= 47.2.0",
       "System.Linq.Expressions >= 4.3.0"
     ]
@@ -6320,6 +6354,10 @@
             "target": "Package",
             "version": "[9.0.0, )"
           },
+          "PayPal": {
+            "target": "Package",
+            "version": "[1.9.1, )"
+          },
           "Stripe.net": {
             "target": "Package",
             "version": "[47.2.0, )"
@@ -6351,5 +6389,17 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'PayPal 1.9.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "libraryId": "PayPal",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
 }

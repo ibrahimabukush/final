@@ -74,6 +74,10 @@
               "target": "Package",
               "version": "[9.0.0, )"
             },
+            "PayPal": {
+              "target": "Package",
+              "version": "[1.9.1, )"
+            },
             "Stripe.net": {
               "target": "Package",
               "version": "[47.2.0, )"

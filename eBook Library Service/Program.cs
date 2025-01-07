@@ -10,8 +10,18 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddScoped<ShoppingCartService>();
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddControllersWithViews();
+builder.Services.AddSingleton<PayPalService>();
+builder.Services.AddSingleton<StripeService>();
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("Default")));
+
+// Add session support (if needed for shopping cart)
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30); // Session timeout
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
+});
 
 builder.Services.AddIdentity<Users, IdentityRole>(options =>
 {
@@ -34,6 +44,14 @@ builder.Services.AddAuthorization(options =>
 });
 
 var app = builder.Build();
+
+// Validate PayPal configuration
+var payPalClientId = builder.Configuration["PayPal:ClientId"];
+var payPalClientSecret = builder.Configuration["PayPal:ClientSecret"];
+if (string.IsNullOrEmpty(payPalClientId) || string.IsNullOrEmpty(payPalClientSecret))
+{
+    throw new InvalidOperationException("PayPal ClientId or ClientSecret is missing in appsettings.json.");
+}
 
 // Call the SeedAdminUserAsync method after building the application
 using (var scope = app.Services.CreateScope())
@@ -61,9 +79,12 @@ using (var scope = app.Services.CreateScope())
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
+    app.UseHsts(); // Enable HTTP Strict Transport Security (HSTS)
 }
 
+app.UseHttpsRedirection(); // Ensure HTTPS redirection is enabled
 app.UseStaticFiles();
+app.UseSession(); // Enable session support
 
 // Add status code pages middleware BEFORE routing
 app.UseStatusCodePages(async context =>
@@ -75,7 +96,6 @@ app.UseStatusCodePages(async context =>
 });
 
 app.UseRouting();
-
 app.UseAuthentication(); // Ensure authentication is called before authorization
 app.UseAuthorization();
 
