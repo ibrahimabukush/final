@@ -72,5 +72,19 @@ namespace eBook_Library_Service.Controllers
             var count = cart?.Items.Sum(item => item.Quantity) ?? 0;
             return Json(new { count });
         }
+
+        public async Task<IActionResult> PurchaseHistory()
+        {
+            // Get the current user's ID
+            var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+
+            // Fetch the user's purchase history
+            var purchases = await _context.PurchaseHistories
+                .Where(p => p.UserId == userId)
+                .OrderByDescending(p => p.PurchaseDate)
+                .ToListAsync();
+
+            return View(purchases);
+        }
     }
 }

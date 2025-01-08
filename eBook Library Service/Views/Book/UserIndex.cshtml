@@ -209,7 +209,8 @@
                         <input type="hidden" name="isForBorrow" value="true" />
                         <button type="submit" class="btn btn-borrow">Borrow</button>
                     </form>
-                    <form asp-controller="ShoppingCart" asp-action="BuyNow" method="post">
+                    <!-- Buy Now Button -->
+                    <form asp-controller="Payment" asp-action="BuyNow" method="get">
                         <input type="hidden" name="bookId" value="@book.BookId" />
                         <button type="submit" class="btn btn-buy-now">Buy Now</button>
                     </form>

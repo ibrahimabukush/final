@@ -251,10 +251,10 @@
                 <!-- Action Buttons -->
                 <div class="action-buttons">
                     <!-- Buy Direct -->
-                    <form asp-controller="ShoppingCart" asp-action="AddToCart" method="post" data-ajax="true">
+                    <!-- Buy Now Button -->
+                    <form asp-controller="Payment" asp-action="BuyNow" method="get">
                         <input type="hidden" name="bookId" value="@Model.BookId" />
-                        <input type="hidden" name="isForBorrow" value="false" />
-                        <button type="submit" class="btn btn-buy-direct">
+                        <button type="submit" class="btn btn-buy-now">
                             <i class="fas fa-shopping-cart"></i> Buy Now
                         </button>
                     </form>

@@ -1,0 +1,49 @@
+﻿@model List<eBook_Library_Service.Models.PurchaseHistory>
+
+@{
+    ViewData["Title"] = "Purchase History";
+}
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Your Purchase History</h2>
+            <hr />
+
+            @if (Model.Any())
+            {
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Book Title</th>
+                            <th>Publisher</th>
+                            <th>Description</th>
+                            <th>Year Published</th>
+                            <th>Price</th>
+                            <th>Purchase Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var purchase in Model)
+                        {
+                            <tr>
+                                <td>@purchase.BookTitle</td>
+                                <td>@purchase.Publisher</td>
+                                <td>@purchase.Description</td>
+                                <td>@purchase.YearPublished</td>
+                                <td>@purchase.Price.ToString("C")</td>
+                                <td>@purchase.PurchaseDate.ToString("yyyy-MM-dd HH:mm")</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            }
+            else
+            {
+                <div class="alert alert-info">
+                    You have no purchase history.
+                </div>
+            }
+        </div>
+    </div>
+</div>

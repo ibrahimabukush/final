@@ -14,6 +14,7 @@ namespace eBook_Library_Service.Data
         public DbSet<Contact> Contacts { get; set; }
         public DbSet<ShoppingCart> ShoppingCarts { get; set; }
         public DbSet<ShoppingCartItem> ShoppingCartItems { get; set; }
+        public DbSet<PurchaseHistory> PurchaseHistories { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
