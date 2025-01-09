@@ -1,22 +1,28 @@
-﻿using eBook_Library_Service.Data;
+﻿using System.Security.Claims;
+using eBook_Library_Service.Data;
 using eBook_Library_Service.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 
 namespace eBook_Library_Service.Controllers
 {
     public class BookController : Controller
     {
+        private readonly AppDbContext _context;
         private readonly Repository<Book> _books;
         private readonly Repository<Author> _authors;
+        private readonly ILogger<BookController> _logger;
         private readonly IWebHostEnvironment _webHostingEnvironment;
 
-        public BookController(AppDbContext context, IWebHostEnvironment webHostingEnvironment)
+        public BookController(AppDbContext context, IWebHostEnvironment webHostingEnvironment, ILogger<BookController> logger)
         {
             _books = new Repository<Book>(context);
             _authors = new Repository<Author>(context);
             _webHostingEnvironment = webHostingEnvironment;
+            _logger = logger;
+            _context = context;
         }
 
         [Authorize(Policy = "AdminOnly")]
@@ -318,6 +324,209 @@ namespace eBook_Library_Service.Controllers
                 Console.WriteLine($"Error saving file: {ex.Message}");
                 throw; // Re-throw the exception to see it in the debugger
             }
+        }
+        public async Task<IActionResult> BorrowHistory()
+        {
+            try
+            {
+                // Get the current user's ID
+                var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+                if (userId == null)
+                {
+                    return Unauthorized(); // User is not logged in
+                }
+
+                // Fetch the user's borrow history with book details
+                var borrowHistory = await _context.BorrowHistory
+                    .Include(bh => bh.Book) // Include book details
+                    .Where(bh => bh.UserId == userId)
+                    .OrderByDescending(bh => bh.BorrowDate)
+                    .ToListAsync();
+
+                return View(borrowHistory); // Pass List<BorrowHistory> to the view
+            }
+            catch (Exception ex)
+            {
+                // Log the error
+                _logger.LogError(ex, "An error occurred while fetching borrow history.");
+                TempData["ErrorMessage"] = "An error occurred while fetching your borrow history. Please try again.";
+                return RedirectToAction("Index", "Home");
+            }
+        }
+        public async Task AddToWaitingListAsync(string userId, int bookId)
+        {
+            // Calculate the user's position in the waiting list
+            var position = await _context.WaitingLists
+                .CountAsync(wl => wl.BookId == bookId) + 1;
+
+            // Add the user to the waiting list
+            var waitingListEntry = new WaitingList
+            {
+                UserId = userId,
+                BookId = bookId,
+                JoinDate = DateTime.UtcNow,
+                Position = position
+            };
+
+            _context.WaitingLists.Add(waitingListEntry);
+            await _context.SaveChangesAsync();
+        }
+        public async Task<IActionResult> BorrowBook(int bookId)
+        {
+            var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            if (userId == null)
+            {
+                return Unauthorized(); // User is not logged in
+            }
+
+            // Check if the user can borrow more books
+            var borrowedBooksCount = await _context.BorrowHistory
+                .CountAsync(bh => bh.UserId == userId && bh.ReturnDate > DateTime.UtcNow);
+
+            if (borrowedBooksCount >= 3)
+            {
+                TempData["ErrorMessage"] = "You have reached the maximum borrowing limit of 3 books.";
+                return RedirectToAction("UserINdex", "Book");
+            }
+
+            // Check if the book exists
+            var book = await _context.Books.FindAsync(bookId);
+            if (book == null)
+            {
+                return NotFound(); // Book does not exist
+            }
+
+            if (book.Stock > 0)
+            {
+                // Book is available - proceed with borrowing
+                await BorrowBookAsync(userId, bookId);
+                TempData["Message"] = $"You have successfully borrowed {book.Title}. It will be available in your library for 30 days.";
+            }
+            else
+            {
+                // Book is unavailable - add user to waiting list
+                await AddToWaitingListAsync(userId, bookId);
+                TempData["Message"] = $"This book is currently unavailable. You are #{await GetUserPositionAsync(userId, bookId)} in the waiting list.";
+            }
+
+            return RedirectToAction("BorrowHistory", "Book"); // Redirect to library page
+        }
+
+        private async Task BorrowBookAsync(string userId, int bookId)
+        {
+            // Reduce the book's stock
+            var book = await _context.Books.FindAsync(bookId);
+            if (book.Stock > 0)
+            {
+                book.Stock -= 1;
+
+                // Add a record to the BorrowHistory table
+                var borrowHistory = new BorrowHistory
+                {
+                    UserId = userId,
+                    BookId = bookId,
+                    BorrowDate = DateTime.UtcNow,
+                    ReturnDate = DateTime.UtcNow.AddDays(30) // 30-day borrowing period
+                };
+
+                _context.BorrowHistory.Add(borrowHistory);
+                await _context.SaveChangesAsync();
+            }
+            else
+            {
+                throw new InvalidOperationException("The book is out of stock.");
+            }
+        }
+        public async Task<List<WaitingList>> GetWaitingListForBookAsync(int bookId)
+        {
+            var waitingList = await _context.WaitingLists
+                .Where(wl => wl.BookId == bookId)
+                .OrderBy(wl => wl.Position)
+                .ToListAsync();
+
+            return waitingList;
+        }
+        public async Task NotifyNextUserAsync(int bookId)
+        {
+            // Get the next user in the waiting list
+            var nextUser = await _context.WaitingLists
+                .Where(wl => wl.BookId == bookId)
+                .OrderBy(wl => wl.Position)
+                .FirstOrDefaultAsync();
+
+            if (nextUser != null)
+            {
+
+
+
+                // Remove the user from the waiting list
+                _context.WaitingLists.Remove(nextUser);
+                await _context.SaveChangesAsync();
+
+                // Update positions of remaining users
+                await UpdatePositionsAsync(bookId, nextUser.Position);
+            }
+        }
+
+        private async Task UpdatePositionsAsync(int bookId, int removedPosition)
+        {
+            var waitingListEntries = await _context.WaitingLists
+                .Where(wl => wl.BookId == bookId && wl.Position > removedPosition)
+                .ToListAsync();
+
+            foreach (var entry in waitingListEntries)
+            {
+                entry.Position -= 1; // Move users up in the queue
+            }
+
+            await _context.SaveChangesAsync();
+        }
+        public async Task RemoveFromWaitingListAsync(string userId, int bookId)
+        {
+            var waitingListEntry = await _context.WaitingLists
+                .FirstOrDefaultAsync(wl => wl.UserId == userId && wl.BookId == bookId);
+
+            if (waitingListEntry != null)
+            {
+                _context.WaitingLists.Remove(waitingListEntry);
+                await _context.SaveChangesAsync();
+
+                // Update positions of remaining users
+                await UpdatePositionsAsync(bookId, waitingListEntry.Position);
+            }
+        }
+        public async Task<int> GetUserPositionAsync(string userId, int bookId)
+        {
+            var position = await _context.WaitingLists
+                .Where(wl => wl.UserId == userId && wl.BookId == bookId)
+                .Select(wl => wl.Position)
+                .FirstOrDefaultAsync();
+
+            return position;
+        }
+        public async Task<IActionResult> ReturnBook(int borrowId)
+        {
+            var borrowRecord = await _context.BorrowHistory
+                .Include(bh => bh.Book)
+                .FirstOrDefaultAsync(bh => bh.BorrowId == borrowId);
+
+            if (borrowRecord == null)
+            {
+                return NotFound(); // Borrow record not found
+            }
+
+            // Increase the book's stock
+            borrowRecord.Book.Stock += 1;
+
+            // Remove the borrow record
+            _context.BorrowHistory.Remove(borrowRecord);
+            await _context.SaveChangesAsync();
+
+            // Notify the next user in the waiting list
+            await NotifyNextUserAsync(borrowRecord.BookId);
+
+            TempData["Message"] = $"You have successfully returned {borrowRecord.Book.Title}.";
+            return RedirectToAction("BorrowHistory", "Book");
         }
     }
 }

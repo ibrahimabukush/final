@@ -15,6 +15,8 @@ namespace eBook_Library_Service.Data
         public DbSet<ShoppingCart> ShoppingCarts { get; set; }
         public DbSet<ShoppingCartItem> ShoppingCartItems { get; set; }
         public DbSet<PurchaseHistory> PurchaseHistories { get; set; }
+        public DbSet<BorrowHistory> BorrowHistory { get; set; }
+        public DbSet<WaitingList> WaitingLists { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -25,6 +27,27 @@ namespace eBook_Library_Service.Data
             modelBuilder.Entity<BookAuthor>().HasOne(ba => ba.Author)
                 .WithMany(a => a.BookAuthors)
                 .HasForeignKey(ba => ba.AuthorId);
+            modelBuilder.Entity<BorrowHistory>()
+            .HasOne(bh => bh.User)
+            .WithMany()
+            .HasForeignKey(bh => bh.UserId); // Foreign key is UserId
+
+            // Configure the BorrowHistory to Book relationship
+            modelBuilder.Entity<BorrowHistory>()
+                 .HasOne(bh => bh.Book) // BorrowHistory has one Book
+                .WithMany()     // Book can have many BorrowHistory records
+                .HasForeignKey(bh => bh.BookId); // Foreign key is BookId
+            modelBuilder.Entity<WaitingList>()
+            .HasOne<Users>() // WaitingList has one User
+            .WithMany()     // User can have many WaitingList entries
+            .HasForeignKey(wl => wl.UserId); // Foreign key is UserId
+
+            // Configure the WaitingList to Book relationship
+            modelBuilder.Entity<WaitingList>()
+                .HasOne<Book>() // WaitingList has one Book
+                .WithMany()     // Book can have many WaitingList entries
+                .HasForeignKey(wl => wl.BookId);
+
 
             modelBuilder.Entity<Author>().HasData(new Author { AuthorId = 1, Name = "Author1" });
             modelBuilder.Entity<Author>().HasData(new Author { AuthorId = 2, Name = "Author2" });

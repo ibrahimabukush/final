@@ -1,0 +1,65 @@
+﻿﻿
+@model List<eBook_Library_Service.Models.BorrowHistory>
+
+@{
+    ViewData["Title"] = "Borrow History";
+}
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Your Borrow History</h2>
+            <hr />
+
+            @if (TempData["Message"] != null)
+            {
+                <div class="alert alert-success">@TempData["Message"]</div>
+            }
+
+            @if (TempData["ErrorMessage"] != null)
+            {
+                <div class="alert alert-danger">@TempData["ErrorMessage"]</div>
+            }
+
+            @if (Model.Any())
+            {
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Book Title</th>
+                            <th>Borrow Date</th>
+                            <th>Return Date</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var borrow in Model)
+                        {
+                            <tr>
+                                <td>@borrow.Book.Title</td>
+                                <td>@borrow.BorrowDate.ToString("yyyy-MM-dd HH:mm")</td>
+                                <td>@borrow.ReturnDate.ToString("yyyy-MM-dd HH:mm")</td>
+                                <td>
+                                    @if (borrow.ReturnDate > DateTime.UtcNow)
+                                    {
+                                        <span class="badge bg-success">Active</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="badge bg-danger">Returned</span>
+                                    }
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            }
+            else
+            {
+                <div class="alert alert-info">
+                    You have no borrow history.
+                </div>
+            }
+        </div>
+    </div>
+</div>

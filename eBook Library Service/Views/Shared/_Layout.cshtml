@@ -1,4 +1,4 @@
-﻿
+﻿﻿
 <!DOCTYPE html>
 <html lang="en">
 
@@ -59,10 +59,20 @@
                             <a href="#"><span>Services</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                             <ul>
                                 <li><a href="/Book/UserIndex">THE LIBRARY</a></li>
-                                <li><a href="/Payment/PurchaseHistory">MY BOOKS</a></li>
 
+
+
+                                <li class="dropdown">
+                                    <a href="#"><span>MyBooks</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                                    <ul>
+                                        <li><a href="/Payment/PurchaseHistory">View Purchase History</a></li>
+                                        <li><a asp-controller="Book" asp-action="BorrowHistory">View Borrow History</a></li>
+                                    </ul>
+                                </li>
+                                <li>
                             </ul>
                         </li>
+
                         <li><a href="/Home/About">About</a></li>
                         <li><a href="/Home/Contact">Contact</a></li>
                         <li>
@@ -71,7 +81,7 @@
                                 <span class="cart-count">0</span> <!-- Optional: Display the number of items in the cart -->
                             </a>
                         </li>
-                        
+
 
                     }
                 </ul>
@@ -126,7 +136,7 @@
         </div>
     </header>
 
-    <main >
+    <main>
         @RenderBody() <!-- Body content will start below the navbar -->
     </main>
     <footer id="footer" class="footer">

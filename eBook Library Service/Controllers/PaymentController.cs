@@ -124,54 +124,52 @@ namespace eBook_Library_Service.Controllers
 
         // Payment Success (for PayPal)
 
-        public async Task<IActionResult> PaymentSuccess(string paymentId, string token, string payerId)
+        public async Task<IActionResult> PaymentSuccess(string paymentId, string token, string payerId, int bookId)
         {
             try
             {
-                // Get the current user's shopping cart
-                var cart = await _shoppingCartService.GetCartAsync();
-                if (cart == null || !cart.Items.Any())
+                // Fetch the book details
+                var book = await _context.Books.FindAsync(bookId);
+                if (book == null)
                 {
-                    return RedirectToAction("PurchaseHistory", "ShoppingCart");
+                    TempData["ErrorMessage"] = "Book not found.";
+                    return RedirectToAction("Index", "Home");
                 }
 
                 // Get the current user's ID
                 var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
 
-                // Record each item in the cart as a purchase
-                foreach (var item in cart.Items)
+                // Save the purchase to the PurchaseHistory table
+                var purchase = new PurchaseHistory
                 {
-                    var purchase = new PurchaseHistory
-                    {
-                        UserId = userId,
-                        BookId = item.Book.BookId,
-                        BookTitle = item.Book.Title,
-                        Publisher = item.Book.Publisher,
-                        Description = item.Book.Description,
-                        YearPublished = item.Book.YearPublished,
-                        Price = item.Book.BuyPrice,
-                        PurchaseDate = DateTime.UtcNow
-                    };
+                    UserId = userId,
+                    BookId = book.BookId,
+                    BookTitle = book.Title,
+                    Publisher = book.Publisher,
+                    Description = book.Description,
+                    YearPublished = book.YearPublished,
+                    Price = book.BuyPrice,
+                    PurchaseDate = DateTime.UtcNow
+                };
 
-                    _context.PurchaseHistories.Add(purchase);
-                }
-
-                // Save changes to the database
+                _context.PurchaseHistories.Add(purchase);
                 await _context.SaveChangesAsync();
 
-                // Clear the cart after successful payment
-                await _shoppingCartService.ClearCartAsync();
+                // Set success message
+                TempData["SuccessMessage"] = "Payment successful! Your purchase history has been updated.";
 
-                TempData["Message"] = "Payment successful! Your purchase history has been updated.";
+                // Redirect to the Home page
+                return RedirectToAction("Index", "Home");
             }
             catch (Exception ex)
             {
+                // Log the error and set an error message
                 _logger.LogError(ex, "An error occurred during payment execution.");
                 TempData["ErrorMessage"] = "An error occurred during payment execution. Please contact support.";
-            }
 
-            // Redirect to the PurchaseHistory page
-            return RedirectToAction("PurchaseHistory", "ShoppingCart");
+                // Redirect to the Home page
+                return RedirectToAction("Index", "Home");
+            }
         }
         // Payment Cancel (for PayPal)
         public IActionResult PaymentCancel()
@@ -196,7 +194,6 @@ namespace eBook_Library_Service.Controllers
             // Return the BuyNow view located in the Views/ShoppingCart folder
             return View("~/Views/ShoppingCart/BuyNow.cshtml", book);
         }
-
         [HttpPost]
         public async Task<IActionResult> ProcessCreditCardPayment(int bookId)
         {
@@ -207,31 +204,13 @@ namespace eBook_Library_Service.Controllers
                 return NotFound();
             }
 
-            // Get the current user's ID
-            var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-
-            // Save the purchase to the PurchaseHistory table
-            var purchase = new PurchaseHistory
-            {
-                UserId = userId,
-                BookId = book.BookId,
-                BookTitle = book.Title,
-                Publisher = book.Publisher,
-                Description = book.Description,
-                YearPublished = book.YearPublished,
-                Price = book.BuyPrice,
-                PurchaseDate = DateTime.UtcNow
-            };
-
-            _context.PurchaseHistories.Add(purchase);
-            await _context.SaveChangesAsync();
-
             // Create a Stripe payment intent
             var clientSecret = _stripeService.CreatePaymentIntent(book.BuyPrice);
 
             // Pass the client secret and publishable key to the view
             ViewBag.StripeClientSecret = clientSecret;
             ViewBag.StripePublishableKey = _configuration["Stripe:PublishableKey"];
+            ViewBag.BookId = bookId; // Pass the book ID to the view
 
             // Return the Stripe Checkout view
             return View("~/Views/ShoppingCart/StripeCheckout.cshtml");
@@ -247,27 +226,8 @@ namespace eBook_Library_Service.Controllers
                 return NotFound();
             }
 
-            // Get the current user's ID
-            var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-
-            // Save the purchase to the PurchaseHistory table
-            var purchase = new PurchaseHistory
-            {
-                UserId = userId,
-                BookId = book.BookId,
-                BookTitle = book.Title,
-                Publisher = book.Publisher,
-                Description = book.Description,
-                YearPublished = book.YearPublished,
-                Price = book.BuyPrice,
-                PurchaseDate = DateTime.UtcNow
-            };
-
-            _context.PurchaseHistories.Add(purchase);
-            await _context.SaveChangesAsync();
-
             // Define return and cancel URLs
-            var returnUrl = Url.Action("PaymentSuccess", "Payment", null, Request.Scheme);
+            var returnUrl = Url.Action("PaymentSuccess", "Payment", new { bookId = bookId }, Request.Scheme);
             var cancelUrl = Url.Action("PaymentCancel", "Payment", null, Request.Scheme);
 
             // Create a PayPal payment

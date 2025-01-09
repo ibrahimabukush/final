@@ -18,9 +18,15 @@
                 <!-- Used to display form errors. -->
                 <div id="card-errors" role="alert"></div>
 
+                <!-- Submit Payment Button -->
                 <button id="submit-button" class="btn btn-primary mt-3">
                     Submit Payment
                 </button>
+
+                <!-- Cancel Button -->
+                <a href="@Url.Action("PaymentCancel", "Payment")" class="btn btn-secondary mt-3">
+                    Cancel
+                </a>
             </form>
         </div>
     </div>
@@ -72,7 +78,7 @@
                 document.getElementById('submit-button').disabled = false;
             } else {
                 // Payment succeeded, redirect to the success page
-                window.location.href = '@Url.Action("PaymentSuccess", "Payment")';
+                window.location.href = '@Url.Action("PaymentSuccess", "Payment", new { bookId = ViewBag.BookId })';
             }
         });
     });
