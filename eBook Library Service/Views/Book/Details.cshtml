@@ -249,34 +249,42 @@
                 </div>
 
                 <!-- Action Buttons -->
-                <div class="action-buttons">
-                    <!-- Buy Direct -->
-                    <!-- Buy Now Button -->
-                    <form asp-controller="Payment" asp-action="BuyNow" method="get">
-                        <input type="hidden" name="bookId" value="@Model.BookId" />
-                        <button type="submit" class="btn btn-buy-now">
-                            <i class="fas fa-shopping-cart"></i> Buy Now
-                        </button>
-                    </form>
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <div class="action-buttons">
+                        <!-- Buy Now Button -->
+                        <form asp-controller="Payment" asp-action="BuyNow" method="get">
+                            <input type="hidden" name="bookId" value="@Model.BookId" />
+                            <button type="submit" class="btn btn-buy-now">
+                                <i class="fas fa-shopping-cart"></i> Buy Now
+                            </button>
+                        </form>
 
-                    <!-- Borrow -->
-                    <form asp-controller="ShoppingCart" asp-action="AddToCart" method="post" data-ajax="true">
-                        <input type="hidden" name="bookId" value="@Model.BookId" />
-                        <input type="hidden" name="isForBorrow" value="true" />
-                        <button type="submit" class="btn btn-borrow">
-                            <i class="fas fa-book"></i> Borrow
-                        </button>
-                    </form>
+                        <!-- Borrow -->
+                        <form asp-controller="ShoppingCart" asp-action="AddToCart" method="post" data-ajax="true">
+                            <input type="hidden" name="bookId" value="@Model.BookId" />
+                            <input type="hidden" name="isForBorrow" value="true" />
+                            <button type="submit" class="btn btn-borrow">
+                                <i class="fas fa-book"></i> Borrow
+                            </button>
+                        </form>
 
-                    <!-- Add to Cart -->
-                    <form asp-controller="ShoppingCart" asp-action="AddToCart" method="post" data-ajax="true">
-                        <input type="hidden" name="bookId" value="@Model.BookId" />
-                        <input type="hidden" name="isForBorrow" value="false" />
-                        <button type="submit" class="btn btn-add-to-cart">
-                            <i class="fas fa-cart-plus"></i> Add to Cart
-                        </button>
-                    </form>
-                </div>
+                        <!-- Add to Cart -->
+                        <form asp-controller="ShoppingCart" asp-action="AddToCart" method="post" data-ajax="true">
+                            <input type="hidden" name="bookId" value="@Model.BookId" />
+                            <input type="hidden" name="isForBorrow" value="false" />
+                            <button type="submit" class="btn btn-add-to-cart">
+                                <i class="fas fa-cart-plus"></i> Add to Cart
+                            </button>
+                        </form>
+                    </div>
+                }
+                else
+                {
+                    <div class="alert alert-warning">
+                        You must <a asp-controller="Account" asp-action="Login">log in</a> to buy or borrow books.
+                    </div>
+                }
             </div>
 
             <!-- Back to List Button -->

@@ -12,6 +12,7 @@ builder.Services.AddHttpContextAccessor();
 builder.Services.AddControllersWithViews();
 builder.Services.AddSingleton<PayPalService>();
 builder.Services.AddSingleton<StripeService>();
+builder.Services.AddTransient<EmailService>();
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("Default")));
 
@@ -125,6 +126,7 @@ async Task SeedAdminUserAsync(UserManager<Users> userManager, RoleManager<Identi
             UserName = adminEmail,
             Email = adminEmail,
             EmailConfirmed = true
+
         };
 
         var result = await userManager.CreateAsync(adminUser, adminPassword);

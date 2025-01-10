@@ -371,6 +371,7 @@ namespace eBook_Library_Service.Controllers
             _context.WaitingLists.Add(waitingListEntry);
             await _context.SaveChangesAsync();
         }
+        [Authorize]
         public async Task<IActionResult> BorrowBook(int bookId)
         {
             var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;

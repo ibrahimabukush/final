@@ -27,6 +27,7 @@ namespace eBook_Library_Service.Controllers
 
         // Add an item to the cart
         [HttpPost]
+        [Authorize]
         public async Task<IActionResult> AddToCart(int bookId, bool isForBorrow)
         {
             try

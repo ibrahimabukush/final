@@ -726,6 +726,9 @@ C:\Users\ibrah\Desktop\yuy\eBook Library Service\bin\Debug\net8.0\Microsoft.Iden
 C:\Users\ibrah\Desktop\yuy\eBook Library Service\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
 C:\Users\ibrah\Desktop\yuy\eBook Library Service\bin\Debug\net8.0\Mono.TextTemplating.dll
 C:\Users\ibrah\Desktop\yuy\eBook Library Service\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\ibrah\Desktop\yuy\eBook Library Service\bin\Debug\net8.0\PayPal.dll
+C:\Users\ibrah\Desktop\yuy\eBook Library Service\bin\Debug\net8.0\SendGrid.dll
+C:\Users\ibrah\Desktop\yuy\eBook Library Service\bin\Debug\net8.0\StarkbankEcdsa.dll
 C:\Users\ibrah\Desktop\yuy\eBook Library Service\bin\Debug\net8.0\Stripe.net.dll
 C:\Users\ibrah\Desktop\yuy\eBook Library Service\bin\Debug\net8.0\System.ClientModel.dll
 C:\Users\ibrah\Desktop\yuy\eBook Library Service\bin\Debug\net8.0\System.CodeDom.dll
@@ -842,4 +845,3 @@ C:\Users\ibrah\Desktop\yuy\eBook Library Service\obj\Debug\net8.0\refint\eBook L
 C:\Users\ibrah\Desktop\yuy\eBook Library Service\obj\Debug\net8.0\eBook Library Service.pdb
 C:\Users\ibrah\Desktop\yuy\eBook Library Service\obj\Debug\net8.0\eBook Library Service.genruntimeconfig.cache
 C:\Users\ibrah\Desktop\yuy\eBook Library Service\obj\Debug\net8.0\ref\eBook Library Service.dll
-C:\Users\ibrah\Desktop\yuy\eBook Library Service\bin\Debug\net8.0\PayPal.dll

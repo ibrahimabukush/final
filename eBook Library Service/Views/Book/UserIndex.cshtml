@@ -198,23 +198,32 @@
                 </div>
 
                 <!-- Action Buttons -->
-                <div class="book-actions">
-                    <form asp-controller="ShoppingCart" asp-action="AddToCart" method="post">
-                        <input type="hidden" name="bookId" value="@book.BookId" />
-                        <input type="hidden" name="isForBorrow" value="false" />
-                        <button type="submit" class="btn btn-add-to-cart">Add to Cart</button>
-                    </form>
-                    <form asp-controller="ShoppingCart" asp-action="AddToCart" method="post">
-                        <input type="hidden" name="bookId" value="@book.BookId" />
-                        <input type="hidden" name="isForBorrow" value="true" />
-                        <button type="submit" class="btn btn-borrow">Borrow</button>
-                    </form>
-                    <!-- Buy Now Button -->
-                    <form asp-controller="Payment" asp-action="BuyNow" method="get">
-                        <input type="hidden" name="bookId" value="@book.BookId" />
-                        <button type="submit" class="btn btn-buy-now">Buy Now</button>
-                    </form>
-                </div>
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <div class="book-actions">
+                        <form asp-controller="ShoppingCart" asp-action="AddToCart" method="post">
+                            <input type="hidden" name="bookId" value="@book.BookId" />
+                            <input type="hidden" name="isForBorrow" value="false" />
+                            <button type="submit" class="btn btn-add-to-cart">Add to Cart</button>
+                        </form>
+                        <form asp-controller="ShoppingCart" asp-action="AddToCart" method="post">
+                            <input type="hidden" name="bookId" value="@book.BookId" />
+                            <input type="hidden" name="isForBorrow" value="true" />
+                            <button type="submit" class="btn btn-borrow">Borrow</button>
+                        </form>
+                        <!-- Buy Now Button -->
+                        <form asp-controller="Payment" asp-action="BuyNow" method="get">
+                            <input type="hidden" name="bookId" value="@book.BookId" />
+                            <button type="submit" class="btn btn-buy-now">Buy Now</button>
+                        </form>
+                    </div>
+                }
+                else
+                {
+                    <div class="alert alert-warning">
+                        You must <a asp-controller="Account" asp-action="Login">log in</a> to buy or borrow books.
+                    </div>
+                }
             </div>
         </a>
 
