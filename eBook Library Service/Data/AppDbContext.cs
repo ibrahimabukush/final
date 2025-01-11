@@ -38,16 +38,17 @@ namespace eBook_Library_Service.Data
                 .WithMany()     // Book can have many BorrowHistory records
                 .HasForeignKey(bh => bh.BookId); // Foreign key is BookId
             modelBuilder.Entity<WaitingList>()
-            .HasOne<Users>() // WaitingList has one User
-            .WithMany()     // User can have many WaitingList entries
-            .HasForeignKey(wl => wl.UserId); // Foreign key is UserId
+     .HasOne(wl => wl.User)
+     .WithMany()
+     .HasForeignKey(wl => wl.UserId)
+     .OnDelete(DeleteBehavior.Restrict); // Disable cascade delete
 
             // Configure the WaitingList to Book relationship
             modelBuilder.Entity<WaitingList>()
-                .HasOne<Book>() // WaitingList has one Book
-                .WithMany()     // Book can have many WaitingList entries
-                .HasForeignKey(wl => wl.BookId);
-
+                .HasOne(wl => wl.Book)
+                .WithMany()
+                .HasForeignKey(wl => wl.BookId)
+                .OnDelete(DeleteBehavior.Restrict);
 
             modelBuilder.Entity<Author>().HasData(new Author { AuthorId = 1, Name = "Author1" });
             modelBuilder.Entity<Author>().HasData(new Author { AuthorId = 2, Name = "Author2" });

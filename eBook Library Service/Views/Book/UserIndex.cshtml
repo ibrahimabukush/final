@@ -198,32 +198,25 @@
                 </div>
 
                 <!-- Action Buttons -->
-                @if (User.Identity.IsAuthenticated)
-                {
-                    <div class="book-actions">
-                        <form asp-controller="ShoppingCart" asp-action="AddToCart" method="post">
-                            <input type="hidden" name="bookId" value="@book.BookId" />
-                            <input type="hidden" name="isForBorrow" value="false" />
-                            <button type="submit" class="btn btn-add-to-cart">Add to Cart</button>
-                        </form>
-                        <form asp-controller="ShoppingCart" asp-action="AddToCart" method="post">
-                            <input type="hidden" name="bookId" value="@book.BookId" />
-                            <input type="hidden" name="isForBorrow" value="true" />
-                            <button type="submit" class="btn btn-borrow">Borrow</button>
-                        </form>
-                        <!-- Buy Now Button -->
-                        <form asp-controller="Payment" asp-action="BuyNow" method="get">
-                            <input type="hidden" name="bookId" value="@book.BookId" />
-                            <button type="submit" class="btn btn-buy-now">Buy Now</button>
-                        </form>
-                    </div>
-                }
-                else
-                {
-                    <div class="alert alert-warning">
-                        You must <a asp-controller="Account" asp-action="Login">log in</a> to buy or borrow books.
-                    </div>
-                }
+                <div class="book-actions">
+                    <form asp-controller="ShoppingCart" asp-action="AddToCart" method="post">
+                        <input type="hidden" name="bookId" value="@book.BookId" />
+                        <input type="hidden" name="isForBorrow" value="false" />
+                        <button type="submit" class="btn btn-add-to-cart">Add to Cart</button>
+                    </form>
+                    <!-- Borrow Button -->
+                    <form asp-controller="Book" asp-action="ChoosePaymentMethod" method="get">
+                        <input type="hidden" name="bookId" value="@book.BookId" />
+                        <button type="submit" class="btn btn-borrow">
+                            <i class="fas fa-book"></i> Borrow
+                        </button>
+                    </form>
+                    <!-- Buy Now Button -->
+                    <form asp-controller="Payment" asp-action="BuyNow" method="get">
+                        <input type="hidden" name="bookId" value="@book.BookId" />
+                        <button type="submit" class="btn btn-buy-now">Buy Now</button>
+                    </form>
+                </div>
             </div>
         </a>
 
@@ -257,12 +250,14 @@
             @if (book.DiscountEndDate.HasValue)
             {
                 <text>
-                    startCountdown(@book.BookId, '@book.DiscountEndDate.Value.ToString("yyyy-MM-ddTHH:mm:ss")');
+                        startCountdown(@book.BookId, '@book.DiscountEndDate.Value.ToString("yyyy-MM-ddTHH:mm:ss")');
                 </text>
             }
         </script>
     }
 </div>
+
+
 
 <script>
     function searchBooks() {

@@ -32,6 +32,22 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\css\main.css))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\css\popups.css))">
+      <SourceType>Package</SourceType>
+      <SourceId>eBook Library Service</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/eBook Library Service</BasePath>
+      <RelativePath>assets/css/popups.css</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\css\popups.css))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\css\style.css))">
       <SourceType>Package</SourceType>
       <SourceId>eBook Library Service</SourceId>
@@ -735,6 +751,22 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\js\main.js))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\js\popups.js))">
+      <SourceType>Package</SourceType>
+      <SourceId>eBook Library Service</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/eBook Library Service</BasePath>
+      <RelativePath>assets/js/popups.js</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\js\popups.js))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\scss\Readme.txt))">
       <SourceType>Package</SourceType>
@@ -2096,6 +2128,22 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\6cc5ea98-b606-4f41-9cf3-a925fbf621c0_HideAndSeek.jpg))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\6ee0bae1-5d13-4340-b2ea-c7e2cde5e6fa_canva-brown-rusty-mystery-novel-book-cover-hG1QhA7BiBU.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>eBook Library Service</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/eBook Library Service</BasePath>
+      <RelativePath>images/6ee0bae1-5d13-4340-b2ea-c7e2cde5e6fa_canva-brown-rusty-mystery-novel-book-cover-hG1QhA7BiBU.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\6ee0bae1-5d13-4340-b2ea-c7e2cde5e6fa_canva-brown-rusty-mystery-novel-book-cover-hG1QhA7BiBU.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\6f71e3f7-2d43-4ffe-b030-8e1520d5158d_1003w-53S3IzrNxvY.webp))">
       <SourceType>Package</SourceType>
       <SourceId>eBook Library Service</SourceId>
@@ -2160,6 +2208,38 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\7f3b0518-a356-4286-af16-cfb6cd510c4f_Million.jpg))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\88068828-7a19-40f0-bd45-c734bdce1d38_canva-brown-rusty-mystery-novel-book-cover-hG1QhA7BiBU.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>eBook Library Service</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/eBook Library Service</BasePath>
+      <RelativePath>images/88068828-7a19-40f0-bd45-c734bdce1d38_canva-brown-rusty-mystery-novel-book-cover-hG1QhA7BiBU.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\88068828-7a19-40f0-bd45-c734bdce1d38_canva-brown-rusty-mystery-novel-book-cover-hG1QhA7BiBU.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\8868ed91-9af5-424e-bcef-e26a685679ab_canva-brown-rusty-mystery-novel-book-cover-hG1QhA7BiBU.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>eBook Library Service</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/eBook Library Service</BasePath>
+      <RelativePath>images/8868ed91-9af5-424e-bcef-e26a685679ab_canva-brown-rusty-mystery-novel-book-cover-hG1QhA7BiBU.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\8868ed91-9af5-424e-bcef-e26a685679ab_canva-brown-rusty-mystery-novel-book-cover-hG1QhA7BiBU.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\8eda3e23-7619-485a-839b-45cee9b577bb_HideAndSeek.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>eBook Library Service</SourceId>
@@ -2191,6 +2271,22 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\8f926f23-f27f-4037-a80a-e16bca9e0172_1003w-53S3IzrNxvY.webp))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\a6f62351-e2f5-4c1d-8bc3-cd54ece76386_canva-brown-rusty-mystery-novel-book-cover-hG1QhA7BiBU.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>eBook Library Service</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/eBook Library Service</BasePath>
+      <RelativePath>images/a6f62351-e2f5-4c1d-8bc3-cd54ece76386_canva-brown-rusty-mystery-novel-book-cover-hG1QhA7BiBU.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\a6f62351-e2f5-4c1d-8bc3-cd54ece76386_canva-brown-rusty-mystery-novel-book-cover-hG1QhA7BiBU.jpg))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\a836840d-6170-40fd-83b8-3d5abef9c97c_images.jpg))">
       <SourceType>Package</SourceType>
@@ -2432,6 +2528,22 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\Soul.jpg))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\epub\08ee4763-14f6-4985-ad59-bc1138f727b6_6e8b171b-11b2-44d1-9df1-71110387f0f1_עבודה 2 (1).pdf))">
+      <SourceType>Package</SourceType>
+      <SourceId>eBook Library Service</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/eBook Library Service</BasePath>
+      <RelativePath>uploads/epub/08ee4763-14f6-4985-ad59-bc1138f727b6_6e8b171b-11b2-44d1-9df1-71110387f0f1_עבודה 2 (1).pdf</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\epub\08ee4763-14f6-4985-ad59-bc1138f727b6_6e8b171b-11b2-44d1-9df1-71110387f0f1_עבודה 2 (1).pdf))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\epub\0a1a2e80-9b50-44b1-a5bc-ccb591bb2cd0_Skin_Final_Cleaned.docx))">
       <SourceType>Package</SourceType>
       <SourceId>eBook Library Service</SourceId>
@@ -2528,6 +2640,38 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\epub\a32e89a1-4bfc-43ee-9e5f-928c8c83ba49_1720002777632.pdf))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\epub\b414cfe0-ef9d-4e72-9aac-f967b39fb5af_Home Assignment no 2.docx))">
+      <SourceType>Package</SourceType>
+      <SourceId>eBook Library Service</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/eBook Library Service</BasePath>
+      <RelativePath>uploads/epub/b414cfe0-ef9d-4e72-9aac-f967b39fb5af_Home Assignment no 2.docx</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\epub\b414cfe0-ef9d-4e72-9aac-f967b39fb5af_Home Assignment no 2.docx))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\epub\cad01876-9edd-45a1-9017-550d4d302797_HomeWork1_2025a-v2.pdf))">
+      <SourceType>Package</SourceType>
+      <SourceId>eBook Library Service</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/eBook Library Service</BasePath>
+      <RelativePath>uploads/epub/cad01876-9edd-45a1-9017-550d4d302797_HomeWork1_2025a-v2.pdf</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\epub\cad01876-9edd-45a1-9017-550d4d302797_HomeWork1_2025a-v2.pdf))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\epub\d3248824-068c-4ad3-be4a-d0d089c9c470_Skin11.pptx))">
       <SourceType>Package</SourceType>
       <SourceId>eBook Library Service</SourceId>
@@ -2543,6 +2687,22 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\epub\d3248824-068c-4ad3-be4a-d0d089c9c470_Skin11.pptx))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\epub\d8a54a15-dfa0-4854-a424-029438adf0e2_6e8b171b-11b2-44d1-9df1-71110387f0f1_עבודה 2 (1).pdf))">
+      <SourceType>Package</SourceType>
+      <SourceId>eBook Library Service</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/eBook Library Service</BasePath>
+      <RelativePath>uploads/epub/d8a54a15-dfa0-4854-a424-029438adf0e2_6e8b171b-11b2-44d1-9df1-71110387f0f1_עבודה 2 (1).pdf</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\epub\d8a54a15-dfa0-4854-a424-029438adf0e2_6e8b171b-11b2-44d1-9df1-71110387f0f1_עבודה 2 (1).pdf))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\f2b\0f7d1d3a-4335-41ff-b1ce-136d83ecd6b8_Skin_Final_Cleaned.docx))">
       <SourceType>Package</SourceType>
@@ -2592,6 +2752,22 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\f2b\476c09e3-d27f-498e-a96f-a1a7636c2933_Skin11.pptx))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\f2b\5fb53404-a90e-4e31-9f3e-0b1de4b9723e_canva-brown-rusty-mystery-novel-book-cover-hG1QhA7BiBU.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>eBook Library Service</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/eBook Library Service</BasePath>
+      <RelativePath>uploads/f2b/5fb53404-a90e-4e31-9f3e-0b1de4b9723e_canva-brown-rusty-mystery-novel-book-cover-hG1QhA7BiBU.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\f2b\5fb53404-a90e-4e31-9f3e-0b1de4b9723e_canva-brown-rusty-mystery-novel-book-cover-hG1QhA7BiBU.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\f2b\6b3964a5-d86d-46f7-94aa-74ba51d4cbbb_HW2-2023.pdf))">
       <SourceType>Package</SourceType>
       <SourceId>eBook Library Service</SourceId>
@@ -2607,6 +2783,22 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\f2b\6b3964a5-d86d-46f7-94aa-74ba51d4cbbb_HW2-2023.pdf))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\f2b\9ce9c5b5-5cb7-4f72-8014-617ec271084a_6e8b171b-11b2-44d1-9df1-71110387f0f1_עבודה 2 (1).pdf))">
+      <SourceType>Package</SourceType>
+      <SourceId>eBook Library Service</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/eBook Library Service</BasePath>
+      <RelativePath>uploads/f2b/9ce9c5b5-5cb7-4f72-8014-617ec271084a_6e8b171b-11b2-44d1-9df1-71110387f0f1_עבודה 2 (1).pdf</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\f2b\9ce9c5b5-5cb7-4f72-8014-617ec271084a_6e8b171b-11b2-44d1-9df1-71110387f0f1_עבודה 2 (1).pdf))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\f2b\b3e8a8bf-7511-4d5f-baf6-650d79142477_1720002777632.pdf))">
       <SourceType>Package</SourceType>
@@ -2640,6 +2832,38 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\f2b\c6ccf696-34e4-4b0d-a8c8-4a68df2802a5_Skin11.pptx))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\f2b\c765050d-a06f-4e5d-b622-e80b14e75802_206817181_316055656_work2.pdf))">
+      <SourceType>Package</SourceType>
+      <SourceId>eBook Library Service</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/eBook Library Service</BasePath>
+      <RelativePath>uploads/f2b/c765050d-a06f-4e5d-b622-e80b14e75802_206817181_316055656_work2.pdf</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\f2b\c765050d-a06f-4e5d-b622-e80b14e75802_206817181_316055656_work2.pdf))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\f2b\ca16e219-77b7-4899-abb3-c672d77050e9_Home Assignment no 2.docx))">
+      <SourceType>Package</SourceType>
+      <SourceId>eBook Library Service</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/eBook Library Service</BasePath>
+      <RelativePath>uploads/f2b/ca16e219-77b7-4899-abb3-c672d77050e9_Home Assignment no 2.docx</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\f2b\ca16e219-77b7-4899-abb3-c672d77050e9_Home Assignment no 2.docx))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\f2b\f4dcb2ab-892c-401b-8106-0c683dee55cb_Skin11.pptx))">
       <SourceType>Package</SourceType>
       <SourceId>eBook Library Service</SourceId>
@@ -2655,6 +2879,22 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\f2b\f4dcb2ab-892c-401b-8106-0c683dee55cb_Skin11.pptx))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\mobi\2d6132d0-f198-4afe-af39-491ce9e845ae_c765050d-a06f-4e5d-b622-e80b14e75802_206817181_316055656_work2.pdf))">
+      <SourceType>Package</SourceType>
+      <SourceId>eBook Library Service</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/eBook Library Service</BasePath>
+      <RelativePath>uploads/mobi/2d6132d0-f198-4afe-af39-491ce9e845ae_c765050d-a06f-4e5d-b622-e80b14e75802_206817181_316055656_work2.pdf</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\mobi\2d6132d0-f198-4afe-af39-491ce9e845ae_c765050d-a06f-4e5d-b622-e80b14e75802_206817181_316055656_work2.pdf))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\mobi\34f40e71-ddef-41de-a47e-badb578738d4_Skin11.pptx))">
       <SourceType>Package</SourceType>
@@ -2688,6 +2928,22 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\mobi\3d1cf832-cb31-4c2e-93eb-93df8ef16e86_Skin_Final_Cleaned.docx))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\mobi\401879c9-3c84-4806-9dcf-3a0fc1ed8d0b_עבודה מספר 2.pdf))">
+      <SourceType>Package</SourceType>
+      <SourceId>eBook Library Service</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/eBook Library Service</BasePath>
+      <RelativePath>uploads/mobi/401879c9-3c84-4806-9dcf-3a0fc1ed8d0b_עבודה מספר 2.pdf</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\mobi\401879c9-3c84-4806-9dcf-3a0fc1ed8d0b_עבודה מספר 2.pdf))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\mobi\42b0a7d5-3832-45ba-868a-55545db4a07c_1720002777632.pdf))">
       <SourceType>Package</SourceType>
       <SourceId>eBook Library Service</SourceId>
@@ -2720,6 +2976,22 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\mobi\7f17d610-b0fd-4476-a5b4-1797fbdace06_Skin11.pptx))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\mobi\892b681a-9a31-4bff-9430-f68c9716e323_canva-brown-rusty-mystery-novel-book-cover-hG1QhA7BiBU.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>eBook Library Service</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/eBook Library Service</BasePath>
+      <RelativePath>uploads/mobi/892b681a-9a31-4bff-9430-f68c9716e323_canva-brown-rusty-mystery-novel-book-cover-hG1QhA7BiBU.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\mobi\892b681a-9a31-4bff-9430-f68c9716e323_canva-brown-rusty-mystery-novel-book-cover-hG1QhA7BiBU.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\mobi\bbb4a61a-df26-47a1-9f98-5ad8ba3ba4bb_1720002777632.pdf))">
       <SourceType>Package</SourceType>
       <SourceId>eBook Library Service</SourceId>
@@ -2751,6 +3023,22 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\mobi\bc7dfd3d-1e98-4ab8-92ce-3d5b25167aa7_Skin_Final_Cleaned.docx))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\mobi\d10a4ed9-4387-46da-b72e-12384b673394_עבודה 2.pdf))">
+      <SourceType>Package</SourceType>
+      <SourceId>eBook Library Service</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/eBook Library Service</BasePath>
+      <RelativePath>uploads/mobi/d10a4ed9-4387-46da-b72e-12384b673394_עבודה 2.pdf</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\mobi\d10a4ed9-4387-46da-b72e-12384b673394_עבודה 2.pdf))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\mobi\e104d244-e2da-413e-bc1a-e233ff1b2426_Skin_Final_Cleaned.docx))">
       <SourceType>Package</SourceType>
@@ -2831,6 +3119,70 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\pdf\27baa4bc-d1ae-4c74-aa91-1c96fdb64345_Skin_Final_Cleaned.docx))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\pdf\2c292837-2c0b-4cdd-98c7-68685afcb40b_6e8b171b-11b2-44d1-9df1-71110387f0f1_עבודה 2 (1).pdf))">
+      <SourceType>Package</SourceType>
+      <SourceId>eBook Library Service</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/eBook Library Service</BasePath>
+      <RelativePath>uploads/pdf/2c292837-2c0b-4cdd-98c7-68685afcb40b_6e8b171b-11b2-44d1-9df1-71110387f0f1_עבודה 2 (1).pdf</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\pdf\2c292837-2c0b-4cdd-98c7-68685afcb40b_6e8b171b-11b2-44d1-9df1-71110387f0f1_עבודה 2 (1).pdf))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\pdf\2e4207ed-9f88-4e3a-9b89-43976ad71b8a_עבודה 2 (1).pdf))">
+      <SourceType>Package</SourceType>
+      <SourceId>eBook Library Service</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/eBook Library Service</BasePath>
+      <RelativePath>uploads/pdf/2e4207ed-9f88-4e3a-9b89-43976ad71b8a_עבודה 2 (1).pdf</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\pdf\2e4207ed-9f88-4e3a-9b89-43976ad71b8a_עבודה 2 (1).pdf))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\pdf\5270f3ac-5019-4be3-bf84-843df2e1e1c8_c765050d-a06f-4e5d-b622-e80b14e75802_206817181_316055656_work2.pdf))">
+      <SourceType>Package</SourceType>
+      <SourceId>eBook Library Service</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/eBook Library Service</BasePath>
+      <RelativePath>uploads/pdf/5270f3ac-5019-4be3-bf84-843df2e1e1c8_c765050d-a06f-4e5d-b622-e80b14e75802_206817181_316055656_work2.pdf</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\pdf\5270f3ac-5019-4be3-bf84-843df2e1e1c8_c765050d-a06f-4e5d-b622-e80b14e75802_206817181_316055656_work2.pdf))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\pdf\5380a7e4-c87b-4119-a8ef-54a445c94cc6_עבודה מספר 2.pdf))">
+      <SourceType>Package</SourceType>
+      <SourceId>eBook Library Service</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/eBook Library Service</BasePath>
+      <RelativePath>uploads/pdf/5380a7e4-c87b-4119-a8ef-54a445c94cc6_עבודה מספר 2.pdf</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\pdf\5380a7e4-c87b-4119-a8ef-54a445c94cc6_עבודה מספר 2.pdf))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\pdf\79feae0e-69b9-495a-83cf-761edc0ff49a_Skin11.pptx))">
       <SourceType>Package</SourceType>

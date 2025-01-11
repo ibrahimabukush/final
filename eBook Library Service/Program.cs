@@ -13,6 +13,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddSingleton<PayPalService>();
 builder.Services.AddSingleton<StripeService>();
 builder.Services.AddTransient<EmailService>();
+builder.Services.AddHostedService<BorrowExpiryBackgroundService>();
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("Default")));
 

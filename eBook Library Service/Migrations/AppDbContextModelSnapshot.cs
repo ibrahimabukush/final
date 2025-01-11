@@ -609,6 +609,9 @@ namespace eBook_Library_Service.Migrations
                     b.Property<DateTime>("JoinDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<DateTime?>("NotificationSentDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<int>("Position")
                         .HasColumnType("int");
 
@@ -746,17 +749,21 @@ namespace eBook_Library_Service.Migrations
 
             modelBuilder.Entity("eBook_Library_Service.Models.WaitingList", b =>
                 {
-                    b.HasOne("eBook_Library_Service.Models.Book", null)
+                    b.HasOne("eBook_Library_Service.Models.Book", "Book")
                         .WithMany()
                         .HasForeignKey("BookId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("eBook_Library_Service.Models.Users", null)
+                    b.HasOne("eBook_Library_Service.Models.Users", "User")
                         .WithMany()
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
+
+                    b.Navigation("Book");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("eBook_Library_Service.Models.Author", b =>

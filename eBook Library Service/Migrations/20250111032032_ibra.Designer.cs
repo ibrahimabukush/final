@@ -12,8 +12,8 @@ using eBook_Library_Service.Data;
 namespace eBook_Library_Service.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250107213217_kia")]
-    partial class kia
+    [Migration("20250111032032_ibra")]
+    partial class ibra
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -351,6 +351,36 @@ namespace eBook_Library_Service.Migrations
                         });
                 });
 
+            modelBuilder.Entity("eBook_Library_Service.Models.BorrowHistory", b =>
+                {
+                    b.Property<int>("BorrowId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("BorrowId"));
+
+                    b.Property<int>("BookId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("BorrowDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("ReturnDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("BorrowId");
+
+                    b.HasIndex("BookId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("BorrowHistory");
+                });
+
             modelBuilder.Entity("eBook_Library_Service.Models.BorrowRequest", b =>
                 {
                     b.Property<int>("BorrowRequestId")
@@ -408,6 +438,47 @@ namespace eBook_Library_Service.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Contacts");
+                });
+
+            modelBuilder.Entity("eBook_Library_Service.Models.PurchaseHistory", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("BookId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("BookTitle")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("Publisher")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("PurchaseDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("YearPublished")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("PurchaseHistories");
                 });
 
             modelBuilder.Entity("eBook_Library_Service.Models.ShoppingCart", b =>
@@ -527,6 +598,39 @@ namespace eBook_Library_Service.Migrations
                     b.ToTable("AspNetUsers", (string)null);
                 });
 
+            modelBuilder.Entity("eBook_Library_Service.Models.WaitingList", b =>
+                {
+                    b.Property<int>("WaitingId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("WaitingId"));
+
+                    b.Property<int>("BookId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("JoinDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("NotificationSentDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Position")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("WaitingId");
+
+                    b.HasIndex("BookId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("WaitingLists");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -597,6 +701,25 @@ namespace eBook_Library_Service.Migrations
                     b.Navigation("Book");
                 });
 
+            modelBuilder.Entity("eBook_Library_Service.Models.BorrowHistory", b =>
+                {
+                    b.HasOne("eBook_Library_Service.Models.Book", "Book")
+                        .WithMany()
+                        .HasForeignKey("BookId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("eBook_Library_Service.Models.Users", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Book");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("eBook_Library_Service.Models.ShoppingCart", b =>
                 {
                     b.HasOne("eBook_Library_Service.Models.Users", "User")
@@ -625,6 +748,25 @@ namespace eBook_Library_Service.Migrations
                     b.Navigation("Book");
 
                     b.Navigation("ShoppingCart");
+                });
+
+            modelBuilder.Entity("eBook_Library_Service.Models.WaitingList", b =>
+                {
+                    b.HasOne("eBook_Library_Service.Models.Book", "Book")
+                        .WithMany()
+                        .HasForeignKey("BookId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("eBook_Library_Service.Models.Users", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Book");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("eBook_Library_Service.Models.Author", b =>

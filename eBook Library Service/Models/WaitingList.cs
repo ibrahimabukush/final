@@ -18,8 +18,10 @@ namespace eBook_Library_Service.Models
 
         public DateTime JoinDate { get; set; } // Date the user joined the waiting list
         public int Position { get; set; } // User's position in the waiting list
+        public DateTime? NotificationSentDate { get; set; } // Add this field
 
         // Navigation properties (optional but useful for querying)
-
+        public virtual Users User { get; set; } // Add this line
+        public virtual Book Book { get; set; } // Add this line
     }
 }
