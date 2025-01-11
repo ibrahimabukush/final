@@ -9,6 +9,7 @@
             <h2>Your Borrow History</h2>
             <hr />
 
+            <!-- Display success and error messages -->
             @if (TempData["Message"] != null)
             {
                 <div class="alert alert-success">@TempData["Message"]</div>
@@ -19,6 +20,7 @@
                 <div class="alert alert-danger">@TempData["ErrorMessage"]</div>
             }
 
+            <!-- Check if there are borrow records -->
             @if (Model.Any())
             {
                 <table class="table table-striped">

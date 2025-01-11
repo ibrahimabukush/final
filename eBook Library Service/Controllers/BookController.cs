@@ -91,6 +91,7 @@ namespace eBook_Library_Service.Controllers
 
             return View(bookList);
         }
+
         [Authorize(Policy = "AdminOnly")]
         [HttpGet]
         public async Task<IActionResult> AddEdit(int id)
@@ -117,6 +118,7 @@ namespace eBook_Library_Service.Controllers
             ViewBag.Operation = "Edit";
             return View(book);
         }
+
         [Authorize(Policy = "AdminOnly")]
         [HttpPost]
         public async Task<IActionResult> AddEdit(Book book, int[] authorIds)
@@ -219,7 +221,6 @@ namespace eBook_Library_Service.Controllers
         }
 
         [Authorize(Policy = "AdminOnly")]
-
         private async Task<string> SaveImage(IFormFile imageFile)
         {
             try
@@ -257,8 +258,34 @@ namespace eBook_Library_Service.Controllers
         }
 
         [Authorize(Policy = "AdminOnly")]
+        private async Task<string> SaveFile(IFormFile file, string format)
+        {
+            try
+            {
+                var uploadsFolder = Path.Combine(_webHostingEnvironment.WebRootPath, "uploads", format);
+                if (!Directory.Exists(uploadsFolder))
+                {
+                    Directory.CreateDirectory(uploadsFolder);
+                }
 
+                var uniqueFileName = Guid.NewGuid().ToString() + "_" + file.FileName;
+                var filePath = Path.Combine(uploadsFolder, uniqueFileName);
 
+                using (var fileStream = new FileStream(filePath, FileMode.Create))
+                {
+                    await file.CopyToAsync(fileStream);
+                }
+
+                return Path.Combine("uploads", format, uniqueFileName);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error saving file: {ex.Message}");
+                throw; // Re-throw the exception to see it in the debugger
+            }
+        }
+
+        [Authorize(Policy = "AdminOnly")]
         [HttpPost]
         public async Task<IActionResult> Delete(int id)
         {
@@ -303,32 +330,7 @@ namespace eBook_Library_Service.Controllers
         {
             return request.Headers["X-Requested-With"] == "XMLHttpRequest";
         }
-        private async Task<string> SaveFile(IFormFile file, string format)
-        {
-            try
-            {
-                var uploadsFolder = Path.Combine(_webHostingEnvironment.WebRootPath, "uploads", format);
-                if (!Directory.Exists(uploadsFolder))
-                {
-                    Directory.CreateDirectory(uploadsFolder);
-                }
 
-                var uniqueFileName = Guid.NewGuid().ToString() + "_" + file.FileName;
-                var filePath = Path.Combine(uploadsFolder, uniqueFileName);
-
-                using (var fileStream = new FileStream(filePath, FileMode.Create))
-                {
-                    await file.CopyToAsync(fileStream);
-                }
-
-                return Path.Combine("uploads", format, uniqueFileName);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error saving file: {ex.Message}");
-                throw; // Re-throw the exception to see it in the debugger
-            }
-        }
         [Authorize]
         public async Task<IActionResult> BorrowHistory()
         {
@@ -366,6 +368,7 @@ namespace eBook_Library_Service.Controllers
             ViewBag.WaitingListPositions = waitingListPositions;
             return View(borrowHistory); // Pass List<BorrowHistory> to the view
         }
+
         public async Task<int> AddToWaitingListAsync(string userId, int bookId)
         {
             // Calculate the user's position in the waiting list
@@ -386,6 +389,7 @@ namespace eBook_Library_Service.Controllers
 
             return position; // Return the user's position in the waiting list
         }
+
         [Authorize]
         public async Task<IActionResult> BorrowBook(int bookId)
         {
@@ -479,6 +483,7 @@ namespace eBook_Library_Service.Controllers
                 return RedirectToAction("UserIndex", "Book");
             }
         }
+
         public async Task<IActionResult> JoinWaitingList(int bookId)
         {
             // Get the current user's ID
@@ -766,11 +771,16 @@ namespace eBook_Library_Service.Controllers
                 {
                     var user = waitingEntry.User;
 
-                    // Send an email notification
-                    var emailSubject = "Book Available for Borrowing";
+                    // Generate the payment link
+                    var paymentLink = Url.Action("ProcessBorrowPayment", "Payment", new { bookId = book.BookId, userId = user.Id }, Request.Scheme);
+
+                    // Send an email notification with the payment link
+                    var emailSubject = "Book Available for Borrowing - Payment Required";
                     var emailMessage = $"Dear {user.FullName},<br/><br/>" +
                                        $"The book <strong>{book.Title}</strong> is now available for borrowing.<br/>" +
-                                       $"You are among the first three users on the waiting list and can borrow the book within the next 24 hours.<br/><br/>" +
+                                       $"To complete your borrowing request, please click the link below to make the payment:<br/><br/>" +
+                                       $"<a href='{paymentLink}'>Pay Now</a><br/><br/>" +
+                                       $"You have 24 hours to complete the payment. After payment, the book will be added to your Borrow History.<br/><br/>" +
                                        $"Thank you for using eBook Library Service!<br/><br/>" +
                                        $"Best regards,<br/>" +
                                        $"eBook Library Service Team";
@@ -779,6 +789,10 @@ namespace eBook_Library_Service.Controllers
                     {
                         await _emailService.SendEmailAsync(user.Email, emailSubject, emailMessage);
                         _logger.LogInformation($"Notification email sent to {user.Email}.");
+
+                        // Update the notification sent date
+                        waitingEntry.NotificationSentDate = DateTime.Now;
+                        await _context.SaveChangesAsync();
                     }
                     catch (Exception ex)
                     {
